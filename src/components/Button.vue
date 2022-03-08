@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const attributes = useAttrs();
 const props = defineProps({
 	type: {
 		type: String,
@@ -21,6 +22,7 @@ const isExternal = computed(() => props.href?.startsWith('http'));
 	<template v-if="href">
 		<ExternalLink
 			v-if="isExternal"
+			v-bind="attributes"
 			:href="href"
 			:class="[type, size]"
 			role="button"
@@ -29,6 +31,7 @@ const isExternal = computed(() => props.href?.startsWith('http'));
 		</ExternalLink>
 		<RouterLink
 			v-else
+			v-bind="attributes"
 			:class="[type, size]"
 			role="button"
 			:to="href"
