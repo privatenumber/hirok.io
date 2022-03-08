@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"lib": [
+			"ESNext",
+			"DOM"
+		],
+		"module": "ESNext",
+		"target": "ESNext",
+		"types": [
+			"@types/node",
+			"vite/client",
+			"vite-plugin-pages/client",
+		],
+	},
+	"include": [
+		"src",
+		"scripts",
+	]
+}
