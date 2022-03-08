@@ -28,7 +28,7 @@ const heading = computed(() => props.frontmatter.heading ?? props.frontmatter.ti
 			v-if="isBlogPost"
 			class="opacity-80 text-lg"
 		>
-			{{ formatDate(props.frontmatter.date) }}
+			{{ formatDate(props.frontmatter.date!) }}
 			<span v-if="props.frontmatter.duration">
 				· {{ props.frontmatter.duration }}
 			</span>

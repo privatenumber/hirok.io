@@ -65,7 +65,7 @@ export default defineConfig({
 
 		markdown({
 			headEnabled: true,
-			wrapperComponent: 'Post',
+			wrapperComponent: 'MarkdownPage',
 			markdownItSetup(md) {
 				md.use(markdownAnchor, {
 					slugify,

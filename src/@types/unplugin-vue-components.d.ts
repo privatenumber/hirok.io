@@ -16,8 +16,8 @@ declare module 'vue' {
     IconRiSunLine: typeof import('~icons/ri/sun-line')['default']
     ListPosts: typeof import('./../components/ListPosts.vue')['default']
     ListProjects: typeof import('./../components/ListProjects.vue')['default']
+    MarkdownPage: typeof import('./../components/MarkdownPage.vue')['default']
     Navigation: typeof import('./../components/Navigation.vue')['default']
-    Post: typeof import('./../components/Post.vue')['default']
     TerminalWindow: typeof import('./../components/TerminalWindow.vue')['default']
     WiggleAnimation: typeof import('./../components/WiggleAnimation.vue')['default']
   }
