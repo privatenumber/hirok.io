@@ -56,6 +56,9 @@ export default defineConfig({
 					route.meta = Object.assign(
 						route.meta ?? {},
 						frontmatter,
+						{
+							filePath: route.component,
+						},
 					);
 				}
 
