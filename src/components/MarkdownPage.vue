@@ -70,7 +70,7 @@ const heading = computed(() => props.frontmatter.heading ?? props.frontmatter.ti
 					Want to propse an edit?
 				</div>
 				<ExternalLink
-					:href="`https://github.com/privatenumber/hirok.io${route.meta.filePath}`"
+					:href="`https://github.com/privatenumber/hirok.io/blob/master${route.meta.filePath}`"
 				>
 					Open a pull request
 				</ExternalLink>
