@@ -1,15 +1,20 @@
 <script setup lang="ts">
-const resetAnimation = ({ target }) => {
-	target.style.animation = 'none';
+const resetAnimation = ({ target }: PointerEvent) => {
+	if (!target) {
+		return;
+	}
+
+	const element = target as HTMLDivElement;
+	element.style.animation = 'none';
 
 	// eslint-disable-next-line no-unused-expressions
-	target.offsetHeight; // trigger reflow
-	target.style.animation = null;
+	element.offsetHeight; // trigger reflow
+	element.style.animation = '';
 };
 </script>
 
 <template>
-	<div @mouseenter="resetAnimation">
+	<div @pointerenter="resetAnimation">
 		<slot />
 	</div>
 </template>
