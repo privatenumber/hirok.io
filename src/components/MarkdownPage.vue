@@ -50,7 +50,27 @@ const heading = computed(() => props.frontmatter.heading ?? props.frontmatter.ti
 	>
 		<hr>
 
-		<div class="flex justify-between text-xs">
+		<div class="flex gap-8 items-center justify-center">
+			<router-link to="/">
+				<img
+					src="/profile-square.png"
+					class="min-w-30 h-30 rounded-50"
+				>
+			</router-link>
+			<div>
+				<div class="text-xl font-medium">
+					Thanks for reading! Hope you'll stick around.
+				</div>
+				<div class="m-t-2">
+					— Hiroki Osame
+				</div>
+				<div class="m-t-1 opacity-70">
+					Open source Engineer. Living in NYC. Working at Square.
+				</div>
+			</div>
+		</div>
+
+		<div class="m-t-15 flex justify-between text-xs">
 			<div>
 				<div class="text-sm font-bold">
 					Have a question for me?
