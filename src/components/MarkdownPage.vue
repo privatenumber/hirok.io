@@ -87,7 +87,7 @@ const heading = computed(() => props.frontmatter.heading ?? props.frontmatter.ti
 
 			<div>
 				<div class="text-sm font-bold">
-					Want to propse an edit?
+					Want to propose an edit?
 				</div>
 				<ExternalLink
 					:href="`https://github.com/privatenumber/hirok.io/blob/master${route.meta.filePath}`"
