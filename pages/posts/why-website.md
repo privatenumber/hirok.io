@@ -33,11 +33,11 @@ Here are some use-cases that describe scenarios where I wished I had my own know
 
 - **Solve once; Help many**
 
-	After solving a recurring problem amongst my peers, I document the solution on my website. When someone encounters it again, I share the post with them. When new information arises, I update the post. As a result, I spend less time helping more people.
+	After solving a recurring problem amongst my peers, I document the solution on my website. When someone encounters it again, I share the post with them. If new information arises, I update the post. As a result, I spend less time helping more people.
 
 - **Sharing coherent tips**
 
-	I discover an interesting tip or process that I want more people to know. I write a short article on it with why it's useful, how-to steps, screenshots, and reference links. When sharing it verbally with friends, my thoughts are organized and coherent because I've written about it. I even have a URL to send them afterward.
+	I discover an interesting tip or process that could also benefit others. I write a short article on why it’s useful, and include how-to steps, screenshots, and reference links. When sharing it verbally with peers, my thoughts are organized and coherent because I’ve written about it. I even have a URL to send them afterward.
 
 - **Guidance on my projects**
 
