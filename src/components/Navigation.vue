@@ -64,7 +64,9 @@ const isPageBottom = computed(() => {
 
 <style scoped>
 header {
-	@apply p-6;
+	@apply
+		p-x-4
+		p-y-6;
 }
 
 .is-sticky {

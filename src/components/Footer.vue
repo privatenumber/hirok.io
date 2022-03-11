@@ -14,7 +14,8 @@ footer {
 	@apply
 		text-center
 		text-sm
-		p-6
+		p-x-4
+		p-y-6
 		font-light;
 }
 
