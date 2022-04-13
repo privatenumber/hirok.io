@@ -5,7 +5,7 @@ date: 2022-04-13
 duration: 10min
 ---
 
-I'm a Software Engineer at [Square](https://squareup.com/), and I was promoted to a Level 6 (_team leader_) Individual Contributor (IC) two years ago.
+I'm a Software Engineer at [Square](https://squareup.com/), and I was promoted to a [Level 6 (_team leader_) Individual Contributor (IC)](https://assets.ctfassets.net/1wryd5vd9xez/6bDnTwb4H7bfiFvg55ldRR/b1cb8514f0afd0a4050991d35ccbac03/Square_Software_Engineering_Career_Ladder.pdf) two years ago.
 
 I didn't have a chance to reflect on my learnings, but a colleague recently reached out regarding my promotion packet. He was working on his application and wanted to see mine as an example and get some pointers.
 
