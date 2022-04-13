@@ -11,7 +11,13 @@
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
 		<title>Hiroki Osame</title>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQWB09608T"></script>
 		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-BQWB09608T');
+
 			(function () {
 				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 				const setting = localStorage.getItem('vueuse-color-scheme') || 'auto';
