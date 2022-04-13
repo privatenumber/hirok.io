@@ -2,6 +2,7 @@
 title: 4 tips from my SWE promotion at Square
 subtitle: My learnings and advice for software engineers applying for their next promotion
 date: 2022-04-13
+duration: 10min
 ---
 
 I'm a Software Engineer at [Square](https://squareup.com/), and I was promoted to a Level 6 (_team leader_) Individual Contributor (IC) two years ago.
