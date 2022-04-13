@@ -15,6 +15,7 @@ Here are 4 tips I learned from my promotion application.
 
 ### 1. Prioritize collaboration over personal achievement
 
+
 It took me two tries to get the L6 promotion.
 
 One of the reasons my first application was rejected was because I showcased an incident where I independently "saved the day". I helped my team meet a Monday deadline by working over the weekend to fix a problem I discovered late Friday evening.
@@ -22,6 +23,8 @@ One of the reasons my first application was rejected was because I showcased an 
 This came as a surprise to me because I felt like I was demonstrating competence, determination, and ability to carry the team.
 
 However, the promotion committee argued that I was enabling poor work-life balance by setting a precedent for others to also work overtime. This was a project underestimation issue, and I shouldn't have carried the consequences independently.
+
+<img src="./collaboration.svg" class="w-3/5 mx-auto my-8">
 
 Given that L6 is _a team leader_, it was important I operated at a higher level of awareness and leadership. Instead of acting alone, I should have discussed with the team so the deliverables and target dates could be adjusted and not disrupt anyone's work-life balance.
 
@@ -33,9 +36,13 @@ The promotion packet has a section to request peer feedback from engineers at th
 
 After struggling with this, I eventually came to the realization nothing was stopping me from including quotes & testimonials from others outside of the peer feedback section.
 
+<img src="./feedback.svg" align="right" class="w-1/3 mx-5">
+
 I started reaching out to everyone I worked closely with: L5 engineers, product managers, designers, and engineer managers. And I asked them for a testimonial on their experience working with me. My promotion packet was scattered with quotes from my peers in varying roles, adding lots of colors and boasting collaboration.
 
 As an added benefit, personally reaching out for feedback allowed me to have more control over the process. The official feedback had to be solicited by my manager through a Google Forms survey, and sometimes, this results in unengaging or irrelevant feedback. Reaching out directly created opportunities to follow up for details/examples.
+
+<div class="clear-both"></div>
 
 ### 3. Share your Hype Doc when soliciting feedback
 
@@ -43,14 +50,17 @@ People don't often remember your contributions.
 
 This is understandable given I struggled to remember my own as I put together my promotion packet. And when peer reviewers don't remember, they dread writing your feedback because it takes them a lot of work to revisit old documents and conversations. As a result, they might end up submitting low-quality feedback near the deadline.
 
+<img src="./hype-doc.svg" align="left" class="w-1/4 m-8">
+
 To make it easy for anyone providing me feedback, I published my [Hype Doc] internally—a document of my accomplishments to track my growth. I made it into a website and hosted it on GitHub Pages, but a scrappy Google Doc with bullet points will suffice. The point of having it hosted online is to reduce friction for the reviewer to remember, learn, and talk about your work. Try to write less, make it skimmable, and prefer showing over explaining (via links and screenshots). I linked my Hype Doc everywhere, even in my Slack & GitHub statuses.
 
 Making my contributions easily accessible helped me get insightful and relevant feedback in a timely manner.
 
 [Hype Doc]: https://medium.com/square-corner-blog/you-are-your-own-best-hype-person-cf1e3a83c0c2
 
-### 4. Develop documentation habits
+<div class="clear-both"></div>
 
+### 4. Develop documentation habits
 
 I struggled to find high-quality examples when trying to find links to demonstrate my work.
 
@@ -59,6 +69,9 @@ Collaboration often happened on temporary and unlinkable mediums like instant me
 I felt I missed a lot of opportunities at the cost of a minute to document them.
 
 This frustration inspired me to adopt better habits that help me document my work with little effort:
+
+<div class="clear-both"></div>
+
 
 #### Improve transparency & discoverability
 
@@ -90,6 +103,7 @@ For pull requests, I fill out "Problem", "Changes", and optionally "Other info".
 
 As a result, the documentation I wrote was not only faster to read but also faster to write.
 
+<img src="./documentation-habits.svg" class="w-1/2 mx-auto my-8">
 
 ## Parting thoughts
 
