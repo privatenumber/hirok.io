@@ -2,7 +2,7 @@
 title: 4 tips from my SWE promotion at Square
 subtitle: My learnings and advice for software engineers applying for their next promotion
 date: 2022-04-13
-duration: 10min
+duration: 5min
 ---
 
 I'm a Software Engineer at [Square](https://squareup.com/), and I was promoted to a [Level 6 (_team leader_) Individual Contributor (IC)](https://assets.ctfassets.net/1wryd5vd9xez/6bDnTwb4H7bfiFvg55ldRR/b1cb8514f0afd0a4050991d35ccbac03/Square_Software_Engineering_Career_Ladder.pdf) two years ago.
@@ -60,7 +60,7 @@ I felt I missed a lot of opportunities at the cost of a minute to document them.
 
 This frustration inspired me to adopt better habits that help me document my work with little effort:
 
-#### Improving transparency & discoverability
+#### Improve transparency & discoverability
 
 I started moving discussions from private to public platforms.
 
@@ -68,7 +68,7 @@ When appropriate, I moved conversations away from direct messaging, email, and m
 
 As a result, my conversations and contributions became preserved, discoverable, and linkable.
 
-#### Improving readability
+#### Improve readability
 
 I started to broaden my target audience in my writing and paid extra attention to spelling, grammar, and formatting. Whenever possible, I would add links, screenshots, and context.
 
@@ -78,7 +78,7 @@ I also generally avoid slang or niche references (eg. jokes) as they can confuse
 
 These practices helped my writing become more accessible and easier to read. And as a bonus, my contributions looked credible and started to get referenced by others.
 
-#### Improving skimmability
+#### Improve skimmability
 
 I started to adopt templates and structure to my writing to make them easier to skim.
 
