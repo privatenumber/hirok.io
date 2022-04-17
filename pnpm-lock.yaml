@@ -37,6 +37,7 @@ specifiers:
   vite-plugin-md: ^0.12.4
   vite-plugin-pages: ^0.22.0
   vite-ssg: ^0.19.2
+  vite-ssg-sitemap: github:privatenumber/vite-ssg-sitemap#built/fix-cjs-entry
   vue: ^3.2.33
   vue-router: ^4.0.14
 
@@ -77,6 +78,7 @@ devDependencies:
   vite-plugin-md: 0.12.4_vite@2.9.5
   vite-plugin-pages: 0.22.0_vite@2.9.5
   vite-ssg: 0.19.2_161ef10f05d54a8ec14182f85934be65
+  vite-ssg-sitemap: github.com/privatenumber/vite-ssg-sitemap/430f365cbf3d9638bd6e3db635dd9ae9f6835782
   vue: 3.2.33
   vue-router: 4.0.14_vue@3.2.33
 
@@ -5327,4 +5329,10 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: true
+
+  github.com/privatenumber/vite-ssg-sitemap/430f365cbf3d9638bd6e3db635dd9ae9f6835782:
+    resolution: {tarball: https://codeload.github.com/privatenumber/vite-ssg-sitemap/tar.gz/430f365cbf3d9638bd6e3db635dd9ae9f6835782}
+    name: vite-ssg-sitemap
+    version: 0.2.2
     dev: true

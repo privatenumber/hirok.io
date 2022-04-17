@@ -10,12 +10,13 @@ import pages from 'vite-plugin-pages';
 import unocss from 'unocss/vite';
 import { presetUno } from 'unocss';
 import transformerDirective from '@unocss/transformer-directives';
-import autoImport from 'unplugin-auto-import/vite';
-import components from 'unplugin-vue-components/vite';
+import autoImport from 'unplugin-auto-import/vite'; // eslint-disable-line import/no-unresolved
+import components from 'unplugin-vue-components/vite'; // eslint-disable-line import/no-unresolved
 import icons from 'unplugin-icons/vite';
 import iconsResolver from 'unplugin-icons/resolver';
 import grayMatter from 'gray-matter';
 import slugify from '@sindresorhus/slugify';
+import generateSitemap from 'vite-ssg-sitemap';
 
 export default defineConfig({
 	plugins: [
@@ -117,4 +118,14 @@ export default defineConfig({
 
 		icons(),
 	],
+
+	ssgOptions: {
+		script: 'async',
+		formatting: 'minify',
+		onFinished() {
+			generateSitemap({
+				hostname: 'https://hirok.io/',
+			});
+		},
+	},
 });
