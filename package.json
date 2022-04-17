@@ -20,7 +20,7 @@
 	},
 	"devDependencies": {
 		"@iconify/json": "^2.1.13",
-		"@pvtnbr/eslint-config": "^0.17.0",
+		"@pvtnbr/eslint-config": "^0.19.1",
 		"@sindresorhus/slugify": "^2.1.0",
 		"@types/markdown-it-link-attributes": "^3.0.1",
 		"@types/node": "^17.0.21",
@@ -30,7 +30,7 @@
 		"@vitejs/plugin-vue": "^2.2.4",
 		"@vueuse/core": "^7.7.1",
 		"@vueuse/head": "^0.7.5",
-		"eslint": "^8.10.0",
+		"eslint": "^8.13.0",
 		"esmo": "^0.14.1",
 		"feed": "^4.2.2",
 		"gray-matter": "^4.0.3",
