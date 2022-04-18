@@ -39,6 +39,8 @@ Given the following packages:
 
 - `my-application`: the package/project you want to test in
 
+Here's how you would link them:
+
 1. **Registration**
 
     Run `npm link` in `my-library` to register it globally, making it possible to link `my-library` to any local project.
