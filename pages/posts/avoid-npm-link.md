@@ -280,14 +280,7 @@ This creates a symlink to the package without installing it globally. This behav
 
 Since this command requires the package path to link, it will visibly fail when the package cannot be resolved locally.
 
-If you want to use binaries from the package, they will only be installed to the package and will only be executable with [npx](https://docs.npmjs.com/cli/v8/commands/npx) or via [package scripts](https://docs.npmjs.com/cli/v8/using-npm/scripts):
-
-<TerminalWindow>
-
-```sh
-$ npx <binary-name>
-```
-</TerminalWindow>
+If you want to use binaries from the package, they will only be installed to the package and will only be executable with [npx](https://docs.npmjs.com/cli/v8/commands/npx) or via [package scripts](https://docs.npmjs.com/cli/v8/using-npm/scripts).
 
 You can also link packages consecutively without worrying about previous links being removed:
 
