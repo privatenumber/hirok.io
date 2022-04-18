@@ -88,7 +88,7 @@ Both `npm link` commands must be run using the same Node.js version.
 
 If the environment has multiple Node.js versions through a manager like [nvm](http://nvm.sh/), each version of Node.js has its own global package registry. Lookups will fail if the same version is not used.
 
-Check to see that the global package registry is scoped to the Node.js version:
+Check to see that the global package registry is scoped to the Node.js version. If the Node.js version is in the path, that means the global package registry is scoped.
 
 <TerminalWindow>
 
@@ -98,12 +98,9 @@ $ npm root -g
 ```
 </TerminalWindow>
 
-
-It's very easy to overlook Node.js versions when working on multiple packages in separate terminal sessions.
+When working on multiple packages in separate terminal sessions, it's very easy to overlook the Node.js version. The version discrepancy can be especially hard to notice since `npm link` doesn't error when it's unable to find the local package to link, which is discussed in the next section.
 
 > **Pro tip:** Add the [recommended shell integration](https://github.com/nvm-sh/nvm/blob/2c0c34f/README.md#deeper-shell-integration) to automatically use the appropriate Node.js version when entering a directory with a `.nvmrc` file.
-
-The Node.js version discrepancy can be especially hard to notice since `npm link` doesn't error when it's unable to find the local package to link, which is discussed in the next section.
 
 ### Non-existent fail-case
 
