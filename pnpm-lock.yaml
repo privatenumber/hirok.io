@@ -37,7 +37,7 @@ specifiers:
   vite-plugin-md: ^0.12.4
   vite-plugin-pages: ^0.22.0
   vite-ssg: ^0.19.2
-  vite-ssg-sitemap: github:privatenumber/vite-ssg-sitemap#built/fix-cjs-entry
+  vite-ssg-sitemap: ^0.2.3
   vue: ^3.2.33
   vue-router: ^4.0.14
 
@@ -78,7 +78,7 @@ devDependencies:
   vite-plugin-md: 0.12.4_vite@2.9.5
   vite-plugin-pages: 0.22.0_vite@2.9.5
   vite-ssg: 0.19.2_161ef10f05d54a8ec14182f85934be65
-  vite-ssg-sitemap: github.com/privatenumber/vite-ssg-sitemap/430f365cbf3d9638bd6e3db635dd9ae9f6835782
+  vite-ssg-sitemap: 0.2.3
   vue: 3.2.33
   vue-router: 4.0.14_vue@3.2.33
 
@@ -5006,6 +5006,10 @@ packages:
       - supports-color
     dev: true
 
+  /vite-ssg-sitemap/0.2.3:
+    resolution: {integrity: sha512-2plw30fjCeCKxY2A83Z7cIRcm0OLn9FlO1IAKvnpu/Vt7vMBTRL9sv6IiE0lnE3NnXxDy/ij3AX4srTB2nbkKA==}
+    dev: true
+
   /vite-ssg/0.19.2_161ef10f05d54a8ec14182f85934be65:
     resolution: {integrity: sha512-r9UJJ4OTMyu9f4nNe12PMVhVkeXYp1rUKbIl6zIOz5QDYEDgFcq8hZGUMMIAcyHhB4pH5ImmjZd1hJ2fO6hOmg==}
     engines: {node: '>=14.0.0'}
@@ -5329,10 +5333,4 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-    dev: true
-
-  github.com/privatenumber/vite-ssg-sitemap/430f365cbf3d9638bd6e3db635dd9ae9f6835782:
-    resolution: {tarball: https://codeload.github.com/privatenumber/vite-ssg-sitemap/tar.gz/430f365cbf3d9638bd6e3db635dd9ae9f6835782}
-    name: vite-ssg-sitemap
-    version: 0.2.2
     dev: true
