@@ -55,6 +55,7 @@
 		"vite-plugin-md": "^0.12.4",
 		"vite-plugin-pages": "^0.22.0",
 		"vite-ssg": "^0.19.2",
+		"vite-ssg-sitemap": "github:privatenumber/vite-ssg-sitemap#built/fix-cjs-entry",
 		"vue": "^3.2.33",
 		"vue-router": "^4.0.14"
 	},
