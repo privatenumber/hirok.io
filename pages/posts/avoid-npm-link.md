@@ -1,6 +1,6 @@
 ---
 title: 3 reasons to avoid using `npm link`
-subtitle: The dangers of `npm link` and why you should use `npm install` instead
+subtitle: The dangers of `npm link` and why you should use `npx link` instead
 date: 2022-04-18
 tags: npm,
 duration: 10min
@@ -8,16 +8,16 @@ duration: 10min
 
 ## TL; DR
 
-Instead of using `npm link`, use `npm install` to symlink a local package as a dependency:
+Instead of using `npm link`, use [`npx link`](https://github.com/privatenumber/link) to symlink a local package as a dependency:
 
 <TerminalWindow size="large">
 
 ```sh
-$ npm install --no-save <package-path>
+$ npx link <package-path>
 ```
 </TerminalWindow>
 
-This command is safer, more explicit, and is actually what you'd expect from `npm link`.
+This command is safer, more explicit, and does what you'd actually expect from `npm link`.
 
 Avoid using `npm link` because of the following footguns:
 - Running two commands is error-prone with multiple Node.js versions
@@ -265,22 +265,21 @@ Installing the wrong package is possible with `npm install` as well, but the ris
 
 - **Binaries are installed.** If the wrong package is installed, it's unintuitive that binaries get installed and to realize it needs to be uninstalled globally. This leaves unexpected binaries to be left installed and accidentally invoked.
 
-## Use `npm install` instead
+## Use `npx link` or `npm install` instead
 
-A better alternative to `npm link` is `npm install` using a package path:
+A better alternative to `npm link` is [`npx link`](https://github.com/privatenumber/link):
 
 <TerminalWindow>
 
 ```sh
-$ npm install --no-save <package-path>
+$ npx link <package-path>
 ```
 </TerminalWindow>
 
+
 This creates a symlink to the package without installing it globally. This behavior is probably closer to what most people expect from `npm link`.
 
-The `--no-save` flag is to prevent the package path from getting saved in `package.json`.
-
-Since this requires passing in the package path to install, it will visibly fail when the package cannot be resolved locally.
+Since this command requires the package path to link, it will visibly fail when the package cannot be resolved locally.
 
 If you want to use binaries from the package, they will only be installed to the package and will only be executable with [npx](https://docs.npmjs.com/cli/v8/commands/npx) or via [package scripts](https://docs.npmjs.com/cli/v8/using-npm/scripts):
 
@@ -291,10 +290,36 @@ $ npx <binary-name>
 ```
 </TerminalWindow>
 
+You can also link packages consecutively without worrying about previous links being removed:
 
-> **Protip:** To link multiple packages, pass the package paths in as arguments.
+<TerminalWindow>
+
+```sh
+$ npx link <package-path-a>
+$ npx link <package-path-b> # Doesn't remove package-a
+$ npx link ...
+```
+</TerminalWindow>
+
+
+### npm install
+
+Another alternative to `npm link` is `npm install` using a package path:
+
+<TerminalWindow>
+
+```sh
+$ npm install --no-save <package-path>
+```
+</TerminalWindow>
+
+Like `npx link`, it also creates a direct symlink without installing it globally.
+
+The `--no-save` flag is to prevent the package path from getting saved in `package.json`.
+
+> **Warning:** Running `npm install` or `npm link` multiple times will remove previous links.
 >
-> Running `npm install` or `npm link` multiple times will remove previous links.
+> To link multiple packages, pass the package paths in as arguments:
 >
 > <TerminalWindow>
 >
