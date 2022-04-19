@@ -14,6 +14,28 @@ const props = defineProps<{
 const route = useRoute();
 const isBlogPost = computed(() => props.frontmatter.date);
 const heading = computed(() => props.frontmatter.heading ?? props.frontmatter.title);
+const article = $ref<HTMLElement>(); // eslint-disable-line no-undef
+
+const { scrollMarginTop } = useCssModule();
+
+onMounted(() => {
+	const { innerHeight: windowHeight } = window;
+	const pageHeight = document.body.offsetHeight;
+
+	// If page is shorter than double the screen size, disable
+	if (pageHeight < windowHeight * 2) {
+		return;
+	}
+
+	const lastPage = pageHeight - windowHeight;
+
+	// Add scroll margin to anchors on last page
+	article.querySelectorAll('[id]').forEach((anchor) => {
+		if ((anchor as HTMLElement).offsetTop > lastPage) {
+			anchor.classList.add(scrollMarginTop);
+		}
+	});
+});
 </script>
 
 <template>
@@ -40,7 +62,10 @@ const heading = computed(() => props.frontmatter.heading ?? props.frontmatter.ti
 			{{ props.frontmatter.subtitle }}
 		</p>
 	</div>
-	<article class="prose m-auto">
+	<article
+		class="prose m-auto"
+		ref="article"
+	>
 		<slot />
 	</article>
 
@@ -98,3 +123,9 @@ const heading = computed(() => props.frontmatter.heading ?? props.frontmatter.ti
 		</div>
 	</div>
 </template>
+
+<style module>
+.scrollMarginTop {
+	scroll-margin-top: 60px;
+}
+</style>
