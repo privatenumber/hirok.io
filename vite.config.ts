@@ -35,6 +35,7 @@ export default defineConfig({
 		}),
 
 		vue({
+			reactivityTransform: true,
 			include: [
 				/\.vue$/,
 				/\.md$/,
