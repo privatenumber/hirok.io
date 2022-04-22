@@ -92,6 +92,14 @@ onMounted(() => {
 				<div class="m-t-1 opacity-70">
 					Open source Engineer. Living in NYC. Working at Square.
 				</div>
+
+				<Button
+					href="https://twitter.com/privatenumbr"
+					size="small"
+					class="m-t-8"
+				>
+					<icon-mdi-twitter class="m-r-1" /> Follow @privatenumbr
+				</Button>
 			</div>
 		</div>
 

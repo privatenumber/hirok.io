@@ -86,4 +86,11 @@ button {
 		p-x-6
 		text-lg;
 }
+
+.small {
+	@apply
+		p-x-2
+		p-y-1
+		text-sm;
+}
 </style>
