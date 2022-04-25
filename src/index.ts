@@ -27,9 +27,44 @@ export const createApp = ViteSSG(
 			router.beforeEach(() => {
 				NProgress.start();
 			});
-			router.afterEach(() => {
+
+			router.afterEach((from, to) => {
 				NProgress.done();
+
+				pa?.track({
+					name: 'navigation',
+					value: JSON.stringify({
+						from: from.fullPath,
+						to: to.fullPath,
+					}),
+				});
+			});
+
+			window.addEventListener('click', (event) => {
+				if (!pa || !event.target) {
+					return;
+				}
+
+				const target = event.target as HTMLAnchorElement;
+				if (target.tagName !== 'A' || !target.href) {
+					return;
+				}
+
+				pa.track({
+					name: 'click:link',
+					value: target.href,
+				});
 			});
 		}
 	},
 );
+
+declare global {
+	const pa: {
+		track: (data: {
+			name: string;
+			value?: string;
+			unit?: string;
+		}) => void;
+	};
+}
