@@ -36,6 +36,38 @@ onMounted(() => {
 		}
 	});
 });
+
+useHead({
+	meta: [{
+		property: 'og:type',
+		content: 'article',
+	}],
+});
+
+if (props.frontmatter.title) {
+	useHead({
+		title: `${props.frontmatter.title} | Hiroki Osame`,
+		meta: [{
+			property: 'og:title',
+			content: props.frontmatter.title,
+		}],
+	});
+}
+
+if (props.frontmatter.subtitle) {
+	useHead({
+		meta: [
+			{
+				property: 'description',
+				content: props.frontmatter.subtitle,
+			},
+			{
+				property: 'og:description',
+				content: props.frontmatter.subtitle,
+			},
+		],
+	});
+}
 </script>
 
 <template>
@@ -63,8 +95,8 @@ onMounted(() => {
 		</p>
 	</div>
 	<article
-		class="prose m-auto"
 		ref="article"
+		class="prose m-auto"
 	>
 		<slot />
 	</article>
@@ -133,7 +165,7 @@ onMounted(() => {
 </template>
 
 <style module>
-.scrollMarginTop {
+.scroll-margin-top {
 	scroll-margin-top: 60px;
 }
 </style>

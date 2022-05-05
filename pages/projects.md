@@ -1,5 +1,5 @@
 ---
-title: Projects | Hiroki Osame
+title: Projects
 heading: ''
 projects:
   - name: ci

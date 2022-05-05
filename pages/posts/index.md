@@ -1,5 +1,5 @@
 ---
-title: Posts | Hiroki Osame
+title: Posts
 heading: Posts
 ---
 

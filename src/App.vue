@@ -11,6 +11,29 @@ onMounted(() => {
 	setViewportHeight();
 	useEventListener(window, 'resize', setViewportHeight);
 });
+
+const websiteDescription = 'Hiroki Osame\'s personal website & blog';
+useHead({
+	title: 'Hiroki Osame',
+	meta: [
+		{
+			property: 'og:site_name',
+			content: 'Hiroki Osame',
+		},
+		{
+			property: 'og:title',
+			content: 'Hiroki Osame',
+		},
+		{
+			property: 'description',
+			content: websiteDescription,
+		},
+		{
+			property: 'og:description',
+			content: websiteDescription,
+		},
+	],
+});
 </script>
 
 <template>

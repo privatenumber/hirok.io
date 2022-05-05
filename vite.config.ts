@@ -19,6 +19,11 @@ import slugify from '@sindresorhus/slugify';
 import generateSitemap from 'vite-ssg-sitemap';
 
 export default defineConfig({
+	css: {
+		modules: {
+			localsConvention: 'camelCaseOnly',
+		},
+	},
 	plugins: [
 		unocss({
 			transformers: [
@@ -69,7 +74,6 @@ export default defineConfig({
 		}),
 
 		markdown({
-			headEnabled: true,
 			wrapperComponent: 'MarkdownPage',
 			markdownItSetup(md) {
 				md.use(markdownAnchor, {
@@ -100,6 +104,7 @@ export default defineConfig({
 				'vue',
 				'vue-router',
 				'@vueuse/core',
+				'@vueuse/head',
 			],
 			dts: 'src/@types/unplugin-auto-import.d.ts',
 		}),

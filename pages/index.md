@@ -1,5 +1,4 @@
 ---
-title: Hiroki Osame
 heading: ''
 ---
 
