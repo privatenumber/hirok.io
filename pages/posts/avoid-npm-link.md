@@ -223,7 +223,7 @@ added 1 package, and audited 3 packages in 230ms
 
 found 0 vulnerabilities
 
-$ hash cash
+$ hash cat # Clear cache to "cat" binary
 $ type cat
 cat is ~/.nvm/versions/node/v16.14.0/bin/cat
 ```
