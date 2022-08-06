@@ -3,6 +3,7 @@
 	"type": "module",
 	"files": [],
 	"scripts": {
+		"prepare": "simple-git-hooks",
 		"lint": "npm run lint:js; npm run lint:css",
 		"lint:js": "eslint . --cache",
 		"lint:css": "stylelint './src/**/*.{css,vue}' --cache",
@@ -10,10 +11,8 @@
 		"build": "vite-ssg build",
 		"preview": "sirv dist --port 3000"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
+	"simple-git-hooks": {
+		"pre-commit": "pnpm lint-staged"
 	},
 	"lint-staged": {
 		"*.{js,ts,vue,md}": "eslint"
@@ -34,7 +33,6 @@
 		"esmo": "^0.14.1",
 		"feed": "^4.2.2",
 		"gray-matter": "^4.0.3",
-		"husky": "^4.3.8",
 		"lint-staged": "^12.3.8",
 		"markdown-it": "^12.3.2",
 		"markdown-it-anchor": "^8.6.2",
@@ -42,6 +40,7 @@
 		"markdown-it-shiki": "^0.4.0",
 		"nprogress": "^0.2.0",
 		"postcss-html": "^1.4.1",
+		"simple-git-hooks": "^2.8.0",
 		"sirv-cli": "^2.0.2",
 		"stylelint": "^14.7.1",
 		"stylelint-config-recommended-vue": "^1.4.0",
