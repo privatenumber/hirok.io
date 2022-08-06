@@ -27,7 +27,7 @@
 		"@unocss/reset": "^0.31.17",
 		"@unocss/transformer-directives": "^0.31.17",
 		"@vitejs/plugin-vue": "^2.3.3",
-		"@vueuse/core": "^8.9.4",
+		"@vueuse/core": "^9.1.0",
 		"@vueuse/head": "^0.7.9",
 		"eslint": "^8.21.0",
 		"feed": "^4.2.2",
