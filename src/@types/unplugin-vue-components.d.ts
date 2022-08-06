@@ -3,6 +3,8 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
+export {}
+
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Button: typeof import('./../components/Button.vue')['default']
@@ -25,5 +27,3 @@ declare module '@vue/runtime-core' {
     WiggleAnimation: typeof import('./../components/WiggleAnimation.vue')['default']
   }
 }
-
-export {}
