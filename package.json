@@ -52,7 +52,7 @@
 		"vite": "^2.9.14",
 		"vite-plugin-md": "^0.12.4",
 		"vite-plugin-pages": "^0.22.0",
-		"vite-ssg": "^0.19.2",
+		"vite-ssg": "^0.20.2",
 		"vite-ssg-sitemap": "^0.3.1",
 		"vue": "^3.2.37",
 		"vue-router": "^4.1.3"
