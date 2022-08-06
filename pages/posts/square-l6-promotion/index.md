@@ -32,7 +32,7 @@ To prepare for my next promotion packet, I put collaboration work before indepen
 
 ### 2. Collect testimonials from everyone you work with
 
-The promotion packet has a section to request peer feedback from engineers at the target level I was applying to. In my case, L6 engineers. This section was tough for me to complete because I hadn't worked with many L6s. Not being able to ask most of my colleagues for feedback made me feel like I was at a disadvantage.
+The promotion packet had a peer feedback section but was limited to engineers at the level you're applying to. In my case, L6 engineers. This section was tough for me to complete because I hadn't worked with many L6s. Not being able to ask most of my colleagues for feedback made me feel like I was at a disadvantage.
 
 After struggling with this, I eventually came to the realization nothing was stopping me from including quotes & testimonials from others outside of the peer feedback section.
 
@@ -40,7 +40,7 @@ After struggling with this, I eventually came to the realization nothing was sto
 
 I started reaching out to everyone I worked closely with: L5 engineers, product managers, designers, and engineer managers. And I asked them for a testimonial on their experience working with me. My promotion packet was scattered with quotes from my peers in varying roles, adding lots of colors and boasting collaboration.
 
-As an added benefit, personally reaching out for feedback allowed me to have more control over the process. The official feedback had to be solicited by my manager through a Google Forms survey, and sometimes, this results in unengaging or irrelevant feedback. Reaching out directly created opportunities to follow up for details/examples.
+As an added benefit, personally reaching out for feedback allowed me to have more control over the process. The official feedback was collected by my manager through a Google Forms survey, and sometimes, it resulted in unengaging or irrelevant feedback. Reaching out directly created opportunities to follow up for details & examples.
 
 <div class="clear-both"></div>
 
@@ -85,9 +85,9 @@ As a result, my conversations and contributions became preserved, discoverable, 
 
 I started to broaden my target audience in my writing and paid extra attention to spelling, grammar, and formatting. Whenever possible, I would add links, screenshots, and context.
 
-To write more inclusively, I adopted a great tip to think of the tools used by non-English speakers and people with disabilities: Are your sentences simple enough for Google Translate? Can your spelling and punctuation be dictated by a screen reader?
+To write more inclusively, I adopted a great tip to think of the tools used by non-English speakers and people with disabilities: _Are your sentences simple enough for Google Translate? Can your spelling and punctuation be dictated by a screen reader?_
 
-I also generally avoid slang or niche references (eg. jokes) as they can confuse outside participants.
+I also generally avoid slang or niche references (e.g. jokes) as they can confuse outside participants.
 
 These practices helped my writing become more accessible and easier to read. And as a bonus, my contributions looked credible and started to get referenced by others.
 
@@ -95,23 +95,19 @@ These practices helped my writing become more accessible and easier to read. And
 
 I started to adopt templates and structure to my writing to make them easier to skim.
 
-For general writing, I adopted the [Pyramid Principle](https://medium.com/lessons-from-mckinsey/the-pyramid-principle-f0885dd3c5c7)—a technique to get my point across faster.
+For general writing, I adopted the [Pyramid Principle](https://medium.com/lessons-from-mckinsey/the-pyramid-principle-f0885dd3c5c7)—a writing structure to start with the point, followed by 3 reasonings.
 
-For commit messages, I adopted [Conventional Commits](https://www.conventionalcommits.org/)—a convention for creating an explicit commit history.
+For commit messages, I adopted [Conventional Commits](https://www.conventionalcommits.org/)—a simple template for commit messages so they can be easily skimmed and parsed by programs.
 
-For pull requests, I fill out "Problem", "Changes", and optionally "Other info".
+For pull requests, I fill out sections "Problem", "Changes", and optionally "Other info".
 
-As a result, the documentation I wrote was not only faster to read but also faster to write.
+As a result, the documentation I wrote was not only faster to read but also faster to write because I was filling out a template.
 
 <img src="./documentation-habits.svg" class="w-1/2 mx-auto my-8">
 
 ## Parting thoughts
 
-These tips helped me get the most out of my work to showcase in my promotion packet.
-
-Interestingly, I also found them to have a real impact on me as an engineer. They helped me communicate better, collaborate more, and expand my reach.
-
-After all, the engineering ladder is supposed to reflect your competence as an impactful engineer.
+My promotion packet was by no means perfect but I'm very proud of how it helped me grow as an IC. These skills helped me communicate better, collaborate more, and expand my reach. After all, the engineering ladder is supposed to reflect your competence as an impactful engineer.
 
 I hope you find these tips helpful to your growth as well.
 
