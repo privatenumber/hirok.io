@@ -1,8 +1,12 @@
 <script setup lang="ts">
+let animating = $ref(false); // eslint-disable-line no-undef
+
 const resetAnimation = ({ target }: PointerEvent) => {
-	if (!target) {
+	if (!target || animating) {
 		return;
 	}
+
+	animating = true;
 
 	const element = target as HTMLDivElement;
 	element.style.animation = 'none';
@@ -11,16 +15,25 @@ const resetAnimation = ({ target }: PointerEvent) => {
 	element.offsetHeight; // trigger reflow
 	element.style.animation = '';
 };
+
+const animationDone = () => {
+	animating = false;
+};
 </script>
 
 <template>
-	<div @pointerenter="resetAnimation">
+	<div
+		@pointerenter="resetAnimation"
+		@animationend="animationDone"
+	>
 		<slot />
 	</div>
 </template>
 
 <style scoped>
 div {
+	/* Disable tap-to-zoom on iOS */
+	@apply touch-manipulation;
 	animation: wiggle 500ms ease-in 1 normal forwards;
 }
 
