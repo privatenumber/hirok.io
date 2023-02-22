@@ -18,7 +18,7 @@
 		"*.{js,ts,vue,md}": "eslint"
 	},
 	"devDependencies": {
-		"@iconify/json": "^2.1.87",
+		"@iconify/json": "^2.2.25",
 		"@pvtnbr/eslint-config": "^0.33.0",
 		"@sindresorhus/slugify": "^2.1.0",
 		"@types/markdown-it-link-attributes": "^3.0.1",
