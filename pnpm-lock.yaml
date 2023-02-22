@@ -1,9 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@iconify/json': ^2.2.25
+  '@iconify/json': ^2.2.26
   '@pvtnbr/eslint-config': ^0.33.0
-  '@sindresorhus/slugify': ^2.1.0
+  '@sindresorhus/slugify': ^2.2.0
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/node': ^18.14.0
   '@types/nprogress': ^0.2.0
@@ -41,9 +41,9 @@ specifiers:
   vue-router: ^4.1.3
 
 devDependencies:
-  '@iconify/json': 2.2.25
+  '@iconify/json': 2.2.26
   '@pvtnbr/eslint-config': 0.33.0_r4nhl7oghl6mgx4ukbxrwoekle
-  '@sindresorhus/slugify': 2.1.0
+  '@sindresorhus/slugify': 2.2.0
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/node': 18.14.0
   '@types/nprogress': 0.2.0
@@ -241,8 +241,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@iconify/json/2.2.25:
-    resolution: {integrity: sha512-mkuLLGyg7LhvIUlKXTQrag0Y38/6pnIp6vT48nmiKBTvqU8C+sRG+UzOuzWW0Hw6B3pqMlK8VvZ5Iktie4h6tA==}
+  /@iconify/json/2.2.26:
+    resolution: {integrity: sha512-ATRMh64npEpb/ZGDHwNugZfXxy8m7MdH3MZHJPOBO39oEnNZg93jhglqGZnbDjPNffTFET+JUlImF3CXF2QE3w==}
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.0
@@ -398,20 +398,19 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sindresorhus/slugify/2.1.0:
-    resolution: {integrity: sha512-gU3Gdm/V167BmUwIn8APHZ3SeeRVRUSOdXxnt7Q/JkUHLXaaTA/prYmoRumwsSitJZWUDYMzDWdWgrOdvE8IRQ==}
+  /@sindresorhus/slugify/2.2.0:
+    resolution: {integrity: sha512-9Vybc/qX8Kj6pxJaapjkFbiUJPk7MAkCh/GFCxIBnnsuYCFPIXKvnLidG8xlepht3i24L5XemUmGtrJ3UWrl6w==}
     engines: {node: '>=12'}
     dependencies:
-      '@sindresorhus/transliterate': 1.5.0
+      '@sindresorhus/transliterate': 1.6.0
       escape-string-regexp: 5.0.0
     dev: true
 
-  /@sindresorhus/transliterate/1.5.0:
-    resolution: {integrity: sha512-/sfSkoNelLq5riqNRp5uBjHIKBi1MWZk9ubRT1WiBQuTfmDf7BeQkph2DJzRB83QagMPHk2VDjuvpy0VuwyzdA==}
+  /@sindresorhus/transliterate/1.6.0:
+    resolution: {integrity: sha512-doH1gimEu3A46VX6aVxpHTeHrytJAG6HgdxntYnCFiIFHEM/ZGpG8KiZGBChchjQmG0XFIBL552kBTjVcMZXwQ==}
     engines: {node: '>=12'}
     dependencies:
       escape-string-regexp: 5.0.0
-      lodash.deburr: 4.1.0
     dev: true
 
   /@tootallnate/once/2.0.0:
@@ -3626,10 +3625,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       p-locate: 5.0.0
-    dev: true
-
-  /lodash.deburr/4.1.0:
-    resolution: {integrity: sha1-3bG7s+8HRYwBd7oH3hRCLLAz/5s=}
     dev: true
 
   /lodash.merge/4.6.2:
