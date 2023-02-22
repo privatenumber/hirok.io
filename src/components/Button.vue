@@ -77,7 +77,7 @@ button {
 .secondary {
 	@apply
 		border-2
-		color-sky-600
+		border-sky-600
 		hover:bg-sky-600/15;
 }
 
