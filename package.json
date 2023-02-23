@@ -5,7 +5,7 @@
 	"scripts": {
 		"prepare": "simple-git-hooks",
 		"lint": "npm run lint:js; npm run lint:css",
-		"lint:js": "eslint . --cache",
+		"lint:js": "eslint --cache .",
 		"lint:css": "stylelint './src/**/*.{css,vue}' --cache",
 		"dev": "vite --open --port 3000",
 		"build": "vite-ssg build",
@@ -15,7 +15,7 @@
 		"pre-commit": "pnpm lint-staged"
 	},
 	"lint-staged": {
-		"*.{js,ts,vue,md}": "eslint"
+		"*.{js,ts,vue,md}": "pnpm lint"
 	},
 	"devDependencies": {
 		"@iconify/json": "^2.2.26",
