@@ -31,6 +31,6 @@ jobs:
       run: |
         git config user.name 'Hiroki Osame'
         git config user.email 'hiroki.osame@gmail.com'
-        git add data
+        git add src/data
         git commit -m 'chore: update npm data'
         git push

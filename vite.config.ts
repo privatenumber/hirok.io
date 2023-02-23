@@ -56,7 +56,6 @@ export default defineConfig({
 				'vue',
 				'md',
 			],
-			pagesDir: 'pages',
 			extendRoute(route) {
 				const routeFilePath = path.join(__dirname, route.component);
 

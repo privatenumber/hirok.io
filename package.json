@@ -15,10 +15,8 @@
 		"pre-commit": "pnpm lint-staged"
 	},
 	"lint-staged": {
-		"*.{js,ts,vue,md}": [
-			"pnpm lint:js",
-			"pnpm lint:css"
-		]
+		"*.{js,ts,vue,md}": "pnpm lint:js",
+		"*.{css,vue}": "pnpm lint:css"
 	},
 	"devDependencies": {
 		"@iconify/json": "^2.2.26",

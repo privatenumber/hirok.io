@@ -26,7 +26,7 @@ import { search, downloads } from '@nodesecure/npm-registry-sdk';
 	npmPackages.sort((a, b) => a.name.localeCompare(b.name));
 
 	await fs.writeFile(
-		'./data/npm-packages.json',
-		JSON.stringify(npmPackages, null, '\t'),
+		'./src/data/npm-packages.json',
+		`${JSON.stringify(npmPackages, null, '\t')}\n`,
 	);
 })();
