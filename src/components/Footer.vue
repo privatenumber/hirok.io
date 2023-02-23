@@ -1,10 +1,14 @@
+<script setup lang="ts">
+const year = new Date().getFullYear();
+</script>
+
 <template>
 	<footer>
 		<a
 			href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
 			title="Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
 		>
-			© 2022
+			© {{ year }}
 		</a>
 	</footer>
 </template>
