@@ -34,6 +34,7 @@ const animationDone = () => {
 div {
 	/* Disable tap-to-zoom on iOS */
 	@apply touch-manipulation;
+
 	animation: wiggle 500ms ease-in 1 normal forwards;
 }
 
