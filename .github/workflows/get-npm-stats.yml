@@ -1,0 +1,36 @@
+name: Get npm stats
+on:
+  schedule:
+    - cron: '0 0 * * MON'
+
+jobs:
+  crawl:
+    name: Get npm stats
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version-file: '.nvmrc'
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 7
+        run_install: true
+
+    - name: Get npm stats
+      run: pnpm tsx scripts/get-npm-stats.ts
+
+    - name: Commit
+      run: |
+        git config user.name 'Hiroki Osame'
+        git config user.email 'hiroki.osame@gmail.com'
+        git add data
+        git commit -m 'chore: update npm data'
+        git push
