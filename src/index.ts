@@ -28,20 +28,24 @@ export const createApp = ViteSSG(
 				NProgress.start();
 			});
 
+			const microanalytics = 'pa' in window;
+
 			router.afterEach((from, to) => {
 				NProgress.done();
 
-				pa?.track({
-					name: 'navigation',
-					value: JSON.stringify({
-						from: from.fullPath,
-						to: to.fullPath,
-					}),
-				});
+				if (microanalytics) {
+					pa.track({
+						name: 'navigation',
+						value: JSON.stringify({
+							from: from.fullPath,
+							to: to.fullPath,
+						}),
+					});
+				}
 			});
 
 			window.addEventListener('click', (event) => {
-				if (!pa || !event.target) {
+				if (!microanalytics || !event.target) {
 					return;
 				}
 
