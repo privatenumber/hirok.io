@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Popper from 'vue3-popper';
 import humanNumber from 'human-number';
 
 const props = defineProps({
@@ -27,6 +28,7 @@ const props = defineProps({
 });
 
 const npmUrl = computed(() => `https://www.npmjs.com/package/${props.name}`);
+const searchLink = computed(() => `https://github.com/search?type=code&q=path%3A%2Fpackage.json%24%2F+%22%5C%22${props.name}%5C%22%3A%22`);
 const prettyDownloads = computed(
 	() => humanNumber(
 		props.downloads,
@@ -85,23 +87,49 @@ const lastPublishedRelative = computed(() => {
 				>
 					{{ name }}
 				</ExternalLink>
-				<ExternalLink
-					v-if="repository"
-					:href="repository"
-					class="
-						ml-2
-						text-lg
-						align-middle
-						color-black
-						dark:color-white
-						transition-opacity
-						opacity-50
-						hover:opacity-90
-					"
-					title="Go to GitHub repository"
+				<Popper
+					hover
+					content="GitHub repository"
 				>
-					<icon-mdi-github-box class="inline-block" />
-				</ExternalLink>
+					<ExternalLink
+						v-if="repository"
+						:href="repository"
+						class="
+							ml-2
+							text-lg
+							align-middle
+							color-black
+							dark:color-white
+							transition-opacity
+							opacity-50
+							hover:opacity-90
+						"
+						title="GitHub repository"
+					>
+						<icon-mdi-github-box class="inline-block" />
+					</ExternalLink>
+				</Popper>
+				<Popper
+					hover
+					content="Find projects that use this package"
+				>
+					<ExternalLink
+						:href="searchLink"
+						class="
+							ml-2
+							text-lg
+							align-middle
+							color-black
+							dark:color-white
+							transition-opacity
+							opacity-50
+							hover:opacity-90
+						"
+						title="Find projects that use this package"
+					>
+						<icon-tabler-viewfinder class="inline-block" />
+					</ExternalLink>
+				</Popper>
 			</div>
 			<div class="text-sm mt-2">
 				{{ description }}

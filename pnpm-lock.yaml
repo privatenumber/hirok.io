@@ -45,6 +45,7 @@ specifiers:
   vite-ssg-sitemap: ^0.4.3
   vue: ^3.2.47
   vue-router: ^4.1.6
+  vue3-popper: ^1.5.0
 
 devDependencies:
   '@iconify/json': 2.2.26
@@ -91,6 +92,7 @@ devDependencies:
   vite-ssg-sitemap: 0.4.3
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
+  vue3-popper: 1.5.0_vue@3.2.47
 
 packages:
 
@@ -994,6 +996,10 @@ packages:
 
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
+    dev: true
+
+  /@popperjs/core/2.11.6:
+    resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
     dev: true
 
   /@pvtnbr/eslint-config/0.33.0_7kw3g6rralp5ps6mg3uyzz6azm:
@@ -2166,6 +2172,10 @@ packages:
       abab: 2.0.6
       whatwg-mimetype: 3.0.0
       whatwg-url: 11.0.0
+    dev: true
+
+  /debounce/1.2.1:
+    resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
     dev: true
 
   /debug/3.2.7:
@@ -6327,6 +6337,17 @@ packages:
       '@vue/runtime-dom': 3.2.47
       '@vue/server-renderer': 3.2.47_vue@3.2.47
       '@vue/shared': 3.2.47
+    dev: true
+
+  /vue3-popper/1.5.0_vue@3.2.47:
+    resolution: {integrity: sha512-xaEnx90YBnlSg5G2yWqm2DHWHg+DB99UVRp4VsyTF0QLXyHrqSuE1Xo5+sG0AQq/lBcrGMlk5NU5xE2MDLKViw==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      vue: ^3.2.20
+    dependencies:
+      '@popperjs/core': 2.11.6
+      debounce: 1.2.1
+      vue: 3.2.47
     dev: true
 
   /w3c-xmlserializer/4.0.0:

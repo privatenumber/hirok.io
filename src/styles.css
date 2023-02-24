@@ -237,3 +237,16 @@ summary {
 	cursor: pointer;
 	font-weight: 600;
 }
+
+.popper {
+	font-size: 14px;
+}
+
+:root {
+	--popper-theme-background-color: #333;
+	--popper-theme-background-color-hover: #333;
+	--popper-theme-text-color: #fff;
+	--popper-theme-border-radius: 4px;
+	--popper-theme-padding: 4px 8px;
+	--popper-theme-box-shadow: 0 6px 30px -6px rgb(0 0 0 / 25%);
+}
