@@ -7,10 +7,15 @@ import { search, downloads } from '@nodesecure/npm-registry-sdk';
 		size: 250,
 	});
 
-	const npmPackages = await Promise.all(
+	let downloadsStart: string; let
+		downloadsEnd: string;
+	const packages = await Promise.all(
 		results.objects.map(
 			async ({ package: npmPackage }) => {
 				const downloadCount = await downloads(npmPackage.name, 'last-month');
+
+				downloadsStart = downloadCount.start;
+				downloadsEnd = downloadCount.end;
 
 				return {
 					name: npmPackage.name,
@@ -24,8 +29,17 @@ import { search, downloads } from '@nodesecure/npm-registry-sdk';
 		),
 	);
 
-	npmPackages.sort((a, b) => a.name.localeCompare(b.name));
+	packages.sort((a, b) => a.name.localeCompare(b.name));
 
+	const npmPackages = {
+		packages,
+		fetched: results.time,
+		totalDownloads: packages.reduce((total, p) => total + p.downloads, 0),
+		downloadsRange: {
+			start: downloadsStart!,
+			end: downloadsEnd!,
+		},
+	};
 	await fs.writeFile(
 		'./src/data/npm-packages.json',
 		`${JSON.stringify(npmPackages, null, '\t')}\n`,
