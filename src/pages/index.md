@@ -26,7 +26,7 @@ I'm a software engineer specializing in JavaScript & TypeScript.
 
 I have a passion for improving developer experience (_DX_) to help engineers be more productive.
 
-I love working on Open Souce and I currently maintain <router-link to="/projects">70+ projects</router-link>. Last month, my packages were downloaded [{{ npmDownloads }} times](/projects).
+I love working on Open Souce and making tools for the everyone to use. Last month, my packages were downloaded <router-link to="/projects">{{ npmDownloads }} times</router-link>.
 
 I live in Tokyo 🗼 and work at [Square](https://squareup.com/) as a frontend engineer.
 
