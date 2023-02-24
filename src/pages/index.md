@@ -5,7 +5,7 @@ heading: ''
 <WiggleAnimation class="ml-auto w-40 h-40 sm:w-45 sm:h-45 mt-3 sm:mt-6 -mb-5 sm:-mb-12 mr-2">
 	<img
 		alt="Hiroki's portrait"
-		src="/profile-square.png"
+		src="/profile-square.webp"
 		class="rounded-md shadow-sm shadow-gray-900/70"
 	>
 </WiggleAnimation>
