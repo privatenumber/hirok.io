@@ -89,9 +89,15 @@ nav {
 .title {
 	@apply
 		font-medium
-		text-lg;
+		text-lg
+		transition-transform;
 
 	font-family: Lexend, sans-serif;
+}
+
+.title:active {
+	@apply
+		scale-95;
 }
 
 .nav-links {
