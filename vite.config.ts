@@ -23,6 +23,11 @@ import generateSitemap from 'vite-ssg-sitemap';
 import 'vite-ssg'; // For `ssgOptions` types
 
 export default defineConfig({
+	resolve: {
+		alias: {
+			'@': path.resolve(__dirname, 'src'),
+		},
+	},
 	css: {
 		modules: {
 			localsConvention: 'camelCaseOnly',
