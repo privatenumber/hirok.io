@@ -46,9 +46,6 @@ specifiers:
   vue: ^3.2.47
   vue-router: ^4.1.6
 
-dependencies:
-  human-number: 2.0.1
-
 devDependencies:
   '@iconify/json': 2.2.26
   '@nodesecure/npm-registry-sdk': 1.5.1
@@ -68,6 +65,7 @@ devDependencies:
   eslint: 8.34.0
   feed: 4.2.2
   gray-matter: 4.0.3
+  human-number: 2.0.1
   lint-staged: 13.1.2
   markdown-it: 13.0.1
   markdown-it-anchor: 8.6.7_markdown-it@13.0.1
@@ -3553,7 +3551,7 @@ packages:
     engines: {node: '>= 8'}
     dependencies:
       round-to: 5.0.0
-    dev: false
+    dev: true
 
   /human-signals/2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
@@ -5165,7 +5163,7 @@ packages:
   /round-to/5.0.0:
     resolution: {integrity: sha512-i4+Ntwmo5kY7UWWFSDEVN3RjT2PX1FqkZ9iCcAO3sKML3Ady9NgsjM/HLdYKUAnrxK4IlSvXzpBMDvMHZQALRQ==}
     engines: {node: '>=10'}
-    dev: false
+    dev: true
 
   /run-parallel/1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
