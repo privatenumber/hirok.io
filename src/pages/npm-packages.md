@@ -14,8 +14,6 @@ My Open Source projects are published as packages on [npm](https://www.npmjs.com
 
 Last month, my packages had a total of **{{ totalDownloads.toLocaleString() }}** downloads.
 
-<table>
-  <template v-for="npmPackage in npmPackages">
-    <NpmPackage v-bind="npmPackage" />
-  </template>
-</table>
+<template v-for="npmPackage in npmPackages">
+	<NpmPackage v-bind="npmPackage" />
+</template>

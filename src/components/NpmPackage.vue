@@ -8,7 +8,6 @@ const props = defineProps({
 	},
 	description: {
 		type: String,
-		required: true,
 	},
 	repository: {
 		type: String,
@@ -72,13 +71,13 @@ const lastPublishedRelative = computed(() => {
 	const unit = units.find(interval => interval.seconds < secondsAgo)!;
 	const time = Math.round(secondsAgo / unit.seconds);
 
-	return `${time} ${unit.label}${time > 1 ? 's' : ''} ago`;
+	return `${time} ${unit.label}${time > 1 ? 's' : ''}`;
 });
 </script>
 
 <template>
-	<tr>
-		<td>
+	<div class="flex justify-between flex-wrap md:flex-nowrap my-14">
+		<div class="basis-full">
 			<div>
 				<ExternalLink
 					:href="npmUrl"
@@ -107,30 +106,32 @@ const lastPublishedRelative = computed(() => {
 			<div class="text-sm mt-2">
 				{{ description }}
 			</div>
-		</td>
-		<td class="text-center p-x-4 w-20%">
-			<div class="text-xl">
-				v{{ latestVersion }}
+		</div>
+		<div class="flex basis-full md:basis-1/2 gap-2 px-2 justify-between mt-4 md:mt-0">
+			<div class=" text-center">
+				<div class="text-xl">
+					v{{ latestVersion }}
+				</div>
+				<div
+					class="text-xs mt-1 opacity-75"
+					:title="lastPublishDate"
+				>
+					Published <span class="whitespace-nowrap">{{ lastPublishedRelative }}</span> ago
+				</div>
 			</div>
-			<div
-				class="text-xs mt-1 opacity-75"
-				:title="lastPublishDate"
-			>
-				Published {{ lastPublishedRelative }}
+			<div class=" text-center">
+				<div
+					class="text-xl"
+					:title="downloads.toLocaleString()"
+				>
+					{{ prettyDownloads }}
+				</div>
+				<div class="text-xs mt-1 opacity-75">
+					downloads last month
+				</div>
 			</div>
-		</td>
-		<td class="text-center w-15%">
-			<div
-				class="text-xl"
-				:title="downloads.toLocaleString()"
-			>
-				{{ prettyDownloads }}
-			</div>
-			<div class="text-xs mt-1 opacity-75">
-				downloads last month
-			</div>
-		</td>
-	</tr>
+		</div>
+	</div>
 </template>
 
 <style scoped>
