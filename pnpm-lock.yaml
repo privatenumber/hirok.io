@@ -5,6 +5,7 @@ specifiers:
   '@nodesecure/npm-registry-sdk': ^1.5.1
   '@pvtnbr/eslint-config': ^0.33.0
   '@sindresorhus/slugify': ^2.2.0
+  '@types/human-number': ^1.0.0
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/node': ^18.14.0
   '@types/nprogress': ^0.2.0
@@ -18,6 +19,7 @@ specifiers:
   eslint: ^8.34.0
   feed: ^4.2.2
   gray-matter: ^4.0.3
+  human-number: ^2.0.1
   lint-staged: ^13.1.2
   markdown-it: ^13.0.1
   markdown-it-anchor: ^8.6.7
@@ -44,11 +46,15 @@ specifiers:
   vue: ^3.2.47
   vue-router: ^4.1.6
 
+dependencies:
+  human-number: 2.0.1
+
 devDependencies:
   '@iconify/json': 2.2.26
   '@nodesecure/npm-registry-sdk': 1.5.1
   '@pvtnbr/eslint-config': 0.33.0_7kw3g6rralp5ps6mg3uyzz6azm
   '@sindresorhus/slugify': 2.2.0
+  '@types/human-number': 1.0.0
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/node': 18.14.0
   '@types/nprogress': 0.2.0
@@ -1062,6 +1068,10 @@ packages:
 
   /@types/estree/1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
+    dev: true
+
+  /@types/human-number/1.0.0:
+    resolution: {integrity: sha512-biJCQC3j7xJ7nB1ewe431U06Y+ss6pGNQrxloxRo5pb08Ve/klO0EDJdd67dGZLzs5HNSvuYjRLUi+sRdCiyuA==}
     dev: true
 
   /@types/json-schema/7.0.11:
@@ -3538,6 +3548,13 @@ packages:
       - supports-color
     dev: true
 
+  /human-number/2.0.1:
+    resolution: {integrity: sha512-0ibkHNHQXLiI4Exiu9Cm2EhnrBOSEt4kHRxbKhmM41rbjCIlfd35PdNptEbHohnKkqmJt6q+Z9X8A1WcDCeuNg==}
+    engines: {node: '>= 8'}
+    dependencies:
+      round-to: 5.0.0
+    dev: false
+
   /human-signals/2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
@@ -5144,6 +5161,11 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /round-to/5.0.0:
+    resolution: {integrity: sha512-i4+Ntwmo5kY7UWWFSDEVN3RjT2PX1FqkZ9iCcAO3sKML3Ady9NgsjM/HLdYKUAnrxK4IlSvXzpBMDvMHZQALRQ==}
+    engines: {node: '>=10'}
+    dev: false
 
   /run-parallel/1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}

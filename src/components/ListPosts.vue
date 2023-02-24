@@ -92,7 +92,7 @@ const postRoutes = useRouter().getRoutes()
 
 .post-link:hover .title {
 	@apply
-		color-sky-600;
+		color-sky-500;
 }
 
 </style>

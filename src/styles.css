@@ -61,7 +61,7 @@ a.header-anchor:focus {
 
 a {
 	@apply
-		color-sky-600
+		color-sky-500
 		hover:underline;
 }
 
@@ -213,16 +213,6 @@ table {
 	margin: 1em 0;
 	border-collapse: collapse;
 	overflow-x: auto;
-}
-
-tr:nth-child(2n) {
-	background: red;
-}
-
-td,
-th {
-	border: 1px solid red;
-	padding: 0.625em 1em;
 }
 
 abbr {

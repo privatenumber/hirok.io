@@ -2,630 +2,720 @@
 	{
 		"name": "@esbuild-kit/cjs-loader",
 		"repository": "https://github.com/esbuild-kit/cjs-loader",
-		"date": "2023-02-06T02:11:28.356Z",
+		"description": "Node.js loader for compiling ESM & TypeScript modules to CommonJS",
+		"lastPublishDate": "2023-02-06T02:11:28.356Z",
 		"latestVersion": "2.4.2",
 		"downloads": 1058982
 	},
 	{
 		"name": "@esbuild-kit/core-utils",
 		"repository": "https://github.com/esbuild-kit/core-utils",
-		"date": "2023-02-09T00:08:19.371Z",
+		"description": "Core utility functions used by [@esbuild-kit/cjs-loader](https://github.com/esbuild-kit/cjs-loader) and [@esbuild-kit/esm-loader](https://github.com/esbuild-kit/esm-loader).",
+		"lastPublishDate": "2023-02-09T00:08:19.371Z",
 		"latestVersion": "3.1.0",
 		"downloads": 1122548
 	},
 	{
 		"name": "@esbuild-kit/esm-loader",
 		"repository": "https://github.com/esbuild-kit/esm-loader",
-		"date": "2023-02-06T02:11:45.049Z",
+		"description": "Node.js loader for compiling TypeScript modules to ESM",
+		"lastPublishDate": "2023-02-06T02:11:45.049Z",
 		"latestVersion": "2.5.5",
 		"downloads": 1074775
 	},
 	{
 		"name": "@pvtnbr/eslint-config",
 		"repository": "https://github.com/privatenumber/eslint-config",
-		"date": "2022-10-31T02:21:43.977Z",
+		"lastPublishDate": "2022-10-31T02:21:43.977Z",
 		"latestVersion": "0.33.0",
 		"downloads": 1005
 	},
 	{
 		"name": "@pvtnbr/eslint-config-base",
 		"repository": "https://github.com/privatenumber/eslint-config",
-		"date": "2021-08-26T03:56:50.749Z",
+		"description": "Base ESLint configuration",
+		"lastPublishDate": "2021-08-26T03:56:50.749Z",
 		"latestVersion": "1.0.0",
 		"downloads": 219
 	},
 	{
 		"name": "@pvtnbr/eslint-config-react",
 		"repository": "https://github.com/privatenumber/eslint-config",
-		"date": "2021-08-26T04:26:00.310Z",
+		"description": "React ESLint configuration",
+		"lastPublishDate": "2021-08-26T04:26:00.310Z",
 		"latestVersion": "1.0.1",
 		"downloads": 29
 	},
 	{
 		"name": "@pvtnbr/eslint-config-typescript",
 		"repository": "https://github.com/privatenumber/eslint-config",
-		"date": "2021-08-26T04:24:52.739Z",
+		"description": "TypeScript ESLint configuration",
+		"lastPublishDate": "2021-08-26T04:24:52.739Z",
 		"latestVersion": "1.0.1",
 		"downloads": 86
 	},
 	{
 		"name": "@pvtnbr/eslint-config-vue",
 		"repository": "https://github.com/privatenumber/eslint-config",
-		"date": "2021-08-26T04:25:05.785Z",
+		"description": "Vue ESLint configuration",
+		"lastPublishDate": "2021-08-26T04:25:05.785Z",
 		"latestVersion": "1.0.0",
 		"downloads": 69
 	},
 	{
 		"name": "@pvtnbr/pkg-size",
 		"repository": "https://github.com/privatenumber/pkg-size",
-		"date": "2020-12-03T23:25:46.067Z",
+		"description": "Measure the size of your npm package distribution",
+		"lastPublishDate": "2020-12-03T23:25:46.067Z",
 		"latestVersion": "1.2.0",
 		"downloads": 11
 	},
 	{
 		"name": "@square/orbit-icons",
-		"date": "2020-01-22T05:37:47.225Z",
+		"description": "Orbit Icons",
+		"lastPublishDate": "2020-01-22T05:37:47.225Z",
 		"latestVersion": "1.0.0-rc.1",
 		"downloads": 11
 	},
 	{
 		"name": "alias-imports",
 		"repository": "https://github.com/privatenumber/alias-imports",
-		"date": "2022-12-15T03:46:51.208Z",
+		"description": "Create bare aliases in the imports map in package.json",
+		"lastPublishDate": "2022-12-15T03:46:51.208Z",
 		"latestVersion": "1.0.0",
 		"downloads": 17
 	},
 	{
 		"name": "bfs",
-		"date": "2020-12-28T22:17:56.692Z",
+		"description": "Find the path of a value in a complex JavaScript object graph/tree",
+		"lastPublishDate": "2020-12-28T22:17:56.692Z",
 		"latestVersion": "1.0.0",
 		"downloads": 42
 	},
 	{
 		"name": "browser-reload-plugin",
 		"repository": "https://github.com/privatenumber/browser-reload-plugin",
-		"date": "2020-10-19T18:15:54.195Z",
+		"description": "Automatically reload the browser page on every Webpack watch build",
+		"lastPublishDate": "2020-10-19T18:15:54.195Z",
 		"latestVersion": "1.1.0",
 		"downloads": 5176
 	},
 	{
 		"name": "build-this-branch",
 		"repository": "https://github.com/privatenumber/build-this-branch",
-		"date": "2022-08-06T05:05:14.200Z",
+		"description": "Script to automate creating built branches",
+		"lastPublishDate": "2022-08-06T05:05:14.200Z",
 		"latestVersion": "1.6.1",
 		"downloads": 24
 	},
 	{
 		"name": "chainset",
 		"repository": "https://github.com/privatenumber/chainset",
-		"date": "2022-07-21T21:21:46.277Z",
+		"description": "Set object values using property chaining syntax",
+		"lastPublishDate": "2022-07-21T21:21:46.277Z",
 		"latestVersion": "1.0.0",
 		"downloads": 176
 	},
 	{
 		"name": "ci",
-		"date": "2022-05-03T23:02:55.621Z",
+		"description": "Run npm ci using the appropriate Node package manager (npm, yarn, pnpm)",
+		"lastPublishDate": "2022-05-03T23:02:55.621Z",
 		"latestVersion": "2.2.0",
 		"downloads": 371855
 	},
 	{
 		"name": "clean-pkg-json",
 		"repository": "https://github.com/privatenumber/clean-pkg-json",
-		"date": "2022-08-25T05:15:22.125Z",
+		"description": "Clean package.json before publish by removing unnecessary properties",
+		"lastPublishDate": "2022-08-25T05:15:22.125Z",
 		"latestVersion": "1.2.0",
 		"downloads": 1195
 	},
 	{
 		"name": "cleye",
 		"repository": "https://github.com/privatenumber/cleye",
-		"date": "2023-02-16T10:27:07.659Z",
+		"description": "The intuitive CLI development tool",
+		"lastPublishDate": "2023-02-16T10:27:07.659Z",
 		"latestVersion": "1.3.2",
 		"downloads": 52504
 	},
 	{
 		"name": "cli-simple-table",
 		"repository": "https://github.com/privatenumber/cli-simple-table",
-		"date": "2021-09-23T02:25:35.921Z",
+		"description": "CLI simple table",
+		"lastPublishDate": "2021-09-23T02:25:35.921Z",
 		"latestVersion": "1.1.1",
 		"downloads": 34640
 	},
 	{
 		"name": "code-inject-loader",
 		"repository": "https://github.com/privatenumber/code-inject-loader",
-		"date": "2020-04-02T21:37:04.165Z",
+		"description": "Inject code to certain files",
+		"lastPublishDate": "2020-04-02T21:37:04.165Z",
 		"latestVersion": "0.0.1",
 		"downloads": 10
 	},
 	{
 		"name": "comment-mark",
 		"repository": "https://github.com/privatenumber/comment-mark",
-		"date": "2021-11-09T05:44:06.662Z",
+		"description": "Interpolate strings with HTML comment markers",
+		"lastPublishDate": "2021-11-09T05:44:06.662Z",
 		"latestVersion": "1.1.1",
 		"downloads": 331
 	},
 	{
 		"name": "dbgr",
 		"repository": "https://github.com/privatenumber/dbgr",
-		"date": "2021-04-18T09:09:30.511Z",
+		"description": "Lightweight debugger for Node.js",
+		"lastPublishDate": "2021-04-18T09:09:30.511Z",
 		"latestVersion": "1.0.0",
 		"downloads": 32
 	},
 	{
 		"name": "deps",
 		"repository": "https://github.com/privatenumber/deps",
-		"date": "2020-06-20T06:47:46.619Z",
+		"description": "Node dependency usage checker using V8 Coverage",
+		"lastPublishDate": "2020-06-20T06:47:46.619Z",
 		"latestVersion": "1.0.0",
 		"downloads": 34556
 	},
 	{
 		"name": "entry-file-plugin",
 		"repository": "https://github.com/privatenumber/entry-file-plugin",
-		"date": "2021-08-10T23:08:47.802Z",
+		"description": "Create an entry-file in your Webpack build to consolidate entry-point exports",
+		"lastPublishDate": "2021-08-10T23:08:47.802Z",
 		"latestVersion": "1.1.0",
 		"downloads": 10
 	},
 	{
 		"name": "esbuild-loader",
 		"repository": "https://github.com/esbuild-kit/esbuild-loader",
-		"date": "2023-02-14T02:05:41.709Z",
+		"description": "⚡️ Speed up your Webpack build with esbuild",
+		"lastPublishDate": "2023-02-14T02:05:41.709Z",
 		"latestVersion": "3.0.1",
 		"downloads": 3336382
 	},
 	{
 		"name": "fs-fixture",
 		"repository": "https://github.com/privatenumber/fs-fixture",
-		"date": "2022-12-05T14:51:06.682Z",
+		"description": "Easily create test fixtures at a temporary file-system path",
+		"lastPublishDate": "2022-12-05T14:51:06.682Z",
 		"latestVersion": "1.2.0",
 		"downloads": 702
 	},
 	{
 		"name": "fs-require",
 		"repository": "https://github.com/privatenumber/fs-require",
-		"date": "2022-12-05T14:36:42.900Z",
+		"description": "Create a require() function from any file-system",
+		"lastPublishDate": "2022-12-05T14:36:42.900Z",
 		"latestVersion": "1.6.0",
 		"downloads": 15441
 	},
 	{
 		"name": "fs.promises.exists",
 		"repository": "https://github.com/privatenumber/fs.promises.exists",
-		"date": "2023-01-26T15:31:14.205Z",
+		"description": "The missing fs.promises.exists()",
+		"lastPublishDate": "2023-01-26T15:31:14.205Z",
 		"latestVersion": "1.1.4",
 		"downloads": 1934
 	},
 	{
 		"name": "generate-batched-pr-manifest",
 		"repository": "https://github.com/privatenumber/generate-batched-pr-manifest",
-		"date": "2023-02-14T05:11:10.453Z",
+		"description": "Generate a manifest of all the PRs included in a batched PR",
+		"lastPublishDate": "2023-02-14T05:11:10.453Z",
 		"latestVersion": "1.1.0",
 		"downloads": 139
 	},
 	{
 		"name": "get-tsconfig",
 		"repository": "https://github.com/privatenumber/get-tsconfig",
-		"date": "2023-02-06T00:48:28.829Z",
+		"description": "Find and parse the tsconfig.json file from a directory path",
+		"lastPublishDate": "2023-02-06T00:48:28.829Z",
 		"latestVersion": "4.4.0",
 		"downloads": 11187028
 	},
 	{
 		"name": "gh-emojis",
 		"repository": "https://github.com/privatenumber/gh-emojis",
-		"date": "2020-12-30T23:49:49.929Z",
+		"description": "Use GitHub emojis from their API as an npm package",
+		"lastPublishDate": "2020-12-30T23:49:49.929Z",
 		"latestVersion": "1.0.0",
 		"downloads": 24
 	},
 	{
 		"name": "git-detect-case-change",
 		"repository": "https://github.com/privatenumber/git-detect-case-change",
-		"date": "2022-01-06T03:02:46.078Z",
+		"description": "Detect file name case changes in a Git repository",
+		"lastPublishDate": "2022-01-06T03:02:46.078Z",
 		"latestVersion": "1.0.0",
 		"downloads": 17
 	},
 	{
 		"name": "git-publish",
 		"repository": "https://github.com/privatenumber/git-publish",
-		"date": "2023-01-29T07:09:45.395Z",
+		"description": "Publish your npm package to a GitHub repository branch",
+		"lastPublishDate": "2023-01-29T07:09:45.395Z",
 		"latestVersion": "1.0.2",
 		"downloads": 98
 	},
 	{
 		"name": "git-squash-branch",
 		"repository": "https://github.com/privatenumber/git-squash-branch",
-		"date": "2023-02-13T13:50:01.932Z",
+		"description": "Squash commits in a Git branch or pull-request",
+		"lastPublishDate": "2023-02-13T13:50:01.932Z",
 		"latestVersion": "1.4.0",
 		"downloads": 461
 	},
 	{
 		"name": "github-cdn",
-		"date": "2020-05-04T06:33:10.227Z",
+		"description": "🛰 Github CDN Server",
+		"lastPublishDate": "2020-05-04T06:33:10.227Z",
 		"latestVersion": "1.0.0-rc.3",
 		"downloads": 11
 	},
 	{
 		"name": "grunt-importjs",
 		"repository": "https://github.com/hirokiosame/grunt-importjs",
-		"date": "2014-04-23T17:11:09.194Z",
+		"description": "Grunt plugin for import.",
+		"lastPublishDate": "2014-04-23T17:11:09.194Z",
 		"latestVersion": "0.1.1",
 		"downloads": 13
 	},
 	{
 		"name": "htmlvue-loader",
 		"repository": "https://github.com/privatenumber/htmlvue-loader",
-		"date": "2020-07-02T00:29:57.188Z",
+		"description": "Webpack loader for compiling HTML to Vue",
+		"lastPublishDate": "2020-07-02T00:29:57.188Z",
 		"latestVersion": "1.1.1",
 		"downloads": 67
 	},
 	{
 		"name": "i-peers",
 		"repository": "https://github.com/privatenumber/i-peers",
-		"date": "2020-10-13T01:10:22.710Z",
+		"description": "⚡️ Instantly install peer-dependencies: npx i-peers",
+		"lastPublishDate": "2020-10-13T01:10:22.710Z",
 		"latestVersion": "1.1.2",
 		"downloads": 36
 	},
 	{
 		"name": "ink-task-list",
 		"repository": "https://github.com/privatenumber/ink-task-list",
-		"date": "2022-05-01T01:10:59.895Z",
+		"description": "Render a Task list in Ink",
+		"lastPublishDate": "2022-05-01T01:10:59.895Z",
 		"latestVersion": "2.0.0",
 		"downloads": 8306
 	},
 	{
 		"name": "ink-task-runner",
 		"repository": "https://github.com/privatenumber/ink-task-runner",
-		"date": "2021-05-05T23:48:42.310Z",
+		"description": "Render a Task runner in Ink",
+		"lastPublishDate": "2021-05-05T23:48:42.310Z",
 		"latestVersion": "1.0.0",
 		"downloads": 12
 	},
 	{
 		"name": "instant-mocha",
 		"repository": "https://github.com/privatenumber/instant-mocha",
-		"date": "2022-11-21T06:01:45.925Z",
+		"description": "Build tests with Webpack and run them with Mocha in one command",
+		"lastPublishDate": "2022-11-21T06:01:45.925Z",
 		"latestVersion": "1.5.0",
 		"downloads": 8702
 	},
 	{
 		"name": "is-fs-case-sensitive",
-		"date": "2023-02-05T08:55:56.684Z",
+		"description": "The missing is-fs-case-sensitive()",
+		"lastPublishDate": "2023-02-05T08:55:56.684Z",
 		"latestVersion": "1.0.0",
 		"downloads": 107
 	},
 	{
 		"name": "link",
 		"repository": "https://github.com/privatenumber/link",
-		"date": "2022-07-20T20:30:10.487Z",
+		"description": "A better npm link",
+		"lastPublishDate": "2022-07-20T20:30:10.487Z",
 		"latestVersion": "1.5.1",
 		"downloads": 22361
 	},
 	{
 		"name": "manten",
 		"repository": "https://github.com/privatenumber/manten",
-		"date": "2023-02-20T03:20:35.479Z",
+		"description": "満点 - Lightweight testing library for Node.js",
+		"lastPublishDate": "2023-02-20T03:20:35.479Z",
 		"latestVersion": "0.7.0",
 		"downloads": 610
 	},
 	{
 		"name": "markdown-it-add-attrs",
-		"date": "2020-04-08T06:49:12.454Z",
+		"description": "markdown-it plugin to add attributes to all rendered elements",
+		"lastPublishDate": "2020-04-08T06:49:12.454Z",
 		"latestVersion": "0.0.1",
 		"downloads": 8
 	},
 	{
 		"name": "mempack",
 		"repository": "https://github.com/privatenumber/mempack",
-		"date": "2020-04-15T08:00:54.123Z",
+		"description": "Run a Webpack build in-memory",
+		"lastPublishDate": "2020-04-15T08:00:54.123Z",
 		"latestVersion": "1.0.0",
 		"downloads": 4
 	},
 	{
 		"name": "npm-multi-publish",
 		"repository": "https://github.com/privatenumber/npm-multi-publish",
-		"date": "2021-09-02T07:32:26.828Z",
+		"description": "Publish an npm package to multiple registries",
+		"lastPublishDate": "2021-09-02T07:32:26.828Z",
 		"latestVersion": "2.2.0",
 		"downloads": 157
 	},
 	{
 		"name": "npm-registry-sync",
 		"repository": "https://github.com/privatenumber/npm-registry-sync",
-		"date": "2022-07-22T22:21:28.972Z",
+		"description": "A daemon that syncs npm registries",
+		"lastPublishDate": "2022-07-22T22:21:28.972Z",
 		"latestVersion": "1.1.0",
 		"downloads": 10
 	},
 	{
 		"name": "pkg-size",
 		"repository": "https://github.com/privatenumber/pkg-size",
-		"date": "2021-08-06T01:58:12.090Z",
+		"description": "Measure the size of your npm package distribution",
+		"lastPublishDate": "2021-08-06T01:58:12.090Z",
 		"latestVersion": "2.4.0",
 		"downloads": 1636
 	},
 	{
 		"name": "pkgroll",
 		"repository": "https://github.com/privatenumber/pkgroll",
-		"date": "2023-02-13T05:44:29.184Z",
+		"description": "Zero-config rollup bundler",
+		"lastPublishDate": "2023-02-13T05:44:29.184Z",
 		"latestVersion": "1.9.0",
 		"downloads": 2518
 	},
 	{
 		"name": "playwright-start",
 		"repository": "https://github.com/privatenumber/playwright-start",
-		"date": "2021-04-24T00:56:26.763Z",
+		"description": "Start a Playwright browser server via CLI",
+		"lastPublishDate": "2021-04-24T00:56:26.763Z",
 		"latestVersion": "1.1.0",
 		"downloads": 268
 	},
 	{
 		"name": "postcss-custom-properties-transformer",
 		"repository": "https://github.com/privatenumber/postcss-custom-properties-transformer",
-		"date": "2020-10-05T07:56:30.285Z",
+		"description": "PostCSS plugin to transform custom properties",
+		"lastPublishDate": "2020-10-05T07:56:30.285Z",
 		"latestVersion": "1.0.0",
 		"downloads": 27
 	},
 	{
 		"name": "postcss-import-alias",
 		"repository": "https://github.com/privatenumber/postcss-import-alias",
-		"date": "2020-04-08T06:24:05.731Z",
+		"description": "Use aliases in your PostCSS import statements",
+		"lastPublishDate": "2020-04-08T06:24:05.731Z",
 		"latestVersion": "0.0.1",
 		"downloads": 488
 	},
 	{
 		"name": "prerelease-checks",
 		"repository": "https://github.com/privatenumber/prerelease-checks",
-		"date": "2021-03-31T08:54:58.548Z",
+		"description": "Run essential pre-release checks before releasing an npm package",
+		"lastPublishDate": "2021-03-31T08:54:58.548Z",
 		"latestVersion": "1.0.0",
 		"downloads": 20
 	},
 	{
 		"name": "reactive-json-file",
 		"repository": "https://github.com/privatenumber/reactive-json-file",
-		"date": "2022-01-28T12:38:34.001Z",
+		"description": "Reactively sync JSON mutations to disk",
+		"lastPublishDate": "2022-01-28T12:38:34.001Z",
 		"latestVersion": "2.0.0",
 		"downloads": 208
 	},
 	{
 		"name": "resolve-pkg-maps",
 		"repository": "https://github.com/privatenumber/resolve-pkg-maps",
-		"date": "2022-12-14T15:37:46.218Z",
+		"description": "Resolve package.json exports & imports maps",
+		"lastPublishDate": "2022-12-14T15:37:46.218Z",
 		"latestVersion": "1.0.0",
 		"downloads": 55
 	},
 	{
 		"name": "rollup-plugin-aggregate-exports",
 		"repository": "https://github.com/privatenumber/rollup-plugin-aggregate-exports",
-		"date": "2020-12-27T20:51:05.075Z",
+		"description": "Emit an entry file to aggregate exports across multiple files",
+		"lastPublishDate": "2020-12-27T20:51:05.075Z",
 		"latestVersion": "1.0.0",
 		"downloads": 29
 	},
 	{
 		"name": "rollup-plugin-htmlvue",
 		"repository": "https://github.com/privatenumber/rollup-plugin-htmlvue",
-		"date": "2021-12-01T04:50:58.926Z",
+		"description": "Rollup plugin for transforming HTML/XML to Vue SFC",
+		"lastPublishDate": "2021-12-01T04:50:58.926Z",
 		"latestVersion": "1.2.0",
 		"downloads": 45
 	},
 	{
 		"name": "snap-tweet",
 		"repository": "https://github.com/privatenumber/snap-tweet",
-		"date": "2022-08-23T20:21:14.684Z",
+		"description": "Snap a screenshot of a tweet",
+		"lastPublishDate": "2022-08-23T20:21:14.684Z",
 		"latestVersion": "1.2.3",
 		"downloads": 175
 	},
 	{
 		"name": "svg-browser-export",
-		"date": "2021-09-09T03:44:44.641Z",
+		"description": "Export SVG to PNG, JPEG, or WEBP in the browser",
+		"lastPublishDate": "2021-09-09T03:44:44.641Z",
 		"latestVersion": "1.0.0",
 		"downloads": 48
 	},
 	{
 		"name": "svg-trace-loader",
 		"repository": "https://github.com/privatenumber/svg-trace-loader",
-		"date": "2020-03-21T07:31:58.588Z",
+		"description": "Webpack loader to trace SVGs",
+		"lastPublishDate": "2020-03-21T07:31:58.588Z",
 		"latestVersion": "1.1.2",
 		"downloads": 15
 	},
 	{
 		"name": "systemjs-unpkg",
 		"repository": "https://github.com/privatenumber/systemjs-unpkg",
-		"date": "2020-11-20T09:02:33.190Z",
+		"description": "Auto-resolve bare specifiers in SystemJS using UNPKG",
+		"lastPublishDate": "2020-11-20T09:02:33.190Z",
 		"latestVersion": "1.0.1",
 		"downloads": 36
 	},
 	{
 		"name": "tasuku",
 		"repository": "https://github.com/privatenumber/tasuku",
-		"date": "2023-01-29T00:30:52.680Z",
+		"description": "タスク — The minimal task runner",
+		"lastPublishDate": "2023-01-29T00:30:52.680Z",
 		"latestVersion": "2.0.1",
 		"downloads": 14524
 	},
 	{
 		"name": "terminal-columns",
 		"repository": "https://github.com/privatenumber/terminal-columns",
-		"date": "2022-01-24T16:17:04.590Z",
+		"description": "Render a readable table in the terminal",
+		"lastPublishDate": "2022-01-24T16:17:04.590Z",
 		"latestVersion": "1.4.1",
 		"downloads": 52172
 	},
 	{
 		"name": "tsx",
 		"repository": "https://github.com/esbuild-kit/tsx",
-		"date": "2023-02-06T03:27:03.297Z",
+		"description": "TypeScript Execute (tsx): Node.js enhanced with esbuild to run TypeScript & ESM files",
+		"lastPublishDate": "2023-02-06T03:27:03.297Z",
 		"latestVersion": "3.12.3",
 		"downloads": 1046199
 	},
 	{
 		"name": "type-flag",
 		"repository": "https://github.com/privatenumber/type-flag",
-		"date": "2022-11-09T11:29:24.362Z",
+		"description": "Typed command-line arguments parser",
+		"lastPublishDate": "2022-11-09T11:29:24.362Z",
 		"latestVersion": "3.0.0",
 		"downloads": 52258
 	},
 	{
 		"name": "vue-2-3",
 		"repository": "https://github.com/privatenumber/vue-2-3",
-		"date": "2020-11-30T05:53:49.681Z",
+		"description": "Interop Vue 2 components in Vue 3 apps and vice versa",
+		"lastPublishDate": "2020-11-30T05:53:49.681Z",
 		"latestVersion": "1.0.0",
 		"downloads": 271
 	},
 	{
 		"name": "vue-ast-utils",
 		"repository": "https://github.com/privatenumber/vue-ast-utils",
-		"date": "2021-04-09T20:15:50.816Z",
+		"description": "Utils for working with Vue 3 AST nodes",
+		"lastPublishDate": "2021-04-09T20:15:50.816Z",
 		"latestVersion": "1.0.1",
 		"downloads": 71
 	},
 	{
 		"name": "vue-demo-collapse",
 		"repository": "https://github.com/privatenumber/vue-demo-collapse",
-		"date": "2020-04-08T04:40:42.104Z",
+		"description": "Vue component that shows a demo and a \"Show Code\" button to expand source code",
+		"lastPublishDate": "2020-04-08T04:40:42.104Z",
 		"latestVersion": "0.0.2",
 		"downloads": 55
 	},
 	{
 		"name": "vue-dom-hints",
 		"repository": "https://github.com/privatenumber/vue-dom-hints",
-		"date": "2023-02-20T13:22:34.221Z",
+		"description": "Vue devtool for DOM hints",
+		"lastPublishDate": "2023-02-20T13:22:34.221Z",
 		"latestVersion": "1.3.0",
 		"downloads": 201
 	},
 	{
 		"name": "vue-feather-icon-set",
 		"repository": "https://github.com/privatenumber/vue-feather-icon-set",
-		"date": "2020-08-10T07:18:08.961Z",
+		"description": "Optimized Feather icon set for Vue",
+		"lastPublishDate": "2020-08-10T07:18:08.961Z",
 		"latestVersion": "0.1.1",
 		"downloads": 34
 	},
 	{
 		"name": "vue-frag",
 		"repository": "https://github.com/privatenumber/vue-frag",
-		"date": "2022-11-17T15:57:08.732Z",
+		"description": "Vue 2 fragment directive to return multiple root elements",
+		"lastPublishDate": "2022-11-17T15:57:08.732Z",
 		"latestVersion": "1.4.2",
 		"downloads": 106381
 	},
 	{
 		"name": "vue-frag-plugin",
 		"repository": "https://github.com/privatenumber/vue-frag-plugin",
-		"date": "2021-11-02T01:12:32.585Z",
+		"description": "Webpack/Rollup/Vite plugin to use multiple root nodes in Vue 2",
+		"lastPublishDate": "2021-11-02T01:12:32.585Z",
 		"latestVersion": "1.0.0",
 		"downloads": 222
 	},
 	{
 		"name": "vue-grep",
 		"repository": "https://github.com/privatenumber/vue-grep",
-		"date": "2021-04-12T02:37:37.816Z",
+		"description": "Grep your Vue.js codebase with query selector",
+		"lastPublishDate": "2021-04-12T02:37:37.816Z",
 		"latestVersion": "1.0.0",
 		"downloads": 36
 	},
 	{
 		"name": "vue-import-loader",
 		"repository": "https://github.com/privatenumber/vue-import-loader",
-		"date": "2020-05-25T04:50:31.216Z",
+		"description": "Webpack loader to automatically detect & import used components",
+		"lastPublishDate": "2020-05-25T04:50:31.216Z",
 		"latestVersion": "0.0.1",
 		"downloads": 44
 	},
 	{
 		"name": "vue-just-ssr",
 		"repository": "https://github.com/privatenumber/vue-just-ssr",
-		"date": "2021-08-04T04:27:49.678Z",
+		"description": "Instantly add a Vue SSR dev-env to your repo",
+		"lastPublishDate": "2021-08-04T04:27:49.678Z",
 		"latestVersion": "1.0.0",
 		"downloads": 55
 	},
 	{
 		"name": "vue-proxi",
 		"repository": "https://github.com/privatenumber/vue-proxi",
-		"date": "2020-04-22T06:16:41.011Z",
+		"description": "Tiny proxy component for Vue.js",
+		"lastPublishDate": "2020-04-22T06:16:41.011Z",
 		"latestVersion": "1.0.0",
 		"downloads": 80
 	},
 	{
 		"name": "vue-pseudo-window",
 		"repository": "https://github.com/privatenumber/vue-pseudo-window",
-		"date": "2021-02-08T06:02:40.102Z",
+		"description": "🖼 Declaratively interface window/document/body in your Vue template",
+		"lastPublishDate": "2021-02-08T06:02:40.102Z",
 		"latestVersion": "1.0.0",
 		"downloads": 173
 	},
 	{
 		"name": "vue-split-view",
 		"repository": "https://github.com/privatenumber/vue-split-view",
-		"date": "2020-12-30T04:05:34.827Z",
+		"description": "Create a resizable split-view to partition the UI",
+		"lastPublishDate": "2020-12-30T04:05:34.827Z",
 		"latestVersion": "1.0.0",
 		"downloads": 319
 	},
 	{
 		"name": "vue-subslot",
 		"repository": "https://github.com/privatenumber/vue-subslot",
-		"date": "2020-11-04T05:07:35.169Z",
+		"description": "💍 Pick 'n choose what you want from a slot passed into your Vue component",
+		"lastPublishDate": "2020-11-04T05:07:35.169Z",
 		"latestVersion": "1.2.3",
 		"downloads": 93
 	},
 	{
 		"name": "vue-svg-icon-set",
 		"repository": "https://github.com/privatenumber/vue-svg-icon-set",
-		"date": "2020-10-08T00:54:17.488Z",
+		"description": "Create an optimized Vue SVG icon set",
+		"lastPublishDate": "2020-10-08T00:54:17.488Z",
 		"latestVersion": "0.2.0",
 		"downloads": 44
 	},
 	{
 		"name": "vue-v",
 		"repository": "https://github.com/privatenumber/vue-v",
-		"date": "2020-11-21T08:09:16.564Z",
+		"description": "Render Vue vNodes from the template",
+		"lastPublishDate": "2020-11-21T08:09:16.564Z",
 		"latestVersion": "1.2.0",
 		"downloads": 721
 	},
 	{
 		"name": "vue-vnode-syringe",
 		"repository": "https://github.com/privatenumber/vue-vnode-syringe",
-		"date": "2020-11-01T05:42:42.961Z",
+		"description": "Add attributes and event-listeners to <slot> content",
+		"lastPublishDate": "2020-11-01T05:42:42.961Z",
 		"latestVersion": "3.1.1",
 		"downloads": 205
 	},
 	{
 		"name": "vue-voodoo-doll",
 		"repository": "https://github.com/privatenumber/vue-voodoo-doll",
-		"date": "2020-04-17T06:33:54.502Z",
+		"description": "👻 Vue Child component proxy",
+		"lastPublishDate": "2020-04-17T06:33:54.502Z",
 		"latestVersion": "1.0.0-beta.0",
 		"downloads": 10
 	},
 	{
 		"name": "web-diff",
 		"repository": "https://github.com/privatenumber/web-diff",
-		"date": "2019-07-23T05:56:41.858Z",
+		"description": "Visually diff two URLs",
+		"lastPublishDate": "2019-07-23T05:56:41.858Z",
 		"latestVersion": "1.0.0",
 		"downloads": 9
 	},
 	{
 		"name": "webpack-analyze-duplication-plugin",
 		"repository": "https://github.com/privatenumber/webpack-analyze-duplication-plugin",
-		"date": "2021-01-30T16:41:19.176Z",
+		"description": "Detect duplicated modules in your Webpack build",
+		"lastPublishDate": "2021-01-30T16:41:19.176Z",
 		"latestVersion": "1.1.0",
 		"downloads": 18
 	},
 	{
 		"name": "webpack-dependency-size",
 		"repository": "https://github.com/privatenumber/webpack-dependency-size",
-		"date": "2021-02-02T22:54:59.646Z",
+		"description": "Track/evaluate dependencies bundled into a Webpack build",
+		"lastPublishDate": "2021-02-02T22:54:59.646Z",
 		"latestVersion": "0.1.0",
 		"downloads": 33
 	},
 	{
 		"name": "webpack-distsize",
 		"repository": "https://github.com/privatenumber/webpack-distsize",
-		"date": "2021-01-31T00:39:40.930Z",
+		"description": "Track Webpack output size via version control",
+		"lastPublishDate": "2021-01-31T00:39:40.930Z",
 		"latestVersion": "1.0.0",
 		"downloads": 135
 	},
 	{
 		"name": "webpack-json-access-optimizer",
 		"repository": "https://github.com/privatenumber/webpack-json-access-optimizer",
-		"date": "2021-10-20T22:06:10.100Z",
+		"description": "Tree-shake and minify JSON modules in Webpack",
+		"lastPublishDate": "2021-10-20T22:06:10.100Z",
 		"latestVersion": "1.1.0",
 		"downloads": 374
 	},
 	{
 		"name": "webpack-localize-assets-plugin",
 		"repository": "https://github.com/privatenumber/webpack-localize-assets-plugin",
-		"date": "2023-01-24T17:03:15.464Z",
+		"description": "Localize your Webpack bundle with multiple locales",
+		"lastPublishDate": "2023-01-24T17:03:15.464Z",
 		"latestVersion": "1.5.4",
 		"downloads": 19835
 	},
 	{
 		"name": "webpack-test-utils",
 		"repository": "https://github.com/privatenumber/webpack-test-utils",
-		"date": "2022-12-15T07:58:10.758Z",
+		"description": "Utility functions to test Webpack plugins/loaders",
+		"lastPublishDate": "2022-12-15T07:58:10.758Z",
 		"latestVersion": "2.1.0",
 		"downloads": 502
 	}

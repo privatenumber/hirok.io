@@ -15,7 +15,8 @@ import { search, downloads } from '@nodesecure/npm-registry-sdk';
 				return {
 					name: npmPackage.name,
 					repository: npmPackage.links.repository,
-					date: npmPackage.date,
+					description: npmPackage.description,
+					lastPublishDate: npmPackage.date,
 					latestVersion: npmPackage.version,
 					downloads: downloadCount.downloads,
 				};

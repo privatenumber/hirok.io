@@ -15,14 +15,15 @@
 		"pre-commit": "pnpm lint-staged"
 	},
 	"lint-staged": {
-		"*.{js,ts,vue,md}": "pnpm lint:js",
-		"*.{css,vue}": "pnpm lint:css"
+		"*.{js,ts,vue,md}": "eslint --cache",
+		"*.{css,vue}": "stylelint --cache"
 	},
 	"devDependencies": {
 		"@iconify/json": "^2.2.26",
 		"@nodesecure/npm-registry-sdk": "^1.5.1",
 		"@pvtnbr/eslint-config": "^0.33.0",
 		"@sindresorhus/slugify": "^2.2.0",
+		"@types/human-number": "^1.0.0",
 		"@types/markdown-it-link-attributes": "^3.0.1",
 		"@types/node": "^18.14.0",
 		"@types/nprogress": "^0.2.0",
@@ -36,6 +37,7 @@
 		"eslint": "^8.34.0",
 		"feed": "^4.2.2",
 		"gray-matter": "^4.0.3",
+		"human-number": "^2.0.1",
 		"lint-staged": "^13.1.2",
 		"markdown-it": "^13.0.1",
 		"markdown-it-anchor": "^8.6.7",
