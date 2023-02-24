@@ -2,6 +2,16 @@
 heading: ''
 ---
 
+<script setup lang="ts">
+import { getUnit, numberUnits } from '@/utils/get-unit';
+import npmPackages from '@/data/npm-packages.json';
+
+const npmDownloads = computed(() => {
+	const [value, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);
+	return `${value} ${unit}`;
+});
+</script>
+
 <WiggleAnimation class="ml-auto w-40 h-40 sm:w-45 sm:h-45 mt-3 sm:mt-6 -mb-5 sm:-mb-12 mr-2">
 	<img
 		alt="Hiroki's portrait"
@@ -16,7 +26,7 @@ I'm a software engineer specializing in JavaScript & TypeScript.
 
 I have a passion for improving developer experience (_DX_) to help engineers be more productive.
 
-I love working on Open Souce and I currently maintain <router-link to="/projects">70+ projects</router-link>.
+I love working on Open Souce and I currently maintain <router-link to="/projects">70+ projects</router-link>. Last month, my packages were downloaded [{{ npmDownloads }} times](/projects).
 
 I live in Tokyo 🗼 and work at [Square](https://squareup.com/) as a frontend engineer.
 

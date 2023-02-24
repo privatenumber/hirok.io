@@ -16,7 +16,10 @@
 			"vite/client",
 			"vite-plugin-pages/client",
 		],
-		"jsx": "preserve"
+		"jsx": "preserve",
+		"paths": {
+			"@/*": ["./src/*"]
+		}
 	},
 	"include": [
 		"src",

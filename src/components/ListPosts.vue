@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter, type RouteRecordNormalized } from 'vue-router';
-import { formatDate } from '../utils/format-date';
+import { formatDate } from '@/utils/format-date';
 
 type Frontmatter = {
 	title?: string;

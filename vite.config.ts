@@ -108,6 +108,10 @@ export default defineConfig({
 		}),
 
 		autoImport({
+			include: [
+				/\.vue$/,
+				/\.md$/,
+			],
 			imports: [
 				'vue',
 				'vue-router',

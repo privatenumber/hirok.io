@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Popper from 'vue3-popper';
-import humanNumber from 'human-number';
+import { getUnit, timeUnits, shortNumberUnits } from '@/utils/get-unit';
 
 const props = defineProps({
 	name: {
@@ -30,50 +30,17 @@ const props = defineProps({
 const npmUrl = computed(() => `https://www.npmjs.com/package/${props.name}`);
 const searchLink = computed(() => `https://github.com/search?type=code&q=path%3A%2Fpackage.json%24%2F+%22%5C%22${props.name}%5C%22%3A%22`);
 const prettyDownloads = computed(
-	() => humanNumber(
-		props.downloads,
-		shortNumber => (
-			shortNumber % 1 === 0
-				? shortNumber.toString()
-				: shortNumber.toFixed(1)
-		),
-	),
+	() => {
+		const [value, unit] = getUnit(props.downloads, shortNumberUnits, 1)!;
+		return `${value % 1 === 0 ? value : value.toFixed(1)} ${unit ?? ''}`;
+	},
 );
-
-const units = [
-	{
-		label: 'year',
-		seconds: 60 * 60 * 24 * 365,
-	},
-	{
-		label: 'month',
-		seconds: 60 * 60 * 24 * 30,
-	},
-	{
-		label: 'day',
-		seconds: 60 * 60 * 24,
-	},
-	{
-		label: 'hour',
-		seconds: 60 * 60,
-	},
-	{
-		label: 'minute',
-		seconds: 60,
-	},
-	{
-		label: 'second',
-		seconds: 1,
-	},
-] as const;
 
 const lastPublishedRelative = computed(() => {
 	const publishDate = new Date(props.lastPublishDate);
 	const secondsAgo = Math.floor((Date.now() - publishDate.getTime()) / 1000);
-	const unit = units.find(interval => interval.seconds < secondsAgo)!;
-	const time = Math.round(secondsAgo / unit.seconds);
-
-	return `${time} ${unit.label}${time > 1 ? 's' : ''}`;
+	const [value, unit] = getUnit(secondsAgo, timeUnits, 0)!;
+	return `${value} ${unit}${value > 1 ? 's' : ''}`;
 });
 </script>
 

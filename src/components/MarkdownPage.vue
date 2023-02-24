@@ -1,5 +1,5 @@
-<script setup lang='ts'>
-import { formatDate } from '../utils/format-date';
+<script setup lang="ts">
+import { formatDate } from '@/utils/format-date';
 
 const props = defineProps<{
 	frontmatter: {
@@ -30,7 +30,7 @@ onMounted(() => {
 	const lastPage = pageHeight - windowHeight;
 
 	// Add scroll margin to anchors on last page
-	article.querySelectorAll('[id]').forEach((anchor) => {
+	article!.querySelectorAll('[id]').forEach((anchor) => {
 		if ((anchor as HTMLElement).offsetTop > lastPage) {
 			anchor.classList.add(scrollMarginTop);
 		}
