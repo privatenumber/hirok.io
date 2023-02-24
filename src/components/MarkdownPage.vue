@@ -110,7 +110,7 @@ if (props.frontmatter.subtitle) {
 		<div class="flex gap-8 items-center justify-center">
 			<router-link to="/">
 				<img
-					src="/profile-square.png"
+					src="/profile-square.webp"
 					class="min-w-30 h-30 rounded-50"
 				>
 			</router-link>
