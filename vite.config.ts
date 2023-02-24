@@ -133,7 +133,9 @@ export default defineConfig({
 
 		icons(),
 	],
-
+	ssr: {
+		noExternal: ['vue3-popper'],
+	},
 	ssgOptions: {
 		script: 'async',
 		formatting: 'minify',
