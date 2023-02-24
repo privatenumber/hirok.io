@@ -18,7 +18,7 @@ I have a passion for improving developer experience (_DX_) to help engineers be 
 
 I love working on Open Souce and I currently maintain <router-link to="/projects">70+ projects</router-link>.
 
-I currently live in Tokyo 🗼, and work at [Square](https://squareup.com/) as a frontend engineer.
+I live in Tokyo 🗼 and work at [Square](https://squareup.com/) as a frontend engineer.
 
 <div class="m-t-8 sm:m-t-14 flex flex-wrap gap-2 sm:gap-4">
 
