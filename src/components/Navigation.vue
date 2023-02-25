@@ -86,13 +86,21 @@ nav {
 		justify-between;
 }
 
+@font-face {
+	font-family: Lexend;
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/Lexend.woff2') format('woff2');
+}
+
 .title {
 	@apply
 		font-medium
 		text-lg
 		transition-transform;
 
-	font-family: Lexend, sans-serif;
+	font-family: Lexend, Helvetica, sans-serif;
 }
 
 .title:active {
