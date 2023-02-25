@@ -6,10 +6,8 @@ heading: ''
 import { getUnit, numberUnits } from '@/utils/get-unit';
 import npmPackages from '@/data/npm-packages.json';
 
-const npmDownloads = computed(() => {
-	const [value, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);
-	return `${value} ${unit}`;
-});
+const [downloads, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);
+const npmDownloads = `${downloads} ${unit}`;
 </script>
 
 <WiggleAnimation class="ml-auto w-40 h-40 sm:w-45 sm:h-45 mt-3 sm:mt-6 -mb-5 sm:-mb-12 mr-2">

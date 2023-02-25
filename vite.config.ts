@@ -108,10 +108,6 @@ export default defineConfig({
 		}),
 
 		autoImport({
-			include: [
-				/\.vue$/,
-				/\.md$/,
-			],
 			imports: [
 				'vue',
 				'vue-router',
@@ -123,9 +119,8 @@ export default defineConfig({
 
 		components({
 			include: [
-				/\.vue$/,
-				/\.vue\?vue/,
-				/\.md$/,
+				/\.vue($|\?vue)/,
+				/\.md($|\?vue)/,
 			],
 			dts: 'src/@types/unplugin-vue-components.d.ts',
 			resolvers: [
