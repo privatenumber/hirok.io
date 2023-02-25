@@ -10,12 +10,14 @@ const [downloads, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);
 const npmDownloads = `${downloads} ${unit}`;
 </script>
 
-<WiggleAnimation class="ml-auto w-40 h-40 sm:w-45 sm:h-45 mt-3 sm:mt-6 -mb-5 sm:-mb-12 mr-2">
+<WiggleAnimation class="ml-auto w-160px h-160px sm:w-45 sm:h-45 mt-3 sm:mt-6 -mb-5 sm:-mb-12 mr-2">
 	<img
 		alt="Hiroki's portrait"
-		src="/profile-square.webp"
+		src="/hiroki.webp"
+		width="160"
+		height="160"
 		class="rounded-md shadow-sm shadow-gray-900/70"
-	>
+	/>
 </WiggleAnimation>
 
 <span class="text-xl font-medium">Hello,</span><h1 class="mt-2">I'm Hiroki.</h1>
