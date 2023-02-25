@@ -10,12 +10,24 @@ const [downloads, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);
 const npmDownloads = `${downloads} ${unit}`;
 </script>
 
-<WiggleAnimation class="ml-auto w-160px h-160px sm:w-45 sm:h-45 mt-3 sm:mt-6 -mb-5 sm:-mb-12 mr-2">
+<WiggleAnimation
+	class="
+		ml-auto
+		w-160px
+		h-160px
+		sm:w-180px
+		sm:h-180px
+		sm:mt-6
+		-mb-8
+		sm:-mb-12
+		mr-2
+	"
+>
 	<img
 		alt="Hiroki's portrait"
 		src="/hiroki.webp"
-		width="160"
-		height="160"
+		width="180"
+		height="180"
 		class="rounded-md shadow-sm shadow-gray-900/70"
 	/>
 </WiggleAnimation>
@@ -26,7 +38,7 @@ I'm a software engineer specializing in JavaScript & TypeScript.
 
 I have a passion for improving developer experience (_DX_) to help engineers be more productive.
 
-I love working on Open Souce and making tools for the anyone to use. Last month, my packages were downloaded <router-link to="/projects">{{ npmDownloads }} times</router-link>.
+My DX projects are open sourced and available for anyone to use. Last month, they were downloaded <router-link to="/projects">{{ npmDownloads }} times</router-link>.
 
 I live in Tokyo 🗼 and work at [Square](https://squareup.com/) as a frontend engineer.
 
