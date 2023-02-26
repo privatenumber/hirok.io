@@ -1,6 +1,28 @@
 import fs from 'fs/promises';
 import { search, downloads } from '@nodesecure/npm-registry-sdk';
 
+const getMonthFirstDay = () => {
+	const date = new Date();
+	date.setUTCHours(0);
+	date.setUTCMinutes(0);
+	date.setUTCSeconds(0);
+	date.setUTCMilliseconds(0);
+	date.setMonth(date.getMonth() - 1);
+	date.setDate(1);
+	return date;
+};
+
+const getIsoDate = (date: Date) => date.toISOString().split('T')[0];
+
+const getLastMonthRange = () => {
+	const start = getMonthFirstDay();
+	const end = new Date(start);
+	end.setMonth(end.getMonth() + 1);
+	end.setDate(0);
+
+	return `${getIsoDate(start)}:${getIsoDate(end)}`;
+};
+
 (async () => {
 	const results = await search({
 		text: 'author:hirokiosame',
@@ -9,10 +31,14 @@ import { search, downloads } from '@nodesecure/npm-registry-sdk';
 
 	let downloadsStart: string; let
 		downloadsEnd: string;
+
+	// eg. 2023-01-01:2023-01-31
+	const lastMonthRange = getLastMonthRange();
+
 	const packages = await Promise.all(
 		results.objects.map(
 			async ({ package: npmPackage }) => {
-				const downloadCount = await downloads(npmPackage.name, 'last-month');
+				const downloadCount = await downloads(npmPackage.name, lastMonthRange);
 
 				downloadsStart = downloadCount.start;
 				downloadsEnd = downloadCount.end;
