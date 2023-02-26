@@ -27,8 +27,13 @@ const props = defineProps({
 	},
 });
 
+if (!props.repository) {
+	console.warn(`No repository URL provided for ${props.name}`);
+}
+
 const npmUrl = computed(() => `https://www.npmjs.com/package/${props.name}`);
-const searchLink = computed(() => `https://github.com/search?type=code&q=path%3A%2Fpackage.json%24%2F+%22%5C%22${props.name}%5C%22%3A%22`);
+const repositoryUrl = computed(() => props.repository ?? `https://github.com/privatenumber/${props.name}`);
+const searchUrl = computed(() => `https://github.com/search?type=code&q=path%3A%2Fpackage.json%24%2F+%22%5C%22${props.name}%5C%22%3A%22`);
 const prettyDownloads = computed(
 	() => {
 		const [value, unit] = getUnit(props.downloads, shortNumberUnits, 1)!;
@@ -59,8 +64,7 @@ const lastPublishedRelative = computed(() => {
 					content="GitHub repository"
 				>
 					<ExternalLink
-						v-if="repository"
-						:href="repository"
+						:href="repositoryUrl"
 						class="
 							ml-2
 							text-lg
@@ -81,7 +85,7 @@ const lastPublishedRelative = computed(() => {
 					content="Find projects that use this package"
 				>
 					<ExternalLink
-						:href="searchLink"
+						:href="searchUrl"
 						class="
 							ml-2
 							text-lg

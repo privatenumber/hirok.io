@@ -8,7 +8,6 @@ import npmPackages from '@/data/npm-packages.json';
 
 const [downloads, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);
 const npmDownloads = `${downloads} ${unit}`;
-
 const downloadsPerSecond = Math.round(npmPackages.totalDownloads / 30 / 24 / 60 / 60);
 </script>
 
