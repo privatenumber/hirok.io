@@ -8,6 +8,8 @@ import npmPackages from '@/data/npm-packages.json';
 
 const [downloads, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);
 const npmDownloads = `${downloads} ${unit}`;
+
+const downloadsPerSecond = Math.round(npmPackages.totalDownloads / 30 / 24 / 60 / 60);
 </script>
 
 <WiggleAnimation
@@ -36,9 +38,9 @@ const npmDownloads = `${downloads} ${unit}`;
 
 I'm a software engineer specializing in JavaScript & TypeScript.
 
-I have a passion for improving developer experience (_DX_) to help engineers be more productive.
+I have a passion for helping engineers be more productive by improving developer experience (_DX_).
 
-My DX projects are open sourced and available for anyone to use. Last month, they were downloaded <router-link to="/projects">{{ npmDownloads }} times</router-link>.
+My <router-link to="/projects">_DX_ projects</router-link> are open sourced and available for anyone to use. Last month, they were downloaded <span class="whitespace-nowrap">_{{ npmDownloads }} times_</span> (~{{ downloadsPerSecond.toLocaleString() }} downloads/second).
 
 I live in Tokyo 🗼 and work at [Square](https://squareup.com/) as a frontend engineer.
 
