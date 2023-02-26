@@ -52,11 +52,11 @@ I live in Tokyo 🗼 and work at [Square](https://squareup.com/) as a frontend e
 </Button>
 
 <Button href="https://github.com/privatenumber" type="secondary" title="Link to my GitHub profile" class="flex-1 sm:flex-none">
-	<icon-mdi-github class="m-r-1" /> @privatenumber
+	<icon-mdi-github class="m-r-1" /> GitHub
 </Button>
 
 <Button href="https://twitter.com/privatenumbr" type="secondary" title="Link to my Twitter profile" class="flex-1 sm:flex-none">
-	<icon-mdi-twitter class="m-r-1" /> @privatenumbr
+	<icon-mdi-twitter class="m-r-1" /> Twitter
 </Button>
 
 <Button href="https://www.linkedin.com/in/hirokiosame/" type="secondary" title="Link to my LinkedIn profile" class="flex-1 sm:flex-none">

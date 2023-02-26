@@ -58,6 +58,7 @@ button {
 		p-x-4
 		rounded-lg
 		no-underline
+		hover:no-underline
 		transition-colors
 		duration-100
 		justify-center
@@ -78,7 +79,7 @@ button {
 	@apply
 		border-2
 		border-sky-600
-		hover:bg-sky-600/15;
+		hover:bg-sky-700/15;
 }
 
 .large {
