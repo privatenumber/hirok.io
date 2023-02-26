@@ -40,7 +40,7 @@ I'm a software engineer specializing in JavaScript & TypeScript.
 
 I have a passion for helping engineers be more productive by improving developer experience (_DX_).
 
-My <router-link to="/projects">_DX_ projects</router-link> are open sourced and available for anyone to use. Last month, they were downloaded <span class="whitespace-nowrap">_{{ npmDownloads }} times_</span> (~{{ downloadsPerSecond.toLocaleString() }} downloads/second).
+My <router-link to="/projects">_DX_ projects</router-link> are open-sourced and available for anyone to use. Last month, they were downloaded <span class="whitespace-nowrap">_{{ npmDownloads }} times_</span> (~{{ downloadsPerSecond.toLocaleString() }} downloads/second).
 
 I live in Tokyo 🗼 and work at [Square](https://squareup.com/) as a frontend engineer.
 
