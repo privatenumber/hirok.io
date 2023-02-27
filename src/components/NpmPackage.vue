@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Popper from 'vue3-popper';
 import { getUnit, timeUnits, shortNumberUnits } from '@/utils/get-unit';
 
 const props = defineProps({
@@ -59,10 +58,7 @@ const lastPublishedRelative = computed(() => {
 				>
 					{{ name }}
 				</ExternalLink>
-				<Popper
-					hover
-					content="GitHub repository"
-				>
+				<Popper tip="GitHub repository">
 					<ExternalLink
 						:href="repositoryUrl"
 						class="
@@ -80,10 +76,7 @@ const lastPublishedRelative = computed(() => {
 						<icon-mdi-github-box class="inline-block" />
 					</ExternalLink>
 				</Popper>
-				<Popper
-					hover
-					content="Find projects that use this package"
-				>
+				<Popper tip="Find projects that use this package">
 					<ExternalLink
 						:href="searchUrl"
 						class="
@@ -135,6 +128,8 @@ const lastPublishedRelative = computed(() => {
 
 <style scoped>
 td {
-	@apply p-y-8 align-top;
+	@apply
+		p-y-8
+		align-top;
 }
 </style>

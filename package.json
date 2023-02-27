@@ -21,6 +21,7 @@
 	"devDependencies": {
 		"@iconify/json": "^2.2.26",
 		"@nodesecure/npm-registry-sdk": "^1.5.1",
+		"@popperjs/core": "^2.11.6",
 		"@pvtnbr/eslint-config": "^0.33.0",
 		"@sindresorhus/slugify": "^2.2.0",
 		"@types/markdown-it-link-attributes": "^3.0.1",
@@ -60,8 +61,7 @@
 		"vite-ssg": "^0.22.1",
 		"vite-ssg-sitemap": "^0.4.3",
 		"vue": "^3.2.47",
-		"vue-router": "^4.1.6",
-		"vue3-popper": "^1.5.0"
+		"vue-router": "^4.1.6"
 	},
 	"eslintConfig": {
 		"extends": "@pvtnbr",

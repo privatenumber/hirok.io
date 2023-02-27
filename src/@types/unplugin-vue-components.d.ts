@@ -25,6 +25,7 @@ declare module '@vue/runtime-core' {
     MarkdownPage: typeof import('./../components/MarkdownPage.vue')['default']
     Navigation: typeof import('./../components/Navigation.vue')['default']
     NpmPackage: typeof import('./../components/NpmPackage.vue')['default']
+    Popper: typeof import('./../components/Popper.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TerminalWindow: typeof import('./../components/TerminalWindow.vue')['default']
