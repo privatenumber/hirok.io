@@ -40,7 +40,12 @@ const prettyDownloads = computed(
 	},
 );
 
-const lastPublishedRelative = computed(() => {
+const lastPublishDatePretty = computed(() => {
+	const publishDate = new Date(props.lastPublishDate);
+	return publishDate.toLocaleString();
+});
+
+const lastPublishRelative = computed(() => {
 	const publishDate = new Date(props.lastPublishDate);
 	const secondsAgo = Math.floor((Date.now() - publishDate.getTime()) / 1000);
 	const [value, unit] = getUnit(secondsAgo, timeUnits, 0)!;
@@ -104,23 +109,23 @@ const lastPublishedRelative = computed(() => {
 				<div class="text-xl">
 					v{{ latestVersion }}
 				</div>
-				<div
-					class="text-xs mt-1 opacity-75"
-					:title="lastPublishDate"
-				>
-					Published <span class="whitespace-nowrap">{{ lastPublishedRelative }}</span> ago
-				</div>
+				<Popper :tip="lastPublishDatePretty">
+					<div class="text-xs mt-1 opacity-75">
+						Published <span class="whitespace-nowrap">{{ lastPublishRelative }}</span> ago
+					</div>
+				</Popper>
 			</div>
-			<div class=" text-center">
-				<div
-					class="text-xl"
-					:title="downloads.toLocaleString()"
-				>
-					{{ prettyDownloads }}
-				</div>
-				<div class="text-xs mt-1 opacity-75">
-					downloads last month
-				</div>
+			<div class="text-center">
+				<Popper :tip="downloads.toLocaleString()">
+					<div>
+						<div class="text-xl">
+							{{ prettyDownloads }}
+						</div>
+						<div class="text-xs mt-1 opacity-75">
+							downloads last month
+						</div>
+					</div>
+				</Popper>
 			</div>
 		</div>
 	</div>

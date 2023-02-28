@@ -98,7 +98,8 @@ const hide = () => {
 		bg-dark-200
 		py-1
 		px-2
-		shadow;
+		shadow
+		z-1;
 }
 
 .arrow,
