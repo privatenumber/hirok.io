@@ -20,7 +20,10 @@ const getLastMonthRange = () => {
 	end.setMonth(end.getMonth() + 1);
 	end.setDate(0);
 
-	return `${getIsoDate(start)}:${getIsoDate(end)}`;
+	return [
+		getIsoDate(start),
+		getIsoDate(end),
+	] as [startDate: string, endDate: string];
 };
 
 (async () => {
@@ -29,19 +32,13 @@ const getLastMonthRange = () => {
 		size: 250,
 	});
 
-	let downloadsStart: string; let
-		downloadsEnd: string;
-
 	// eg. 2023-01-01:2023-01-31
 	const lastMonthRange = getLastMonthRange();
 
 	const packages = await Promise.all(
 		results.objects.map(
 			async ({ package: npmPackage }) => {
-				const downloadCount = await downloads(npmPackage.name, lastMonthRange);
-
-				downloadsStart = downloadCount.start;
-				downloadsEnd = downloadCount.end;
+				const downloadCount = await downloads(npmPackage.name, lastMonthRange.join(':'));
 
 				return {
 					name: npmPackage.name,
@@ -59,13 +56,11 @@ const getLastMonthRange = () => {
 
 	const npmPackages = {
 		packages,
-		fetched: results.time,
 		totalDownloads: packages.reduce((total, p) => total + p.downloads, 0),
-		downloadsRange: {
-			start: downloadsStart!,
-			end: downloadsEnd!,
-		},
+		totalDownloadsMonth: lastMonthRange[0],
+		fetched: results.time,
 	};
+
 	await fs.writeFile(
 		'./src/data/npm-packages.json',
 		`${JSON.stringify(npmPackages, null, '\t')}\n`,

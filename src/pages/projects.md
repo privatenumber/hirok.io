@@ -6,7 +6,11 @@ title: npm packages
 import { getUnit, numberUnits } from '@/utils/get-unit';
 import npmPackages from '@/data/npm-packages.json';
 
-const range = npmPackages.downloadsRange.start + ' ~ ' + npmPackages.downloadsRange.end;
+const range = new Date(npmPackages.totalDownloadsMonth).toLocaleDateString(undefined, {
+    month: 'long',
+    year: 'numeric',
+});
+
 const packagesSortedByPopularity = npmPackages.packages.slice().sort((a, b) => b.downloads - a.downloads);
 
 const [downloads, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);

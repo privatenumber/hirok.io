@@ -1,7 +1,7 @@
 name: Get npm stats
 on:
   schedule:
-    - cron: '0 0 * * MON'
+    - cron: '0 0 1 * *' # First day of the month
 
 jobs:
   crawl:

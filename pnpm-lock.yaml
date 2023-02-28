@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@iconify/json': ^2.2.26
-  '@nodesecure/npm-registry-sdk': ^1.5.1
+  '@nodesecure/npm-registry-sdk': ^1.5.2
   '@popperjs/core': ^2.11.6
   '@pvtnbr/eslint-config': ^0.33.0
   '@sindresorhus/slugify': ^2.2.0
@@ -47,7 +47,7 @@ specifiers:
 
 devDependencies:
   '@iconify/json': 2.2.26
-  '@nodesecure/npm-registry-sdk': 1.5.1
+  '@nodesecure/npm-registry-sdk': 1.5.2
   '@popperjs/core': 2.11.6
   '@pvtnbr/eslint-config': 0.33.0_7kw3g6rralp5ps6mg3uyzz6azm
   '@sindresorhus/slugify': 2.2.0
@@ -918,8 +918,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@nodesecure/npm-registry-sdk/1.5.1:
-    resolution: {integrity: sha512-Y/DK8hzClc8JzEff96l3tl6tWHPSbHG2tgt3wwxoA7ubrLB2RMC73Bzpe9aHCqhYac1FSAd3ZfpsocaD3sSCnw==}
+  /@nodesecure/npm-registry-sdk/1.5.2:
+    resolution: {integrity: sha512-A0r5ot1/z8BRR2i9Mv+4Zj9+5tRcwRe5PPNnKcKefyP799KajyK3d0PIYWpxclCKu9wCas2isyT/06OhraamZQ==}
     dependencies:
       '@myunisoft/httpie': 1.10.0
       '@npm/types': 1.0.2
