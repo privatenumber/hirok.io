@@ -62,7 +62,8 @@ a.header-anchor:focus {
 a {
 	@apply
 		color-sky-500
-		hover:underline;
+		hover:underline
+		underline-offset-2;
 }
 
 p,
