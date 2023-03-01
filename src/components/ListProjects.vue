@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import markdownit from 'markdown-it';
-import markdownLinkAttributes from 'markdown-it-link-attributes';
+import { LinkComponent } from '../../markdown-it/link-component';
 
-const markdown = markdownit().use(markdownLinkAttributes, {
-	attrs: {
-		target: '_blank',
-		rel: 'noopener',
-	},
+const markdown = markdownit().use(LinkComponent, {
+	linkTag: 'AppLink',
 });
 
 type Project = {

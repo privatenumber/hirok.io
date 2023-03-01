@@ -141,24 +141,24 @@ if (props.frontmatter.subtitle) {
 					Have a question for me?
 				</div>
 				Reach out on
-				<ExternalLink href="https://twitter.com/privatenumbr">
+				<AppLink href="https://twitter.com/privatenumbr">
 					Twitter
-				</ExternalLink>
+				</AppLink>
 				or
-				<ExternalLink href="https://github.com/privatenumber/hirok.io/discussions">
+				<AppLink href="https://github.com/privatenumber/hirok.io/discussions">
 					GitHub
-				</ExternalLink>
+				</AppLink>
 			</div>
 
 			<div>
 				<div class="text-sm font-bold">
 					Want to propose an edit?
 				</div>
-				<ExternalLink
+				<AppLink
 					:href="`https://github.com/privatenumber/hirok.io/blob/master${route.meta.filePath}`"
 				>
 					Open a pull request
-				</ExternalLink>
+				</AppLink>
 			</div>
 		</div>
 	</div>

@@ -2,7 +2,6 @@ import path from 'path';
 import fs from 'fs';
 import { defineConfig } from 'vite';
 import markdown from 'vite-plugin-vue-markdown';
-import markdownLinkAttributes from 'markdown-it-link-attributes';
 import markdownAnchor from 'markdown-it-anchor';
 import Shiki from 'markdown-it-shiki';
 import vue from '@vitejs/plugin-vue';
@@ -20,6 +19,7 @@ import iconsResolver from 'unplugin-icons/resolver';
 import grayMatter from 'gray-matter';
 import slugify from '@sindresorhus/slugify';
 import generateSitemap from 'vite-ssg-sitemap';
+import { LinkComponent } from './markdown-it/link-component';
 import 'vite-ssg'; // For `ssgOptions` types
 
 export default defineConfig({
@@ -97,13 +97,9 @@ export default defineConfig({
 					}),
 				});
 
-				const isExternalLink = /^https?:\/\//;
-				md.use(markdownLinkAttributes, {
-					matcher: (link: string) => isExternalLink.test(link),
-					attrs: {
-						target: '_blank',
-						rel: 'noopener',
-					},
+				// Set AppLink component to all links
+				md.use(LinkComponent, {
+					linkTag: 'AppLink',
 				});
 
 				md.use(Shiki, {

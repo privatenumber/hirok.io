@@ -20,7 +20,7 @@ const isExternal = computed(() => props.href?.startsWith('http'));
 
 <template>
 	<template v-if="href">
-		<ExternalLink
+		<AppLink
 			v-if="isExternal"
 			v-bind="attributes"
 			:href="href"
@@ -28,7 +28,7 @@ const isExternal = computed(() => props.href?.startsWith('http'));
 			role="button"
 		>
 			<slot />
-		</ExternalLink>
+		</AppLink>
 		<RouterLink
 			v-else
 			v-bind="attributes"

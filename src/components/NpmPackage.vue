@@ -57,14 +57,14 @@ const lastPublishRelative = computed(() => {
 	<div class="flex justify-between flex-wrap md:flex-nowrap my-14">
 		<div class="basis-full">
 			<div>
-				<ExternalLink
+				<AppLink
 					:href="npmUrl"
 					class="text-2xl font-bold align-middle"
 				>
 					{{ name }}
-				</ExternalLink>
+				</AppLink>
 				<Popper tip="GitHub repository">
-					<ExternalLink
+					<AppLink
 						:href="repositoryUrl"
 						class="
 							ml-2
@@ -79,10 +79,10 @@ const lastPublishRelative = computed(() => {
 						title="GitHub repository"
 					>
 						<icon-mdi-github-box class="inline-block" />
-					</ExternalLink>
+					</AppLink>
 				</Popper>
 				<Popper tip="Find projects that use this package">
-					<ExternalLink
+					<AppLink
 						:href="searchUrl"
 						class="
 							ml-2
@@ -97,7 +97,7 @@ const lastPublishRelative = computed(() => {
 						title="Find projects that use this package"
 					>
 						<icon-tabler-viewfinder class="inline-block" />
-					</ExternalLink>
+					</AppLink>
 				</Popper>
 			</div>
 			<div class="text-sm mt-2">
