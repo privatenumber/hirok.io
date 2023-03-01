@@ -50,6 +50,11 @@ export default defineConfig({
 
 		vue({
 			reactivityTransform: true,
+			template: {
+				compilerOptions: {
+					comments: false,
+				},
+			},
 			include: [
 				/\.vue$/,
 				/\.md$/,
