@@ -40,7 +40,37 @@ I'm a software engineer specializing in JavaScript & TypeScript. I'm interested 
 
 </template>
 
-## Open Source / Personal projects
+## Work
+
+<div class="grid gap-4 print:grid-cols-2">
+
+<div>
+<Heading
+	size="3"
+	annotation="2018-Present"
+>
+<icon-mdi-square-inc class="inline align-middle m-r-1" /> Square / Block
+</Heading>
+
+As a Senior L6 Frontend SWE on the ECOM DX team, I develop tools to address common pain-points across Eng departments. I'm also the ECOM Open Source (OS) ambassador, and I encourage & drive OS contributions. Previously, on the ECOM Site Performance team, I helped optimize loading times & Lighthouse scores. On the ECOM Site Design team, I helped build a themeable Vue.js component library for our client websites.
+
+</div>
+
+<div>
+<Heading
+	size="3"
+	annotation="2015-2018"
+>
+<icon-fa6-brands-weebly class="inline align-middle m-r-1" /> Weebly
+</Heading>
+
+On the Design Engineering team, I helped build a Vue.js component library with 50+ components. I collaborated extensively with Engineering & Design and developed a comprehensive tooling ecosystem (style guide, recipe-book, playground, auto-upgrade command, visual regression testing). I'm proud to be recognized as a top 10% performer in the Eng department.
+
+</div>
+
+</div>
+
+## <icon-material-symbols-star-rounded class="inline align-middle mt--2" /> Open Source / Personal projects
 
 I'm a highly enthusiastic Open Source developer who dedicates personal time to maintaining around 70 projects on GitHub. Several are quite popular and utilized by renowned developers, projects, and companies. In fact, just last month ({{ downloadsMonth }}), my projects were downloaded <span class="whitespace-nowrap">**{{ npmDownloads }} times**</span> ({{ downloadsPerSecond.toLocaleString() }}/sec). Here are some notable ones:
 
@@ -127,36 +157,6 @@ I made this plugin to improve the Webpack build time at work. Upon investigating
 </div>
 
 [Check out the rest of my packages](/npm-packages).
-
-## Work
-
-<div class="grid gap-4 print:grid-cols-2">
-
-<div>
-<Heading
-	size="3"
-	annotation="2018-Present"
->
-<icon-mdi-square-inc class="inline align-middle m-r-1" /> Square / Block
-</Heading>
-
-As a Senior L6 Frontend SWE on the ECOM DX team, I develop tools to address common pain-points across Eng departments. I'm also the ECOM Open Source (OS) ambassador, and I encourage & drive OS contributions. Previously, on the ECOM Site Performance team, I helped optimize loading times & Lighthouse scores. On the ECOM Site Design team, I helped build a themeable Vue.js component library for our client websites.
-
-</div>
-
-<div>
-<Heading
-	size="3"
-	annotation="2015-2018"
->
-<icon-fa6-brands-weebly class="inline align-middle m-r-1" /> Weebly
-</Heading>
-
-On the Design Engineering team, I helped build a Vue.js component library with 50+ components. I collaborated extensively with Engineering & Design and developed a comprehensive tooling ecosystem (style guide, recipe-book, playground, auto-upgrade command, visual regression testing). I'm proud to be recognized as a top 10% performer in the Eng department.
-
-</div>
-
-</div>
 
 <Heading
 	size="2"
