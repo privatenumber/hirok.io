@@ -28,6 +28,14 @@ export const LinkComponent = (
 		};
 	};
 
+	// TODO: Move out
+	setRenderer('heading_open', (token) => {
+		if (!token.attrs) {
+			token.attrs = [];
+		}
+		token.attrs.push(['class', `${token.tag}-styles`]);
+	});
+
 	setRenderer('link_open', (token) => {
 		token.tag = linkTag;
 	});

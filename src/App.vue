@@ -43,12 +43,3 @@ useHead({
 	</main>
 	<Footer />
 </template>
-
-<style scoped>
-main {
-	@apply
-		px-4
-		py-4
-		flex-1;
-}
-</style>

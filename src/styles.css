@@ -16,6 +16,7 @@ html.dark {
 		flex-col
 		justify-between;
 
+	/* Hack for iOS 100vh */
 	min-height: var(--viewport-height, 100vh);
 }
 
@@ -34,6 +35,13 @@ html.dark {
 	left: 0;
 	width: 100%;
 	height: 2px;
+}
+
+main {
+	@apply
+		px-4
+		py-4
+		flex-1;
 }
 
 a.header-anchor {
@@ -87,12 +95,7 @@ blockquote {
 	margin: 1em 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 	@apply
 		color-gray-600
 		dark:color-zinc-200
@@ -101,32 +104,47 @@ h6 {
 }
 
 h1 {
-	margin: 1rem 0;
-
 	@apply text-4xl;
 }
 
 h2 {
-	margin: 1.75em 0 0.5em;
-
-	@apply
-		text-3xl
-		border-b
-		border-black/10
-		dark:border-white/10
-		p-b-2;
+	@apply text-3xl;
 }
 
 h3 {
-	margin: 1.5em 0 0.5em;
-
 	@apply text-2xl;
 }
 
 h4 {
-	margin: 1em 0;
-
 	@apply text-xl;
+}
+
+.h1-styles {
+	@apply m-y-4;
+}
+
+.h2-styles {
+	@apply
+		m-t-7
+		m-b-2
+		p-b-2
+		border-b
+		border-black/10
+		dark:border-white/10;
+}
+
+.h3-styles {
+	@apply
+		m-t-6
+		m-b-2;
+}
+
+.h4-styles {
+	@apply mt-6;
+}
+
+.h5-styles {
+	@apply mt-6;
 }
 
 img,

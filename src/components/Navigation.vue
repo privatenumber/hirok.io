@@ -45,6 +45,13 @@ const isPageBottom = computed(() => {
 
 				<router-link
 					class="nav-link"
+					to="/cv"
+				>
+					CV
+				</router-link>
+
+				<router-link
+					class="nav-link"
 					to="/posts"
 				>
 					Posts

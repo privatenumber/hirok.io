@@ -2,11 +2,9 @@
 import { createPopper, type Instance } from '@popperjs/core';
 import Subslot from './subslot';
 
-defineProps({
-	tip: {
-		type: String,
-	},
-});
+defineProps<{
+	tip: string;
+}>();
 
 const trigger = $ref<InstanceType<typeof Subslot>>(); // eslint-disable-line no-undef
 const tooltip = $ref<HTMLDivElement>(); // eslint-disable-line no-undef
