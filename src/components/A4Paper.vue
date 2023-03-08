@@ -2,21 +2,18 @@
 	<div class="a4-paper print:p-4">
 		<div
 			class="
-			print:hidden
+			hidden
+			!print:hidden
 			rounded-md
 			bg-blue/20
 			px-6
 			py-4
-			mb-10
+			mb-6
+			sm:block
 		"
 		>
 			<span class="mr-1">🖨️</span>
-			This is a printer-friendly page designed to fit on A4 paper.
-			<!--
-				TODO: Add PDF export?
-				Not sure if this is worth it as I don't necessarily want others downloading it.
-				And it's possible to print via Print dialog.
-			-->
+			Print this page on A4 paper for a condensed version.
 		</div>
 		<slot />
 	</div>
