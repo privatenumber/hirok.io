@@ -72,7 +72,7 @@ On the Design Engineering team, I helped build a Vue.js component library with 5
 
 ## <icon-material-symbols-star-rounded class="inline align-middle mt--2" /> Open Source / Personal projects
 
-I'm a highly enthusiastic Open Source developer who dedicates personal time to maintaining around 70 projects on GitHub. Several are quite popular and utilized by renowned developers, projects, and companies. In fact, just last month ({{ downloadsMonth }}), my projects were downloaded <span class="whitespace-nowrap">**{{ npmDownloads }} times**</span> ({{ downloadsPerSecond.toLocaleString() }}/sec). Here are some notable ones:
+I'm a highly enthusiastic Open Source developer who dedicates personal time to maintaining around 70 projects on GitHub. Several are popular and utilized by renowned developers, projects, and companies. Last month ({{ downloadsMonth }}), they were downloaded <span class="whitespace-nowrap">**{{ npmDownloads }} times**</span> ({{ downloadsPerSecond.toLocaleString() }}/sec). Here are some notable ones:
 
 <div class="
 	mt-2
