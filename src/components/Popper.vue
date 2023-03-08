@@ -93,7 +93,8 @@ const hide = () => {
 	@apply
 		text-sm
 		rounded
-		bg-dark-200
+		text-white
+		bg-zinc-700/95
 		py-1
 		px-2
 		shadow
