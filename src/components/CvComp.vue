@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const isPrint = useMediaQuery('print');
-const email = window.atob('aGlyb2tpLm9zYW1lQGdtYWlsLmNvbQ==');
 const todayPretty = new Date().toLocaleDateString(
 	'en-US',
 	{ month: 'long', day: 'numeric', year: 'numeric' },

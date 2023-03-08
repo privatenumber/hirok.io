@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import markdownit from 'markdown-it';
-import { LinkComponent } from '../../markdown-it/link-component';
+import { LinkComponent } from '../../markdown-it/plugins';
 
 const markdown = markdownit().use(LinkComponent, {
 	linkTag: 'AppLink',
