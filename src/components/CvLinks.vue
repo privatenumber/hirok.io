@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const isPrint = useMediaQuery('print');
-const email = window.atob('aGlyb2tpLm9zYW1lQGdtYWlsLmNvbQ==');
+const email = typeof window !== 'undefined' && window.atob('aGlyb2tpLm9zYW1lQGdtYWlsLmNvbQ==');
 </script>
 
 <template>
