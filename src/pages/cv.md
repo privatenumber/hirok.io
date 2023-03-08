@@ -85,11 +85,11 @@ I'm a highly enthusiastic Open Source developer who dedicates personal time to m
 
 Enhanced Node.js to "just run" TypeScript & ESM code. It's zero-config so it's a beginner-friendly way to jump-start TypeScript development. Powered by esbuild.
 
-<div class="print:hidden">
+<Collapsible class="print:hidden">
 
 I'm proud of this project because I managed to simplify a complex system behind a single command. The implementation required a deep understanding of Node.js internals and the intricacies between ESM and CommonJS (CJS). The development of this project also entailed the creation of independent loaders for [CJS](https://github.com/esbuild-kit/cjs-loader) & [ESM](https://github.com/esbuild-kit/esm-loader), [cleye](https://github.com/privatenumber/cleye)—a strongly typed CLI framework—, and [get-tsconfig](https://github.com/privatenumber/get-tsconfig)—a `tsconfig.json` resolver.
 
-</div>
+</Collapsible>
 
 </ProjectCard>
 
@@ -97,22 +97,22 @@ I'm proud of this project because I managed to simplify a complex system behind 
 
 Webpack loader for transforming JS & CSS code using esbuild. It's a blazing fast alternative for popular loaders such as Babel, TypeScript, and Terser.
 
-<div class="print:hidden">
+<Collapsible class="print:hidden">
 
 This project is my most popular project and what initially drew me to Open Source. I started as a contributor and eventually took over maintenance. The concept is straightforward, but required extensive work to execute correctly, especially when it came to handling two Webpack versions both at runtime & types, and testing them. To accomplish this, I developed tools such as [pkgroll](https://github.com/privatenumber/pkgroll), [webpack-test-utils](https://github.com/privatenumber/webpack-test-utils), [fs-fixture](https://github.com/privatenumber/fs-fixture), and [get-tsconfig](https://github.com/privatenumber/get-tsconfig). I'm also proud of my contributions to esbuild through [issue submissions and feature requests](https://github.com/evanw/esbuild/issues?q=is%3Aissue+sort%3Aupdated-desc+author%3Aprivatenumber).
 
-</div>
+</Collapsible>
 </ProjectCard>
 
 <ProjectCard name="pkgroll">
 
 Zero-config bundler for Node.js packages. It infers how to bundle the package by analyzing `package.json` entry-points and dependencies. Powered by Rollup & esbuild.
 
-<div class="print:hidden">
+<Collapsible class="print:hidden">
 
 Pkgroll is my go-to bundler for my Node.js projects because it knows how to bundle them without any configuration. I created it to streamline my workflow, as I noticed I was repeatedly using the same Rollup configuration for most of my projects. It also reduces the effort required to manage entry-points in both `package.json` and build configuration, making it especially convenient for ESM and CJS distribution.
 
-</div>
+</Collapsible>
 
 </ProjectCard>
 
@@ -123,11 +123,11 @@ Pkgroll is my go-to bundler for my Node.js projects because it knows how to bund
 
 Comparison of JS minifiers based on minification, compression, & speed. Often referenced when picking a minifier. The project is automated and always up-to-date.
 
-<div class="print:hidden">
+<Collapsible class="print:hidden">
 
 I created minification-benchmarks when esbuild first released JS minification, and I wanted to evaluate it against alternatives. I publicized the results to help developers select a minifier, and it was even linked by the esbuild website. The benchmark also functions as a test, aiding minifiers in identifying bugs and enhancing performance.
 
-</div>
+</Collapsible>
 
 </ProjectCard>
 
@@ -135,10 +135,10 @@ I created minification-benchmarks when esbuild first released JS minification, a
 
 A minimal Node.js library for elegantly displaying the progress of tasks in the terminal. It's unopionated and strongly typed, so it can easily enhance any CLI tool.
 
-<div class="print:hidden">
+<Collapsible class="print:hidden">
 
 As a lazy engineer, I often write scripts to automate my workflow. I used to use [listr](https://www.npmjs.com/package/listr) to display the progress of my scripts, but I found it overly structured and limiting in terms of code organization. Seeking a simpler & unopinionated solution, I created tasuku, a lightweight alternative. Since adopting tasuku, I have been able to significantly improve the UX of my scripts with no additional effort.
-</div>
+</Collapsible>
 
 </ProjectCard>
 
@@ -146,11 +146,11 @@ As a lazy engineer, I often write scripts to automate my workflow. I used to use
 
 Webpack plugin for multi-locale asset i18n. Very fast because it uses string manipulation, while predecessors used ASTs. [Used to localize StackOverflow.com](https://t.ly/B-Is).
 
-<div class="print:hidden">
+<Collapsible class="print:hidden">
 
 I made this plugin to improve the Webpack build time at work. Upon investigating bottlenecks, I found that our fork of the deprecated [i18n-webpack-plugin](https://github.com/webpack-contrib/i18n-webpack-plugin) was causing significant slow-downs. It localized at the [AST](https://jotadeveloper.medium.com/abstract-syntax-trees-on-javascript-534e33361fc7#:~:text=What%20is%20an%20Abstract%20syntax,result%20of%20a%20syntax%20analysis.) level, leading to asset generation & minification being multiplied for each locale. Inspired by how Rollup works, I used string-manipulation to localize minified assets. As there was no successor to i18n-webpack-plugin, I decided to open source my solution.
 
-</div>
+</Collapsible>
 
 </ProjectCard>
 
@@ -164,7 +164,6 @@ I made this plugin to improve the Webpack build time at work. Upon investigating
 >
 <icon-mdi-school class="inline-block mr-1" /> Education
 </Heading>
-
 
 <Heading
 	size="3"
