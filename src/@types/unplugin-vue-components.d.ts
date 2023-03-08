@@ -25,6 +25,7 @@ declare module '@vue/runtime-core' {
     'IconMaterialSymbols:download': typeof import('~icons/material-symbols/download')['default']
     IconMaterialSymbolsCloudDownload: typeof import('~icons/material-symbols/cloud-download')['default']
     IconMaterialSymbolsStarRounded: typeof import('~icons/material-symbols/star-rounded')['default']
+    'IconMdi:chevronDown': typeof import('~icons/mdi/chevron-down')['default']
     'IconMdi:cloudDownload': typeof import('~icons/mdi/cloud-download')['default']
     'IconMdi:cloudDownloadOutline': typeof import('~icons/mdi/cloud-download-outline')['default']
     'IconMdi:download': typeof import('~icons/mdi/download')['default']
