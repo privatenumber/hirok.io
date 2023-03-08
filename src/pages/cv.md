@@ -1,11 +1,6 @@
 ---
 title: CV
 heading: ''
-link:
-  - rel: stylesheet
-    media: print
-    href: src/print.css
-
 ---
 
 <script setup lang="ts">
@@ -37,225 +32,175 @@ const getDownloads = (packageName: string) => {
 };
 </script>
 
-<div class="
-	print:hidden
-	rounded-md
-	bg-blue/20
-	px-4
-	py-4
-">
-This page is printer and PDF friendly and designed for one black & white A4 paper.
-</div>
+<CvComp>
+
+<template #about>
+
+I'm a software engineer specializing in JavaScript & TypeScript. I'm interested in web development tooling, and have a passion for helping engineers be more productive by improving their Developer Experience. I like to geek out on low-level JavaScript stuff like module resolution, static-analysis, code-bundling, and code transformations. I have expertise in a range of tools, including Node.js, Rollup, Webpack, esbuild, Vite, and Vue.js.
+
+</template>
+
+## Open Source / Personal projects
+
+I'm a highly enthusiastic Open Source developer who dedicates personal time to maintaining around 70 projects on GitHub. Several are quite popular and utilized by renowned developers, projects, and companies. In fact, just last month ({{ downloadsMonth }}), my projects were downloaded <span class="whitespace-nowrap">**{{ npmDownloads }} times**</span> ({{ downloadsPerSecond.toLocaleString() }}/sec). Here are some notable ones:
 
 <div class="
-	absolute
-	bottom-2
-	right-4
-	text-xs
-">
-
-_Printed on _{{ todayPretty }}_. Latest version available at [hirok.io/cv](https://hirok.io/cv)_
-</div>
-
-# Hiroki Osame
-
-<div>
-
-
-<AppLink href="https://github.com/privatenumber">GitHub</AppLink>
-
-<AppLink href="https://www.linkedin.com/in/hirokiosame/">LinkedIn</AppLink>
-
-- Email hiroki.osame@gmail.com
-
-</div>
-
-I'm a software engineer (SWE) specializing in JavaScript & TypeScript.
-
-I'm currently living in Tokyo, Japan, and work at <AppLink href="https://squareup.com/">Square</AppLink> as an L6 SWE.
-
-## Open Source
-
-I'm a passionate <AppLink href="https://github.com/privatenumber">Open Source dev</AppLink>. On my personal time, I maintain ~70 projects.
-
-Last month ({{ downloadsMonth }}), they were downloaded <span class="whitespace-nowrap">**{{ npmDownloads }} times**</span> ({{ downloadsPerSecond.toLocaleString() }}/sec). Here are some of my favorites:
-
-<div class="
+	mt-2
 	grid
-	grid-cols-2
-	gap-2
+	gap-x-4
+	gap-y-2
+	print:grid-cols-2
 ">
-<div>
+<ProjectCard name="tsx">
 
-### [tsx](https://github.com/esbuild-kit/tsx)
+Enhanced Node.js to "just run" TypeScript & ESM code. It's zero-config so it's a beginner-friendly way to jump-start TypeScript development. Powered by esbuild.
 
-<span>
+<div class="print:hidden">
 
-<icon-material-symbols-cloud-download />
-
-
-
-<!-- {{ getDownloads('tsx') }} -->
-</span>
-
-
-An enhanced Node.js to "just run" TypeScript & ESM code. It's powered by _esbuild_, zero-config, and is a beginner-friendly alternative to _ts-node_ .
-
-<!--
-
-A TypeScript runtime powered by [esbuild].
-
-I like the simplicity of it and how easy it makes it for beginners to jump right into TypeScript.
-
-Proud because I built it from the ground up.
-
-It's also one of the first runtimes that supports ESM. Everyone else was only doing require hooks.
-
-Modular so it can be used by both CommonJS and ESM.
-
-It's used by a lot of engineers and projects I respect.
-
--->
-</div>
-
-<div>
-
-
-### esbuild-loader
-
-<span>
-{{ getDownloads('esbuild-loader') }}
-</span>
-
-A _Webpack_ loader for transforming code with _esbuild_. It's a blazing fast alternative for popular loaders such as Babel, TypeScript, and Terser.
-
-<!-- 
-My first open source project.
-
-I started by contributing and eventually was handed over to maintan.
-
-Webpack loader that leverages esbuild to transform the code to replace JavaScript transformers like Babel or TypeScript, or minifiers like Terser.
-
-The idea is simple but it was a lot of work to get it right.
-
-Also proud to have been able to contribute back to esbuild by surfacing issues and feature requests.
- -->
+I'm proud of this project because I managed to simplify a complex system behind a single command. The implementation required a deep understanding of Node.js internals and the intricacies between ESM and CommonJS (CJS). The development of this project also entailed the creation of independent loaders for [CJS](https://github.com/esbuild-kit/cjs-loader) & [ESM](https://github.com/esbuild-kit/esm-loader), [cleye](https://github.com/privatenumber/cleye)—a strongly typed CLI framework—, and [get-tsconfig](https://github.com/privatenumber/get-tsconfig)—a `tsconfig.json` resolver.
 
 </div>
 
-<div>
+</ProjectCard>
 
-### pkgroll
+<ProjectCard name="esbuild-loader">
 
-A zero-config bundler for Node.js that infers how to bundle the package based on `package.json` defined entry-points. It's powered by _Rollup_ & _esbuild_.
+Webpack loader for transforming JS & CSS code using esbuild. It's a blazing fast alternative for popular loaders such as Babel, TypeScript, and Terser.
+
+<div class="print:hidden">
+
+This project is my most popular project and what initially drew me to Open Source. I started as a contributor and eventually took over maintenance. The concept is straightforward, but required extensive work to execute correctly, especially when it came to handling two Webpack versions both at runtime & types, and testing them. To accomplish this, I developed tools such as [pkgroll](https://github.com/privatenumber/pkgroll), [webpack-test-utils](https://github.com/privatenumber/webpack-test-utils), [fs-fixture](https://github.com/privatenumber/fs-fixture), and [get-tsconfig](https://github.com/privatenumber/get-tsconfig). I'm also proud of my contributions to esbuild through [issue submissions and feature requests](https://github.com/evanw/esbuild/issues?q=is%3Aissue+sort%3Aupdated-desc+author%3Aprivatenumber).
+
+</div>
+</ProjectCard>
+
+<ProjectCard name="pkgroll">
+
+Zero-config bundler for Node.js packages. It infers how to bundle the package by analyzing `package.json` entry-points and dependencies. Powered by Rollup & esbuild.
+
+<div class="print:hidden">
+
+Pkgroll is my go-to bundler for my Node.js projects because it knows how to bundle them without any configuration. I created it to streamline my workflow, as I noticed I was repeatedly using the same Rollup configuration for most of my projects. It also reduces the effort required to manage entry-points in both `package.json` and build configuration, making it especially convenient for ESM and CJS distribution.
 
 </div>
 
-<div>
+</ProjectCard>
 
-### minification-benchmarks
+<ProjectCard
+	name="minification-benchmarks"
+	url="https://github.com/privatenumber/minification-benchmarks"
+>
 
-A repository that benchmarks JavaScript minifiers by performance and speed.
+Comparison of JS minifiers based on minification, compression, & speed. Often referenced when picking a minifier. The project is automated and always up-to-date.
 
-Popular and often referenced as a  picking a minifier.
+<div class="print:hidden">
 
-</div>
-
-<div>
-
-### tasuku
-
-A TypeScript & ESM runtime. Alternative to ts-node, powered by esbuild designed to lower the friction and barrier to running TypeScript code in Node.js.
-</div>
-
-<div>
-
-### webpack-localize-assets-plugin
-
-A TypeScript & ESM runtime. Alternative to ts-node, powered by esbuild designed to lower the friction and barrier to running TypeScript code in Node.js.
-</div>
+I created minification-benchmarks when esbuild first released JS minification, and I wanted to evaluate it against alternatives. I publicized the results to help developers select a minifier, and it was even linked by the esbuild website. The benchmark also functions as a test, aiding minifiers in identifying bugs and enhancing performance.
 
 </div>
 
-See a list of my packages [here](/npm-packages).
+</ProjectCard>
 
-<!-- 
-### Scripts
+<ProjectCard name="tasuku">
 
-#### git-publish
+A minimal Node.js library for elegantly displaying the progress of tasks in the terminal. It's unopionated and strongly typed, so it can easily enhance any CLI tool.
 
+<div class="print:hidden">
 
-### GitHub stats
-To give a quick overview, here are some of my GitHub stats:
+As a lazy engineer, I often write scripts to automate my workflow. I used to use [listr](https://www.npmjs.com/package/listr) to display the progress of my scripts, but I found it overly structured and limiting in terms of code organization. Seeking a simpler & unopinionated solution, I created tasuku, a lightweight alternative. Since adopting tasuku, I have been able to significantly improve the UX of my scripts with no additional effort.
+</div>
 
-Followers
+</ProjectCard>
 
-Commits this year
+<ProjectCard name="webpack-localize-assets-plugin">
 
-PRs this year
+Webpack plugin for multi-locale asset i18n. Very fast because it uses string manipulation, while predecessors used ASTs. [Used to localize StackOverflow.com](https://t.ly/B-Is).
 
-Issues this year -->
+<div class="print:hidden">
 
+I made this plugin to improve the Webpack build time at work. Upon investigating bottlenecks, I found that our fork of the deprecated [i18n-webpack-plugin](https://github.com/webpack-contrib/i18n-webpack-plugin) was causing significant slow-downs. It localized at the [AST](https://jotadeveloper.medium.com/abstract-syntax-trees-on-javascript-534e33361fc7#:~:text=What%20is%20an%20Abstract%20syntax,result%20of%20a%20syntax%20analysis.) level, leading to asset generation & minification being multiplied for each locale. Inspired by how Rollup works, I used string-manipulation to localize minified assets. As there was no successor to i18n-webpack-plugin, I decided to open source my solution.
+
+</div>
+
+</ProjectCard>
+
+</div>
+
+[Check out the rest of my packages](/npm-packages).
 
 ## Work
 
-### <icon-mdi-square-inc class="inline align-middle m-r-1" /> <span class="align-middle">Square</span> <span class="opacity-50 font-light">2018 - Present</span>
-<!-- 
-#### 2024
+<div class="grid gap-4 print:grid-cols-2">
 
-#### 2023
+<div>
+<Heading
+	size="3"
+	annotation="2018-Present"
+>
+<icon-mdi-square-inc class="inline align-middle m-r-1" /> Square / Block
+</Heading>
 
-#### 2022
-
-#### 2019
-
-#### 2018 -->
-
-### <icon-fa6-brands-weebly class="inline align-middle m-r-1" /> <span class="align-middle">Weebly</span> <span class="opacity-50 font-light">2015 - 2018</span>
-
-<!-- 
-#### 2018
-
-#### 2017
-
-#### 2016
-
-#### 2015 -->
-
-## Education
-
-### Boston University <span class="opacity-50 font-light">2011 - 2015</span>
-
-Bachelor of Arts in Computer Science
-
-<div class="print:hidden">
-#### Web security vulnerability reports
-
-As a student, I reported several web vulnerabilities that I discovered in their systems.
-
-Here are my favorites:
-
-##### 1. Viewing any student's transcript
-
-On January 26, 2013, I reported a vulnerability on the BU Link website—a portal for students to manage their enrollment, view their own transcript, etc. The vulnerability was disclosed to to Quinn Shamblin (_Executive Director of Information Security_) and patched on January 29, 2013.
-
-Given a student ID (enumerable number), the vulnerability allowed me to view any student's transcript which contained information such as grades, GPA, GPI, credit honors, honor points, college of registration, class year, and semester schedules.
-
-
-##### 2. Downloading any student's submitted homework
-
-On February 23, 2014, I reported a vulnerability on the BU Websubmit website—a portal for students to submit their Computer Science homework. The vulnerability was disclosed to Paul Stauffer (_Manager of Systems Administration_) and patched on February 24, 2014.
-
-Given a course ID, project name, and a student's username (all public information), the vulnerability allowed me to download their submitted homework files. Accessing the homework of my peers was very easy.
-
-##### 3. Stealing BU login credentials
-
-On May 12, 2014, I reported an XSS vulnerability on the BU Web Login website—the authentication system used by all BU members and systems. The vulnerability was disclosed to 
-Quinn Shamblin (_Executive Director of Information Security_).
-
-The vulnerability allowed me to steal a BU member's (student or faculty) credentials by intercepting an authentic login page. Because the XSS injection happened in a server-side configuration file, I didn't need to construct a malicious login URL for the attack.
+As a Senior L6 Frontend SWE on the ECOM DX team, I develop tools to address common pain-points across Eng departments. I'm also the ECOM Open Source (OS) ambassador, and I encourage & drive OS contributions. Previously, on the ECOM Site Performance team, I helped optimize loading times & Lighthouse scores. On the ECOM Site Design team, I helped build a themeable Vue.js component library for our client websites.
 
 </div>
 
+<div>
+<Heading
+	size="3"
+	annotation="2015-2018"
+>
+<icon-fa6-brands-weebly class="inline align-middle m-r-1" /> Weebly
+</Heading>
 
-[esbuild]: https://esbuild.github.io/
+On the Design Engineering team, I helped build a Vue.js component library with 50+ components. I collaborated extensively with Engineering & Design and developed a comprehensive tooling ecosystem (style guide, recipe-book, playground, auto-upgrade command, visual regression testing). I'm proud to be recognized as a top 10% performer in the Eng department.
+
+</div>
+
+</div>
+
+<Heading
+	size="2"
+	underline
+	annotation="2011-2015"
+>
+<icon-mdi-school class="inline-block mr-1" /> Boston University
+</Heading>
+
+- B.A. in Computer Science
+
+- As a student with a strong interest in web security, I identified and reported several critical vulnerabilities in their systems.
+
+<div class="print:hidden">
+
+Here are some of the critical vulnerabilities I discovered:
+
+<Heading
+	size="5"
+	annotation="January 26, 2013"
+>Viewing another student's transcript</Heading>
+
+Discovered a vulnerability on _BU Link_—a portal for students to manage their enrollment, view their own transcript, etc. Given a student ID (enumerable number), the vulnerability enabled unauthorized access to sensitive student information including grades, GPA, semester schedules, etc.
+
+Reported to the  _Executive Director of Information Security_, Quinn Shamblin, and patched on January 29, 2013.
+
+<Heading
+	size="5"
+	annotation="February 23, 2014"
+>Downloading another student's homework</Heading>
+
+Discovered a vulnerability on _BU Websubmit_—a portal for students to submit their Computer Science homework. Given a student's username, course ID, and project name (all public information), the vulnerability enabled unauthorized access to download their submitted homework files.
+
+Reported to the _Manager of Systems Administration_, Paul Stauffer, and patched on February 24, 2014.
+
+<Heading
+	size="5"
+	annotation="May 12, 2014"
+>Intercepting BU Web Login authentication</Heading>
+
+Discovered an XSS vulnerability on _BU Web Login_—BU's authentication system for student & faculty. Given a BU web server (provided to CS students), the XSS injection exploited the configuration file to enable intercepting an authentic login to steal credentials. Because the attack was server-side, a suspicious login URL didn't need to be constructed for the attack.
+
+Reported to the _Executive Director of Information Security_, Quinn Shamblin.
+
+</div>
+
+</CvComp>

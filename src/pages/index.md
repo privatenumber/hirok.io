@@ -37,11 +37,11 @@ const downloadsPerSecond = Math.round(npmPackages.totalDownloads / 30 / 24 / 60 
 
 I'm a software engineer specializing in JavaScript & TypeScript.
 
-I have a passion for helping engineers be more productive by improving developer experience (_DX_).
+I have a passion for helping engineers be more productive by improving Developer Experience (_DX_).
 
 My [_DX_ projects](/projects) are open-source and available for anyone to use. Last month, they were downloaded <span class="whitespace-nowrap">_{{ npmDownloads }} times_</span> (~{{ downloadsPerSecond.toLocaleString() }}/sec).
 
-I'm currently based in 🗼 Tokyo and work at [<icon-mdi-square-inc class="inline mb-2px" /> Square](https://squareup.com/) as a frontend engineer.
+I'm currently based in 🗼 Tokyo and work at [<icon-mdi-square-inc /> Square](https://squareup.com/) as a frontend engineer.
 
 <div class="m-t-8 sm:m-t-14 flex flex-wrap gap-2 sm:gap-4">
 

@@ -19,7 +19,7 @@ import iconsResolver from 'unplugin-icons/resolver';
 import grayMatter from 'gray-matter';
 import slugify from '@sindresorhus/slugify';
 import generateSitemap from 'vite-ssg-sitemap';
-import { LinkComponent } from './markdown-it/link-component';
+import { LinkComponent, StyleHeadings } from './markdown-it/plugins';
 import 'vite-ssg'; // For `ssgOptions` types
 
 export default defineConfig({
@@ -101,6 +101,8 @@ export default defineConfig({
 				md.use(LinkComponent, {
 					linkTag: 'AppLink',
 				});
+
+				md.use(StyleHeadings);
 
 				md.use(Shiki, {
 					theme: 'nord',

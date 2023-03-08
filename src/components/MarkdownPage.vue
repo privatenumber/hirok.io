@@ -8,6 +8,11 @@ const props = defineProps<{
 		heading?: boolean;
 		date?: string;
 		duration?: string;
+		link?: {
+			href?: string;
+			media?: string;
+			rel?: string;
+		}[];
 	};
 }>();
 
@@ -66,6 +71,12 @@ if (props.frontmatter.subtitle) {
 				content: props.frontmatter.subtitle,
 			},
 		],
+	});
+}
+
+if (props.frontmatter.link) {
+	useHead({
+		link: props.frontmatter.link,
 	});
 }
 </script>
