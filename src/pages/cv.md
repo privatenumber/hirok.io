@@ -156,7 +156,7 @@ I made this plugin to improve the Webpack build time at work. Upon investigating
 
 </div>
 
-[Check out the rest of my packages](/npm-packages).
+[Check out the rest of my packages](/projects).
 
 <Heading
 	size="2"
