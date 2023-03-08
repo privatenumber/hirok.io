@@ -36,7 +36,7 @@ const getDownloads = (packageName: string) => {
 
 <template #about>
 
-I'm a software engineer specializing in JavaScript & TypeScript. I'm interested in web development tooling, and have a passion for helping engineers be more productive by improving their Developer Experience. I like to geek out on low-level JavaScript stuff like module resolution, static-analysis, code-bundling, and code transformations. I have expertise in a range of tools, including Node.js, Rollup, Webpack, esbuild, Vite, and Vue.js.
+I'm a software engineer specializing in JavaScript & TypeScript. I'm interested in web development tooling, and have a passion for helping engineers be more productive by improving their Developer Experience. I like to geek out on low-level JavaScript stuff like module resolution, static-analysis, bundling, and AST transformations. I have expertise in a range of tools including Node.js, Rollup, Webpack, esbuild, Vite, and Vue.js.
 
 </template>
 
