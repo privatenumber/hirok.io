@@ -161,16 +161,25 @@ I made this plugin to improve the Webpack build time at work. Upon investigating
 <Heading
 	size="2"
 	underline
-	annotation="2011-2015"
 >
-<icon-mdi-school class="inline-block mr-1" /> Boston University
+<icon-mdi-school class="inline-block mr-1" /> Education
 </Heading>
 
-- B.A. in Computer Science
+
+<Heading
+	size="3"
+	underline
+	annotation="2011-2015"
+>
+Boston University
+</Heading>
+
+B.A. in Computer Science
+
+<!--
+<div class="print:hidden">
 
 - As a student with a strong interest in web security, I identified and reported several critical vulnerabilities in their systems.
-
-<div class="print:hidden">
 
 Here are some of the critical vulnerabilities I discovered:
 
@@ -202,5 +211,6 @@ Discovered an XSS vulnerability on _BU Web Login_—BU's authentication system f
 Reported to the _Executive Director of Information Security_, Quinn Shamblin.
 
 </div>
+-->
 
 </CvComp>
