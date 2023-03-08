@@ -34,7 +34,7 @@ const todayPretty = new Date().toLocaleDateString(
 			hidden
 			print:block
 			absolute
-			bottom-1
+			bottom-2
 			right-4
 			text-xs
 			italic

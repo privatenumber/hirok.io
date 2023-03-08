@@ -116,7 +116,7 @@
 			color-gray-700;
 
 		width: 21cm;
-		height: 29.6cm;
+		height: 29cm;
 	}
 }
 </style>
