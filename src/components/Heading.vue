@@ -50,6 +50,6 @@ defineProps<{
 <style scoped>
 .annotation {
 	@apply
-		font-extralight;
+		font-light;
 }
 </style>
