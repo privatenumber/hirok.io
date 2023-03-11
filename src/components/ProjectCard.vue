@@ -17,7 +17,7 @@ const downloads = $computed(() => {
 	}
 
 	const [count, unit] = getUnit(npmPackage.downloads, shortNumberUnits, 1);
-	return `↓ ${count}${unit}/month`;
+	return `${count}${unit}/month`;
 });
 </script>
 
@@ -40,6 +40,7 @@ const downloads = $computed(() => {
 				v-if="downloads"
 				#annotation
 			>
+				<icon-mdi:download class="inline-block text-sm mb--0.5" />
 				{{ downloads }}
 			</template>
 		</Heading>

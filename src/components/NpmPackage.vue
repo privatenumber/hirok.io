@@ -119,6 +119,7 @@ const lastPublishRelative = computed(() => {
 				<Popper :tip="downloads.toLocaleString()">
 					<div>
 						<div class="text-xl">
+							<icon-mdi:download class="inline-block text-base" />
 							{{ prettyDownloads }}
 						</div>
 						<div class="text-xs mt-1 opacity-75">
