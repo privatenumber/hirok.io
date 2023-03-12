@@ -40,7 +40,7 @@ I'm a software engineer specializing in JavaScript & TypeScript. I'm interested 
 
 </template>
 
-## Work / Education
+## Work + Education
 
 <div class="
 	grid
