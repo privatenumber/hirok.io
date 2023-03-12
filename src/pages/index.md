@@ -50,21 +50,21 @@ I'm currently based in 🗼 Tokyo and work at [<icon-mdi-square-inc /> Square](h
 	Read my blog
 </Button>
 
-<Button href="https://github.com/privatenumber" type="secondary" title="Link to my GitHub profile" class="flex-1 sm:flex-none">
+<Button href="https://github.com/privatenumber" variant="secondary" title="Link to my GitHub profile" class="flex-1 sm:flex-none">
 	<icon-mdi-github class="m-r-1" /> GitHub
 </Button>
 
-<Button href="https://twitter.com/privatenumbr" type="secondary" title="Link to my Twitter profile" class="flex-1 sm:flex-none">
+<Button href="https://twitter.com/privatenumbr" variant="secondary" title="Link to my Twitter profile" class="flex-1 sm:flex-none">
 	<icon-mdi-twitter class="m-r-1" /> Twitter
 </Button>
 
-<Button href="https://www.linkedin.com/in/hirokiosame/" type="secondary" title="Link to my LinkedIn profile" class="flex-1 sm:flex-none">
+<Button href="https://www.linkedin.com/in/hirokiosame/" variant="secondary" title="Link to my LinkedIn profile" class="flex-1 sm:flex-none">
 	<icon-mdi-linkedin class="m-r-1" /> LinkedIn
 </Button>
 
 <!--
 Deactivated
-<Button href="https://www.instagram.com/private.number_" type="secondary" title="Link to my Instagram profile" class="flex-1 sm:flex-none">
+<Button href="https://www.instagram.com/private.number_" variant="secondary" title="Link to my Instagram profile" class="flex-1 sm:flex-none">
 	<icon-mdi-instagram class="m-r-1" />
 </Button>
 -->

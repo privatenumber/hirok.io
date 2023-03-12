@@ -256,3 +256,41 @@ summary {
 	cursor: pointer;
 	font-weight: 600;
 }
+
+label > .label {
+	@apply
+		text-sm
+		font-bold
+		m-b-1;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	@apply
+		p-x-4
+		p-y-2
+		rounded
+		border
+		border-black/10
+		dark:border-white/10
+		bg-black/5
+		dark:bg-white/5
+	;
+}
+
+:is(
+input[type="text"],
+input[type="email"],
+textarea
+):disabled {
+	@apply
+		color-zinc-400
+		bg-zinc-200
+		border-zinc-300
+
+		dark:color-zinc-500
+		dark:bg-zinc-700
+		dark:border-zinc-600
+	;
+}

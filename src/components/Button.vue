@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const attributes = useAttrs();
 const props = defineProps({
-	type: {
+	variant: {
 		type: String,
 		default: 'primary',
 	},
@@ -24,7 +24,7 @@ const isExternal = computed(() => props.href?.startsWith('http'));
 			v-if="isExternal"
 			v-bind="attributes"
 			:href="href"
-			:class="[type, size]"
+			:class="[variant, size]"
 			role="button"
 		>
 			<slot />
@@ -32,7 +32,7 @@ const isExternal = computed(() => props.href?.startsWith('http'));
 		<RouterLink
 			v-else
 			v-bind="attributes"
-			:class="[type, size]"
+			:class="[variant, size]"
 			role="button"
 			:to="href"
 		>
@@ -41,7 +41,7 @@ const isExternal = computed(() => props.href?.startsWith('http'));
 	</template>
 	<button
 		v-else
-		:class="[type, size]"
+		:class="[variant, size]"
 		type="button"
 	>
 		<slot />
@@ -62,6 +62,14 @@ button {
 		transition-colors
 		duration-100
 		justify-center
+		;
+}
+
+button:disabled {
+	@apply
+		opacity-60
+		cursor-not-allowed
+		pointer-events-none
 		;
 }
 

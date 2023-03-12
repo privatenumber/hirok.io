@@ -213,3 +213,13 @@ Reported to the _Executive Director of Information Security_, Quinn Shamblin.
 -->
 
 </CvComp>
+
+<div class="print:hidden">
+
+## Contact me
+
+If you'd like to talk to me about anything, feel free to reach out.
+
+<ContactForm />
+
+</div>
