@@ -36,13 +36,18 @@ const getDownloads = (packageName: string) => {
 
 <template #about>
 
-I'm a software engineer specializing in JavaScript & TypeScript. I'm interested in web development tooling, and have a passion for helping engineers be more productive by improving their Developer Experience. I enjoy delving into low-level JavaScript concepts such as module resolution, static analysis, bundling, and AST transformations. I have expertise in a range of tools including Node.js, Rollup, Webpack, esbuild, Vite, and Vue.js.
+I'm a software engineer specializing in JavaScript & TypeScript. I'm interested in web development tooling and helping other engineers be more productive by improving their Developer Experience. I enjoy delving into low-level JavaScript concepts such as module resolution, static analysis, bundling, and AST transformations. I have expertise in a range of tools including Node.js, Rollup, Webpack, esbuild, Vite, and Vue.js.
 
 </template>
 
-## Work
+## Work / Education
 
-<div class="grid gap-4 print:grid-cols-2">
+<div class="
+	grid
+	gap-x-4
+	gap-y-2
+	print:text-justify
+">
 
 <div>
 <Heading
@@ -68,9 +73,58 @@ On the Design Engineering team, I helped build a Vue.js component library with 5
 
 </div>
 
+<div>
+<Heading
+	size="3"
+	annotation="2011-2015"
+>
+<icon-mdi-school class="inline-block mr-1" /> Boston University
+</Heading>
+
+B.A. in Computer Science
+
 </div>
 
-## <icon-material-symbols-star-rounded class="inline align-middle mt--2" /> Open Source / Personal projects
+<!--
+<div class="print:hidden">
+
+- As a student with a strong interest in web security, I identified and reported several critical vulnerabilities in their systems.
+
+Here are some of the critical vulnerabilities I discovered:
+
+<Heading
+	size="5"
+	annotation="January 26, 2013"
+>Viewing another student's transcript</Heading>
+
+Discovered a vulnerability on _BU Link_—a portal for students to manage their enrollment, view their own transcript, etc. Given a student ID (enumerable number), the vulnerability enabled unauthorized access to sensitive student information including grades, GPA, semester schedules, etc.
+
+Reported to the  _Executive Director of Information Security_, Quinn Shamblin, and patched on January 29, 2013.
+
+<Heading
+	size="5"
+	annotation="February 23, 2014"
+>Downloading another student's homework</Heading>
+
+Discovered a vulnerability on _BU Websubmit_—a portal for students to submit their Computer Science homework. Given a student's username, course ID, and project name (all public information), the vulnerability enabled unauthorized access to download their submitted homework files.
+
+Reported to the _Manager of Systems Administration_, Paul Stauffer, and patched on February 24, 2014.
+
+<Heading
+	size="5"
+	annotation="May 12, 2014"
+>Intercepting BU Web Login authentication</Heading>
+
+Discovered an XSS vulnerability on _BU Web Login_—BU's authentication system for student & faculty. Given a BU web server (provided to CS students), the XSS injection exploited the configuration file to enable intercepting an authentic login to steal credentials. Because the attack was server-side, a suspicious login URL didn't need to be constructed for the attack.
+
+Reported to the _Executive Director of Information Security_, Quinn Shamblin.
+
+</div>
+-->
+
+</div>
+
+## <icon-material-symbols-star-rounded class="inline align-middle mt--2" /> Personal projects / Open Source
 
 I'm a highly enthusiastic Open Source developer who dedicates personal time to maintaining around 70 projects on GitHub. Several are popular and utilized by renowned developers, projects, and companies. Last month ({{ downloadsMonth }}), they were downloaded <span class="whitespace-nowrap">**{{ npmDownloads }} times**</span> ({{ downloadsPerSecond.toLocaleString() }}/sec). Here are some notable ones:
 
@@ -157,60 +211,6 @@ I made this plugin to improve the Webpack build time at work. Upon investigating
 </div>
 
 [Check out the rest of my packages](/projects).
-
-<Heading
-	size="2"
-	underline
->
-<icon-mdi-school class="inline-block mr-1" /> Education
-</Heading>
-
-<Heading
-	size="3"
-	underline
-	annotation="2011-2015"
->
-Boston University
-</Heading>
-
-B.A. in Computer Science
-
-<!--
-<div class="print:hidden">
-
-- As a student with a strong interest in web security, I identified and reported several critical vulnerabilities in their systems.
-
-Here are some of the critical vulnerabilities I discovered:
-
-<Heading
-	size="5"
-	annotation="January 26, 2013"
->Viewing another student's transcript</Heading>
-
-Discovered a vulnerability on _BU Link_—a portal for students to manage their enrollment, view their own transcript, etc. Given a student ID (enumerable number), the vulnerability enabled unauthorized access to sensitive student information including grades, GPA, semester schedules, etc.
-
-Reported to the  _Executive Director of Information Security_, Quinn Shamblin, and patched on January 29, 2013.
-
-<Heading
-	size="5"
-	annotation="February 23, 2014"
->Downloading another student's homework</Heading>
-
-Discovered a vulnerability on _BU Websubmit_—a portal for students to submit their Computer Science homework. Given a student's username, course ID, and project name (all public information), the vulnerability enabled unauthorized access to download their submitted homework files.
-
-Reported to the _Manager of Systems Administration_, Paul Stauffer, and patched on February 24, 2014.
-
-<Heading
-	size="5"
-	annotation="May 12, 2014"
->Intercepting BU Web Login authentication</Heading>
-
-Discovered an XSS vulnerability on _BU Web Login_—BU's authentication system for student & faculty. Given a BU web server (provided to CS students), the XSS injection exploited the configuration file to enable intercepting an authentic login to steal credentials. Because the attack was server-side, a suspicious login URL didn't need to be constructed for the attack.
-
-Reported to the _Executive Director of Information Security_, Quinn Shamblin.
-
-</div>
--->
 
 </CvComp>
 

@@ -16,7 +16,7 @@ defineProps<{
 			justify-between
 			items-center
 			gap-x-6
-			gap-y-1
+			gap-y-2
 		"
 		:class="`h${size}-styles`"
 	>

@@ -8,7 +8,7 @@ const todayPretty = new Date().toLocaleDateString(
 
 <template>
 	<A4Paper>
-		<div class="flex gap-x-2">
+		<div class="flex gap-x-4">
 			<div>
 				<Heading size="1">
 					Hiroki Osame
@@ -17,7 +17,7 @@ const todayPretty = new Date().toLocaleDateString(
 						<CvLinks v-if="!isPrint" />
 					</template>
 				</Heading>
-				<section>
+				<section class="print:text-justify">
 					<slot
 						name="about"
 					/>
