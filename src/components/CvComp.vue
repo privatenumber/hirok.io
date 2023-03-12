@@ -1,9 +1,6 @@
 <script setup lang="ts">
 const isPrint = useMediaQuery('print');
-const todayPretty = new Date().toLocaleDateString(
-	'en-US',
-	{ month: 'long', day: 'numeric', year: 'numeric' },
-);
+const todayPretty = new Date().toLocaleDateString();
 </script>
 
 <template>

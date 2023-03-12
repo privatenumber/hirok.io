@@ -7,6 +7,7 @@ import { getUnit, numberUnits } from '@/utils/get-unit';
 import npmPackages from '@/data/npm-packages.json';
 
 const downloadsMonth = new Date(npmPackages.totalDownloadsMonth).toLocaleDateString(undefined, {
+	timeZone: 'UTC',
 	month: 'long',
 	year: 'numeric',
 });

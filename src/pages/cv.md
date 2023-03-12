@@ -8,17 +8,12 @@ import { getUnit, numberUnits, shortNumberUnits } from '@/utils/get-unit';
 import npmPackages from '@/data/npm-packages.json';
 const [downloads, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);
 const npmDownloads = `${downloads} ${unit}`;
-const downloadsPerSecond = Math.round(npmPackages.totalDownloads / 30 / 24 / 60 / 60);
 const downloadsMonth = new Date(npmPackages.totalDownloadsMonth).toLocaleDateString(undefined, {
+	timeZone: 'UTC',
 	month: 'short',
 	year: 'numeric',
 });
-
-const downloadsMonthPretty = npmPackages.totalDownloadsMonth
-const todayPretty = new Date().toLocaleDateString(
-	'en-US',
-	{ month: 'long', day: 'numeric', year: 'numeric' },
-);
+const downloadsPerSecond = Math.round(npmPackages.totalDownloads / 30 / 24 / 60 / 60);
 
 const getDownloads = (packageName: string) => {
 	const packageData = npmPackages.packages.find((pkg) => pkg.name === packageName);
