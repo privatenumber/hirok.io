@@ -62,7 +62,7 @@ const getLastMonthRange = () => {
 	};
 
 	await fs.writeFile(
-		'./src/data/npm-packages.json',
+		'./src/data/npm-downloads.json',
 		`${JSON.stringify(npmPackages, null, '\t')}\n`,
 	);
 })();

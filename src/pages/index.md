@@ -4,7 +4,7 @@ heading: ''
 
 <script setup lang="ts">
 import { getUnit, numberUnits } from '@/utils/get-unit';
-import npmPackages from '@/data/npm-packages.json';
+import npmPackages from '@/data/npm-downloads.json';
 
 const [downloads, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);
 const npmDownloads = `${downloads} ${unit}`;

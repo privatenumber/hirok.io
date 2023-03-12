@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { getUnit, shortNumberUnits } from '@/utils/get-unit';
-import npmPackages from '@/data/npm-packages.json';
+import npmPackages from '@/data/npm-downloads.json';
 
 const props = defineProps<{
 	name: string;

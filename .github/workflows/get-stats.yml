@@ -1,11 +1,11 @@
-name: Get npm stats
+name: Get stats
 on:
   schedule:
     - cron: '0 0 1 * *' # First day of the month
 
 jobs:
   crawl:
-    name: Get npm stats
+    name: Get npm & GitHub stats
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -24,13 +24,18 @@ jobs:
         version: 7
         run_install: true
 
-    - name: Get npm stats
-      run: pnpm tsx scripts/get-npm-stats.ts
+    - name: Get npm downloads
+      run: pnpm tsx scripts/get-npm-downloads.ts
+
+    - name: Get GitHub stats
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      run: pnpm tsx scripts/get-github-stats.ts
 
     - name: Commit
       run: |
         git config user.name 'Hiroki Osame'
         git config user.email 'hiroki.osame@gmail.com'
         git add src/data
-        git commit -m 'chore: update npm data'
+        git commit -m 'chore: update stats'
         git push

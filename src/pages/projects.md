@@ -4,7 +4,7 @@ title: npm packages
 
 <script setup lang="ts">
 import { getUnit, numberUnits } from '@/utils/get-unit';
-import npmPackages from '@/data/npm-packages.json';
+import npmPackages from '@/data/npm-downloads.json';
 
 const downloadsMonth = new Date(npmPackages.totalDownloadsMonth).toLocaleDateString(undefined, {
 	timeZone: 'UTC',
