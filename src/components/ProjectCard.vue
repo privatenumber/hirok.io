@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { getUnit, shortNumberUnits } from '@/utils/get-unit';
-import npmPackages from '@/data/npm-downloads.json';
+import npmDownloads from '@/data/npm-downloads.json';
 
 const props = defineProps<{
 	name: string;
 	url?: string;
 }>();
 
-const npmPackage = $computed(() => npmPackages.packages.find(pkg => pkg.name === props.name));
+const npmPackage = $computed(() => npmDownloads.packages.find(pkg => pkg.name === props.name));
 
 const npmUrl = $computed(() => `https://npm.im/${props.name}`);
 

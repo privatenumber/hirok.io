@@ -63,6 +63,7 @@
 		"privatenumber/prerelease-checks": 11,
 		"privatenumber/bfs": 11,
 		"privatenumber/vue-proxi": 11,
+		"esbuild-kit/core-utils": 10,
 		"privatenumber/webpack-test-utils": 8,
 		"privatenumber/fs.promises.exists": 8,
 		"privatenumber/webpack-playground": 8,
@@ -141,5 +142,5 @@
 		"romanzubenko/YHack": 0,
 		"romanzubenko/greenCaptcha": 0
 	},
-	"fetched": "2023-03-12T23:59:03.738Z"
+	"fetched": "2023-03-13T00:41:59.229Z"
 }

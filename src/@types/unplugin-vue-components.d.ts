@@ -42,6 +42,7 @@ declare module '@vue/runtime-core' {
     'IconMdi:plusCircleOutline': typeof import('~icons/mdi/plus-circle-outline')['default']
     'IconMdi:school': typeof import('~icons/mdi/school')['default']
     'IconMdi:send': typeof import('~icons/mdi/send')['default']
+    'IconMdi:star': typeof import('~icons/mdi/star')['default']
     'IconMdi:triangleSmallDown': typeof import('~icons/mdi/triangle-small-down')['default']
     'IconMdi:triangleSmallUp': typeof import('~icons/mdi/triangle-small-up')['default']
     IconMdiGithub: typeof import('~icons/mdi/github')['default']
