@@ -96,7 +96,7 @@ const getDownloadsForMonth = async (
 	packages: NpmPackage[],
 	monthRange: MonthRange,
 ) => {
-	console.log('Downloading', monthRange);
+	console.log('Fetching', monthRange);
 	const monthRangeString = monthRange.join(':');
 	const [monthKey] = monthRange;
 	const monthDownloads = await Promise.all(packages.map(async (npmPackage) => {
@@ -104,12 +104,17 @@ const getDownloadsForMonth = async (
 			return npmPackage.downloads[monthKey];
 		}
 
-		const downloadCount = await getNpmDownloads(npmPackage.name, monthRangeString);
-		npmPackage.downloads[monthKey] = downloadCount.downloads;
-		return downloadCount.downloads;
+		try {
+			const downloadCount = await getNpmDownloads(npmPackage.name, monthRangeString);
+			npmPackage.downloads[monthKey] = downloadCount.downloads;
+			return downloadCount.downloads;
+		} catch (error) {
+			console.warn(error);
+			return 0;
+		}
 	}));
 
-	console.log('Downloaded', monthRange);
+	console.log('Fetched', monthRange);
 
 	return monthDownloads.reduce((total, d) => total + d, 0);
 };
@@ -134,13 +139,18 @@ const getDownloadsForMonth = async (
 		const month = new Date(thisMonth);
 		month.setMonth(month.getMonth() - i);
 		const monthRange = getLastMonthRange(month);
-		const lastMonthDownloads = await getDownloadsForMonth(packages, monthRange);
 
-		if (i === 0) {
-			lastMonth = [monthRange[0], lastMonthDownloads];
+		try {
+			const lastMonthDownloads = await getDownloadsForMonth(packages, monthRange);
+
+			if (i === 0) {
+				lastMonth = [monthRange[0], lastMonthDownloads];
+			}
+		} catch (error) {
+			console.warn(error);
 		}
 
-		await setTimeout(1000);
+		await setTimeout(5000);
 	}
 
 	const npmDownloads: NpmDownloads = {
