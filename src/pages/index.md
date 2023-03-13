@@ -6,9 +6,10 @@ heading: ''
 import { getUnit, numberUnits } from '@/utils/get-unit';
 import npmPackages from '@/data/npm-downloads.json';
 
-const [downloads, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);
+const [downloadMonth, downloadCount] = npmPackages.lastMonth;
+const [downloads, unit] = getUnit(downloadCount, numberUnits, 1);
 const npmDownloads = `${downloads} ${unit}`;
-const downloadsPerSecond = Math.round(npmPackages.totalDownloads / 30 / 24 / 60 / 60);
+const downloadsPerSecond = Math.round(downloadCount / 30 / 24 / 60 / 60);
 </script>
 
 <WiggleAnimation

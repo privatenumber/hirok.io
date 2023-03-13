@@ -12,11 +12,13 @@ const npmPackage = $computed(() => npmDownloads.packages.find(pkg => pkg.name ==
 const npmUrl = $computed(() => `https://npm.im/${props.name}`);
 
 const downloads = $computed(() => {
-	if (!npmPackage?.downloads) {
+	if (!npmPackage) {
 		return;
 	}
 
-	const [count, unit] = getUnit(npmPackage.downloads, shortNumberUnits, 1);
+	const lastMonthKey = npmDownloads.lastMonth[0] as keyof typeof npmPackage.downloads;
+	const downloadsLastMonth = npmPackage.downloads[lastMonthKey] ?? 0;
+	const [count, unit] = getUnit(downloadsLastMonth, shortNumberUnits, 1);
 	return `${count}${unit}/month`;
 });
 </script>

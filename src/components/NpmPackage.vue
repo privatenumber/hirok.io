@@ -1,31 +1,16 @@
 <script setup lang="ts">
 import { getUnit, timeUnits, shortNumberUnits } from '@/utils/get-unit';
 import githubStars from '@/data/github-stars.json';
+import npmDownloads from '@/data/npm-downloads.json';
 
-const props = defineProps({
-	name: {
-		type: String,
-		required: true,
-	},
-	description: {
-		type: String,
-	},
-	repository: {
-		type: String,
-	},
-	latestVersion: {
-		type: String,
-		required: true,
-	},
-	lastPublishDate: {
-		type: String,
-		required: true,
-	},
-	downloads: {
-		type: Number,
-		required: true,
-	},
-});
+const props = defineProps<{
+	name: string;
+	description: string;
+	repository: string | undefined;
+	latestVersion: string;
+	lastPublishDate: string;
+	downloads: Record<string, number>;
+}>();
 
 if (!props.repository) {
 	console.warn(`No repository URL provided for ${props.name}`);
@@ -55,9 +40,12 @@ const repoStarsPretty = $computed(() => {
 
 const repositoryUrl = $computed(() => props.repository ?? `https://github.com/privatenumber/${props.name}`);
 const searchUrl = $computed(() => `https://github.com/search?type=code&q=path%3A%2Fpackage.json%24%2F+%22%5C%22${props.name}%5C%22%3A%22`);
+
+const [lastMonthKey] = npmDownloads.lastMonth;
 const npmDownloadsPretty = $computed(
 	() => {
-		const [value, unit] = getUnit(props.downloads, shortNumberUnits, 1)!;
+		const downloads = props.downloads[lastMonthKey] ?? 0;
+		const [value, unit] = getUnit(downloads, shortNumberUnits, 1)!;
 		return `${value % 1 === 0 ? value : value.toFixed(1)} ${unit ?? ''}`;
 	},
 );
