@@ -1,7 +1,10 @@
 import fs from 'fs/promises';
 import { setTimeout } from 'timers/promises';
 import { cli } from 'cleye';
-import { search, downloads } from '@nodesecure/npm-registry-sdk';
+import {
+	search as npmSearch,
+	downloads as getNpmDownloads,
+} from '@nodesecure/npm-registry-sdk';
 
 type NpmPackage = {
 	name: string;
@@ -64,7 +67,7 @@ const getLastMonthRange = (start: Date): MonthRange => {
 const getNpmPackages = async () => {
 	const npmDownloads = await getNpmDownloadsJson();
 
-	const results = await search({
+	const results = await npmSearch({
 		text: 'author:hirokiosame',
 		size: 250,
 	});
@@ -93,12 +96,20 @@ const getDownloadsForMonth = async (
 	packages: NpmPackage[],
 	monthRange: MonthRange,
 ) => {
+	console.log('Downloading', monthRange);
 	const monthRangeString = monthRange.join(':');
+	const [monthKey] = monthRange;
 	const monthDownloads = await Promise.all(packages.map(async (npmPackage) => {
-		const downloadCount = await downloads(npmPackage.name, monthRangeString);
-		npmPackage.downloads[monthRange[0]] = downloadCount.downloads;
+		if (npmPackage.downloads[monthKey]) {
+			return npmPackage.downloads[monthKey];
+		}
+
+		const downloadCount = await getNpmDownloads(npmPackage.name, monthRangeString);
+		npmPackage.downloads[monthKey] = downloadCount.downloads;
 		return downloadCount.downloads;
 	}));
+
+	console.log('Downloaded', monthRange);
 
 	return monthDownloads.reduce((total, d) => total + d, 0);
 };
@@ -123,7 +134,6 @@ const getDownloadsForMonth = async (
 		const month = new Date(thisMonth);
 		month.setMonth(month.getMonth() - i);
 		const monthRange = getLastMonthRange(month);
-
 		const lastMonthDownloads = await getDownloadsForMonth(packages, monthRange);
 
 		if (i === 0) {
