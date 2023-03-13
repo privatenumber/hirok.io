@@ -48,9 +48,14 @@ const repoStars = $computed(() => {
 	return stars;
 });
 
+const repoStarsPretty = $computed(() => {
+	const [value, unit] = getUnit(repoStars, shortNumberUnits, 1);
+	return `${value}${unit ?? ''}`;
+});
+
 const repositoryUrl = $computed(() => props.repository ?? `https://github.com/privatenumber/${props.name}`);
 const searchUrl = $computed(() => `https://github.com/search?type=code&q=path%3A%2Fpackage.json%24%2F+%22%5C%22${props.name}%5C%22%3A%22`);
-const prettyDownloads = $computed(
+const npmDownloadsPretty = $computed(
 	() => {
 		const [value, unit] = getUnit(props.downloads, shortNumberUnits, 1)!;
 		return `${value % 1 === 0 ? value : value.toFixed(1)} ${unit ?? ''}`;
@@ -133,15 +138,17 @@ const lastPublishRelative = $computed(() => {
 				</Popper>
 			</div>
 			<div class="text-center">
-				<div class="text-xl whitespace-nowrap">
-					<icon-mdi:star class="inline-block text-base mb-1" />
-					<span class="ml-1">
-						{{ repoStars.toLocaleString() }}
-					</span>
-				</div>
-				<Popper :tip="lastPublishDatePretty">
-					<div class="text-xs mt-1 opacity-75">
-						GitHub Stars
+				<Popper :tip="repoStars.toLocaleString()">
+					<div>
+						<div class="text-xl whitespace-nowrap">
+							<icon-mdi:star class="inline-block text-base mb-1" />
+							<span class="ml-1">
+								{{ repoStarsPretty }}
+							</span>
+						</div>
+						<div class="text-xs mt-1 opacity-75">
+							GitHub Stars
+						</div>
 					</div>
 				</Popper>
 			</div>
@@ -150,7 +157,7 @@ const lastPublishRelative = $computed(() => {
 					<div>
 						<div class="text-xl whitespace-nowrap">
 							<icon-mdi:download class="inline-block text-base" />
-							{{ prettyDownloads }}
+							{{ npmDownloadsPretty }}
 						</div>
 						<div class="text-xs mt-1 opacity-75">
 							downloads last month
