@@ -17,8 +17,8 @@ const downloads = $computed(() => {
 	}
 
 	const lastMonthKey = npmDownloads.lastMonth[0] as keyof typeof npmPackage.downloads;
-	const downloadsLastMonth = npmPackage.downloads[lastMonthKey] ?? 0;
-	const [count, unit] = getUnit(downloadsLastMonth, shortNumberUnits, 1);
+	const lastMonthDownloads = npmPackage.downloads[lastMonthKey] ?? 0;
+	const [count, unit] = getUnit(lastMonthDownloads, shortNumberUnits, 1);
 	return `${count}${unit}/month`;
 });
 </script>

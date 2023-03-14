@@ -7,15 +7,15 @@ heading: ''
 import { getUnit, numberUnits, shortNumberUnits } from '@/utils/get-unit';
 import npmPackages from '@/data/npm-downloads.json';
 
-const [downloadMonth, downloadCount] = npmPackages.lastMonth;
-const [downloads, unit] = getUnit(downloadCount, numberUnits, 1);
+const [lastMonth, lastMonthDownloads] = npmPackages.lastMonth;
+const [downloads, unit] = getUnit(lastMonthDownloads, numberUnits, 1);
 const npmDownloads = `${downloads} ${unit}`;
-const downloadMonthPretty = new Date(downloadMonth).toLocaleDateString(undefined, {
+const downloadMonthPretty = new Date(lastMonth).toLocaleDateString(undefined, {
 	timeZone: 'UTC',
 	month: 'short',
 	year: 'numeric',
 });
-const downloadsPerSecond = Math.round(downloadCount / 30 / 24 / 60 / 60);
+const downloadsPerSecond = Math.round(lastMonthDownloads / 30 / 24 / 60 / 60);
 
 const getDownloads = (packageName: string) => {
 	const packageData = npmPackages.packages.find((pkg) => pkg.name === packageName);
