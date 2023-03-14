@@ -273,9 +273,10 @@ textarea {
 		rounded
 		border
 		border-black/10
+		bg-zinc-100
+
 		dark:border-white/10
-		bg-black/5
-		dark:bg-white/5
+		dark:bg-zinc-800
 	;
 }
 
