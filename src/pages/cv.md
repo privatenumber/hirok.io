@@ -6,14 +6,16 @@ heading: ''
 <script setup lang="ts">
 import { getUnit, numberUnits, shortNumberUnits } from '@/utils/get-unit';
 import npmPackages from '@/data/npm-downloads.json';
-const [downloads, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);
+
+const [lastMonth, lastMonthDownloads] = npmPackages.lastMonth;
+const [downloads, unit] = getUnit(lastMonthDownloads, numberUnits, 1);
 const npmDownloads = `${downloads} ${unit}`;
-const downloadsMonth = new Date(npmPackages.totalDownloadsMonth).toLocaleDateString(undefined, {
+const downloadMonthPretty = new Date(lastMonth).toLocaleDateString(undefined, {
 	timeZone: 'UTC',
 	month: 'short',
 	year: 'numeric',
 });
-const downloadsPerSecond = Math.round(npmPackages.totalDownloads / 30 / 24 / 60 / 60);
+const downloadsPerSecond = Math.round(lastMonthDownloads / 30 / 24 / 60 / 60);
 
 const getDownloads = (packageName: string) => {
 	const packageData = npmPackages.packages.find((pkg) => pkg.name === packageName);
@@ -121,7 +123,7 @@ Reported to the _Executive Director of Information Security_, Quinn Shamblin.
 
 ## <icon-material-symbols-star-rounded class="inline align-middle mt--2" /> Personal projects / Open Source
 
-I'm a highly enthusiastic Open Source developer who dedicates personal time to maintaining around 70 projects on GitHub. Several are popular and utilized by renowned developers, projects, and companies. Last month ({{ downloadsMonth }}), they were downloaded <span class="whitespace-nowrap">**{{ npmDownloads }} times**</span> ({{ downloadsPerSecond.toLocaleString() }}/sec). Here are some notable ones:
+I'm a highly enthusiastic Open Source developer who dedicates personal time to maintaining around 70 projects on GitHub. Several are popular and utilized by renowned developers, projects, and companies. Last month ({{ downloadMonthPretty }}), they were downloaded <span class="whitespace-nowrap">**{{ npmDownloads }} times**</span> ({{ downloadsPerSecond.toLocaleString() }}/sec). Here are some notable ones:
 
 <div class="
 	mt-2

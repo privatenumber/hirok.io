@@ -6,9 +6,14 @@ heading: ''
 import { getUnit, numberUnits } from '@/utils/get-unit';
 import npmPackages from '@/data/npm-downloads.json';
 
-const [downloads, unit] = getUnit(npmPackages.totalDownloads, numberUnits, 1);
-const npmDownloads = `${downloads} ${unit}`;
-const downloadsPerSecond = Math.round(npmPackages.totalDownloads / 30 / 24 / 60 / 60);
+const [, lastMonthDownloads] = npmPackages.lastMonth;
+
+const lastMonthDownloadsPretty = $computed(() => {
+	const [downloads, unit] = getUnit(lastMonthDownloads, numberUnits, 1);
+	return `${downloads} ${unit}`;
+});
+
+const downloadsPerSecond = Math.round(lastMonthDownloads / 30 / 24 / 60 / 60);
 </script>
 
 <WiggleAnimation
@@ -39,7 +44,7 @@ I'm a software engineer specializing in JavaScript & TypeScript.
 
 I have a passion for helping engineers be more productive by improving Developer Experience (_DX_).
 
-My [_DX_ projects](/projects) are open-source and available for anyone to use. Last month, they were downloaded <span class="whitespace-nowrap">_{{ npmDownloads }} times_</span> (~{{ downloadsPerSecond.toLocaleString() }}/sec).
+My [_DX_ projects](/projects) are open-source and available for anyone to use. Last month, they were downloaded <span class="whitespace-nowrap">_{{ lastMonthDownloadsPretty }} times_</span> (~{{ downloadsPerSecond.toLocaleString() }}/sec).
 
 I'm currently based in 🗼 Tokyo and work at [<icon-mdi-square-inc /> Square](https://squareup.com/) as a frontend engineer.
 
