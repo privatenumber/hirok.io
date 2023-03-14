@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     Button: typeof import('./../components/Button.vue')['default']
     Collapsible: typeof import('./../components/Collapsible.vue')['default']
     ContactForm: typeof import('./../components/ContactForm.vue')['default']
+    CssChart: typeof import('./../components/CssChart.vue')['default']
     Cv: typeof import('./../components/Cv.vue')['default']
     CvComp: typeof import('./../components/CvComp.vue')['default']
     CvLinks: typeof import('./../components/CvLinks.vue')['default']
