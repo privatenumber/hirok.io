@@ -8,7 +8,7 @@
 		"lint:js": "eslint --cache .",
 		"lint:css": "stylelint --cache './src/**/*.{css,vue}'",
 		"dev": "vite --open --port 3000",
-		"build": "vite-ssg build",
+		"build": "NODE_ENV=production vite-ssg build",
 		"preview": "sirv dist --port 3000"
 	},
 	"simple-git-hooks": {
