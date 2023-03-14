@@ -10,6 +10,7 @@ const sendMessage = async () => {
 	const body = new FormData();
 	body.append('name', name);
 	body.append('email', email);
+	body.append('subject', 'hirok.io Contact form');
 	body.append('message', message);
 	body.append('access_key', '01766d79-8da6-4752-a79f-48ed42a1631f');
 
