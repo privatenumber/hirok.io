@@ -4,7 +4,7 @@ on:
     - cron: '0 0 1 * *' # First day of the month
   workflow_dispatch:
 
-permissions: read-all
+permissions: write-all
 
 jobs:
   crawl:
