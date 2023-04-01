@@ -2,6 +2,7 @@ name: Get stats
 on:
   schedule:
     - cron: '0 0 1 * *' # First day of the month
+  workflow_dispatch:
 
 jobs:
   crawl:
@@ -30,7 +31,7 @@ jobs:
     - name: Get GitHub stats
       env:
         GITHUB_TOKEN: ${{ github.token }}
-      run: pnpm tsx scripts/get-github-stats.ts
+      run: pnpm tsx scripts/get-github-stars.ts
 
     - name: Commit
       run: |
