@@ -4,8 +4,6 @@ on:
     - cron: '0 0 1 * *' # First day of the month
   workflow_dispatch:
 
-permissions: write-all
-
 jobs:
   crawl:
     name: Get npm & GitHub stats
@@ -32,7 +30,7 @@ jobs:
 
     - name: Get GitHub stats
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: pnpm tsx scripts/get-github-stars.ts
 
     - name: Commit

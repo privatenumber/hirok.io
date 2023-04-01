@@ -19,7 +19,7 @@ type Repositories = {
 	pageInfo: PageInfo;
 };
 
-const { GITHUB_TOKEN } = process.env;
+const { GH_TOKEN } = process.env;
 
 const getStarsPage = async (cursor: string) => graphql<{
 	viewer: {
@@ -57,7 +57,7 @@ const getStarsPage = async (cursor: string) => graphql<{
 	`,
 	{
 		headers: {
-			authorization: `token ${GITHUB_TOKEN}`,
+			authorization: `token ${GH_TOKEN}`,
 		},
 	},
 );
@@ -84,6 +84,8 @@ const getAllStars = async () => {
 		repositories: await getAllStars(),
 		fetched: new Date(),
 	};
+
+	console.log(data);
 
 	await fs.writeFile(
 		'./src/data/github-stars.json',
