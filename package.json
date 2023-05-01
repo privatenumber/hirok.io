@@ -2,6 +2,9 @@
 	"private": true,
 	"type": "module",
 	"files": [],
+	"engines": {
+		"node": "18.16.0"
+	},
 	"scripts": {
 		"prepare": "simple-git-hooks",
 		"lint": "npm run lint:js; npm run lint:css",
