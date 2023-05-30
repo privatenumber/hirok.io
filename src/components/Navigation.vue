@@ -97,7 +97,6 @@ nav {
 	font-family: Lexend;
 	font-style: normal;
 	font-weight: 400;
-	font-display: swap;
 	src: url('/Lexend.woff2') format('woff2');
 }
 
