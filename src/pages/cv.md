@@ -213,10 +213,8 @@ I made this plugin to improve the Webpack build time at work. Upon investigating
 
 <div class="print:hidden">
 
-## Contact me
+## Let's connect
 
-If you'd like to talk to me about anything, feel free to reach out.
-
-<ContactForm />
+If you're interested in connecting, feel free to <router-link to="/contact">reach out</router-link>!
 
 </div>

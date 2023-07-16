@@ -31,7 +31,7 @@ const isPageBottom = computed(() => {
 		<nav class="prose">
 			<router-link
 				to="/"
-				class="title"
+				class="title text-center"
 			>
 				Hiroki Osame
 			</router-link>
@@ -39,6 +39,7 @@ const isPageBottom = computed(() => {
 				<router-link
 					class="nav-link"
 					to="/projects"
+					title="Projects"
 				>
 					Projects
 				</router-link>
@@ -46,6 +47,7 @@ const isPageBottom = computed(() => {
 				<router-link
 					class="nav-link"
 					to="/cv"
+					title="CV"
 				>
 					CV
 				</router-link>
@@ -53,16 +55,25 @@ const isPageBottom = computed(() => {
 				<router-link
 					class="nav-link"
 					to="/posts"
+					title="Posts"
 				>
 					Posts
+				</router-link>
+
+				<router-link
+					class="nav-link"
+					to="/contact"
+					title="Contact me"
+				>
+					<icon-ci:paper-plane />
 				</router-link>
 
 				<button
 					:title="`Change to ${isDark ? 'light' : 'dark'} mode`"
 					@click="toggleDarkMode()"
 				>
-					<icon-ri-sun-line v-if="isDark" />
-					<icon-ri-moon-line v-else />
+					<icon-ci:sun v-if="isDark" />
+					<icon-ci:moon v-else />
 				</button>
 			</div>
 		</nav>
@@ -118,7 +129,8 @@ nav {
 	@apply
 		flex
 		items-center
-		gap-6;
+		gap-4
+		sm:gap-6;
 }
 
 a {

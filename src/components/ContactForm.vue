@@ -77,7 +77,7 @@ const sendMessage = async () => {
 				<div class="label">Message</div>
 				<textarea
 					v-model="message"
-					class="w-full"
+					class="w-full h-40"
 					placeholder="Hey there, can I ask you a question?"
 					:disabled="isSending"
 					required
