@@ -2,9 +2,6 @@
 	"private": true,
 	"type": "module",
 	"files": [],
-	"engines": {
-		"node": "18.16.0"
-	},
 	"scripts": {
 		"prepare": "simple-git-hooks",
 		"lint": "npm run lint:js; npm run lint:css",
@@ -21,12 +18,15 @@
 		"*.{js,ts,vue,md}": "eslint --cache",
 		"*.{css,vue}": "stylelint --cache"
 	},
+	"engines": {
+		"node": "18.16.0"
+	},
 	"devDependencies": {
 		"@iconify/json": "^2.2.58",
 		"@nodesecure/npm-registry-sdk": "^1.5.2",
 		"@octokit/graphql": "^5.0.5",
 		"@popperjs/core": "^2.11.7",
-		"@pvtnbr/eslint-config": "^0.33.0",
+		"@pvtnbr/eslint-config": "^0.34.0",
 		"@sindresorhus/slugify": "^2.2.0",
 		"@types/markdown-it": "^12.2.3",
 		"@types/node": "^18.16.3",

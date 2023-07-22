@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const animating = ref(false); // eslint-disable-line no-undef
+const animating = ref(false);
 
 const resetAnimation = ({ target }: PointerEvent) => {
 	if (!target || animating.value) {

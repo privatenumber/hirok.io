@@ -6,9 +6,9 @@ defineProps<{
 	tip: string;
 }>();
 
-const trigger = ref<InstanceType<typeof Subslot>>(); // eslint-disable-line no-undef
-const tooltip = ref<HTMLDivElement>(); // eslint-disable-line no-undef
-const isOpen = ref(false); // eslint-disable-line no-undef
+const trigger = ref<InstanceType<typeof Subslot>>();
+const tooltip = ref<HTMLDivElement>();
+const isOpen = ref(false);
 
 let popper: Instance;
 const show = () => {

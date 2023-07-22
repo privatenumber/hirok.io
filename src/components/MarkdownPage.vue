@@ -19,7 +19,7 @@ const props = defineProps<{
 const route = useRoute();
 const isBlogPost = computed(() => props.frontmatter.date);
 const heading = computed(() => props.frontmatter.heading ?? props.frontmatter.title);
-const article = ref<HTMLElement>(); // eslint-disable-line no-undef
+const article = ref<HTMLElement>();
 
 const { scrollMarginTop } = useCssModule();
 
