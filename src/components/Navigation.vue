@@ -69,6 +69,7 @@ const isPageBottom = computed(() => {
 				</router-link>
 
 				<button
+					class="nav-link"
 					:title="`Change to ${isDark ? 'light' : 'dark'} mode`"
 					@click="toggleDarkMode()"
 				>
@@ -133,10 +134,10 @@ nav {
 		sm:gap-6;
 }
 
-a {
+.nav-link {
 	@apply
-		text-gray-900
 		hover:no-underline
+		text-gray-900
 		dark:text-gray-100;
 }
 </style>
