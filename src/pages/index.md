@@ -37,8 +37,8 @@ const downloadsPerSecond = Math.round(lastMonthDownloads / 30 / 24 / 60 / 60);
 		class="rounded-md shadow-sm shadow-gray-900/70"
 	/>
 </WiggleAnimation>
-
-<span class="text-xl font-medium">Hello,</span><h1 class="mt-2">I'm Hiroki.</h1>
+<span class="text-xl font-medium">Hello,</span>
+<h1 class="mt-2">I'm Hiroki.</h1>
 
 I'm a software engineer specializing in JavaScript & TypeScript.
 
