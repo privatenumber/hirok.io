@@ -1,17 +1,4 @@
 <script setup lang="ts">
-
-// Hack for iOS 100vh
-const setViewportHeight = () => {
-	document.documentElement.style.setProperty(
-		'--viewport-height',
-		`${window.innerHeight}px`,
-	);
-};
-onMounted(() => {
-	setViewportHeight();
-	useEventListener(window, 'resize', setViewportHeight);
-});
-
 const websiteDescription = 'Hiroki Osame\'s personal website & blog';
 useHead({
 	title: 'Hiroki Osame',

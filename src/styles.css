@@ -21,8 +21,7 @@ html.dark {
 		flex-col
 		justify-between;
 
-	/* Hack for iOS 100vh */
-	min-height: var(--viewport-height, 100vh);
+	min-height: 100dvh;
 }
 
 #nprogress {
