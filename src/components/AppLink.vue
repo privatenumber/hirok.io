@@ -13,7 +13,7 @@ const isExternal = computed(() => isExternalPattern.test(props.href));
 		target="_blank"
 		rel="noopener"
 		:href="props.href"
-		class="inline-flex flex-wrap items-center gap-x-1 align-bottom"
+		class="inline-flex flex-wrap items-center gapx-1 align-bottom"
 	>
 		<slot />
 		<PrintUrlLabel :url="href" />
@@ -21,7 +21,7 @@ const isExternal = computed(() => isExternalPattern.test(props.href));
 	<RouterLink
 		v-else
 		:to="props.href"
-		class="inline-flex flex-wrap items-center gap-x-1 align-bottom"
+		class="inline-flex flex-wrap items-center gapx-1 align-bottom"
 	>
 		<slot />
 		<PrintUrlLabel :url="href" />

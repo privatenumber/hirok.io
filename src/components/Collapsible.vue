@@ -11,7 +11,7 @@ const isOpen = ref(false);
 		</TransitionCollapse>
 		<div
 			class="
-				p-y-1
+				py-1
 				cursor-pointer
 				text-xs
 				text-center

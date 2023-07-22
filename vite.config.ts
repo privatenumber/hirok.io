@@ -7,11 +7,6 @@ import Shiki from 'markdown-it-shiki';
 import vue from '@vitejs/plugin-vue';
 import pages from 'vite-plugin-pages';
 
-// Unocss
-import unocss from '@unocss/vite';
-import presetUno from '@unocss/preset-uno';
-import transformerDirective from '@unocss/transformer-directives';
-
 import autoImport from 'unplugin-auto-import/vite';
 import components from 'unplugin-vue-components/vite';
 import icons from 'unplugin-icons/vite';
@@ -34,20 +29,6 @@ export default defineConfig({
 		},
 	},
 	plugins: [
-		unocss({
-			transformers: [
-				transformerDirective(),
-			],
-			presets: [
-				presetUno(),
-			],
-			theme: {
-				boxShadow: {
-					border: '0 0 0 2px var(--un-shadow-color)',
-				},
-			},
-		}),
-
 		vue({
 			reactivityTransform: true,
 			template: {

@@ -104,11 +104,11 @@ const categoriesByCategory = computed(() => {
 		flex-wrap
 		justify-between
 		no-underline
-		m-y-2
-		p-y-2
+		my-2
+		py-2
 		rounded
-		color-gray-800
-		dark:color-zinc-300
+		text-gray-800
+		dark:text-zinc-300
 		transition
 		duration-100;
 }
@@ -122,7 +122,7 @@ const categoriesByCategory = computed(() => {
 
 .project-link:hover .project-name {
 	@apply
-		color-sky-600;
+		text-sky-600;
 }
 
 .project-description {

@@ -74,25 +74,27 @@ const postRoutes = useRouter().getRoutes()
 	@apply
 		block
 		no-underline
-		m-y-4
-		p-y-4
-		p-x-4
+		my-4
+		py-4
+		px-4
 		rounded
-		color-gray-800
-		dark:color-zinc-300
+		text-gray-800
+		dark:text-zinc-300
 		transition
 		duration-100;
 }
 
 .post-link:hover {
 	@apply
-		shadow-border
-		shadow-sky-600;
+		outline
+		outline-2
+		outline-offset-2
+		outline-sky-500;
 }
 
 .post-link:hover .title {
 	@apply
-		color-sky-500;
+		text-sky-500;
 }
 
 </style>

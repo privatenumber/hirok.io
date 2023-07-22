@@ -5,7 +5,7 @@
 			hidden
 			!print:hidden
 			rounded-md
-			bg-blue/20
+			bg-blue-400/20
 			px-6
 			py-4
 			mb-6
@@ -22,7 +22,7 @@
 <style>
 @media print {
 	* {
-		@apply !color-black;
+		@apply !text-black;
 	}
 
 	html {
@@ -68,19 +68,19 @@
 
 	.h2-styles {
 		@apply
-			m-t-3
-			p-b-2
+			mt-3
+			pb-2
 			border-black/40;
 	}
 
 	.h3-styles {
 		@apply
-			m-y-1;
+			my-1;
 	}
 
 	.h4-styles {
 		@apply
-			m-y-1;
+			my-1;
 	}
 
 	p,
@@ -92,13 +92,13 @@
 	}
 
 	a {
-		@apply color-black;
+		@apply text-black;
 	}
 
 	:not(pre) > code {
 		@apply
 			bg-transparent
-			p-x-1;
+			px-1;
 	}
 
 	.header-anchor{
@@ -110,7 +110,7 @@
 			relative
 			bg-white
 			overflow-hidden
-			color-gray-700;
+			text-gray-700;
 
 		width: 21cm;
 		height: 29cm;

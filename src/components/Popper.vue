@@ -98,7 +98,7 @@ const hide = () => {
 		py-1
 		px-2
 		shadow
-		z-1;
+		z-10;
 }
 
 .arrow,

@@ -40,8 +40,6 @@ declare module '@vue/runtime-core' {
     IconMdiSchool: typeof import('~icons/mdi/school')['default']
     IconMdiSquareInc: typeof import('~icons/mdi/square-inc')['default']
     IconMdiTwitter: typeof import('~icons/mdi/twitter')['default']
-    IconRiMoonLine: typeof import('~icons/ri/moon-line')['default']
-    IconRiSunLine: typeof import('~icons/ri/sun-line')['default']
     IconTablerViewfinder: typeof import('~icons/tabler/viewfinder')['default']
     ListPosts: typeof import('./../components/ListPosts.vue')['default']
     ListProjects: typeof import('./../components/ListProjects.vue')['default']

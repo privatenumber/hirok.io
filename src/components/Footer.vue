@@ -18,12 +18,12 @@ footer {
 	@apply
 		text-center
 		text-sm
-		p-x-4
-		p-y-6
+		px-4
+		py-6
 		font-light;
 }
 
 a {
-	@apply color-inherit;
+	@apply text-inherit;
 }
 </style>

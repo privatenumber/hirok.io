@@ -93,14 +93,14 @@ const sendMessage = async () => {
 					<template v-if="isSending">
 						<Spinner
 							v-if="isSending"
-							class="w-4 m-r-2"
+							class="w-4 mr-2"
 						/>
 
 						Sending
 					</template>
 					<template v-else>
 						<icon-mdi:send
-							class="inline m-r-2"
+							class="inline mr-2"
 						/>
 
 						Send

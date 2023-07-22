@@ -1,12 +1,17 @@
+/* Preflight will be injected here */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
-	@apply color-gray-700;
+	@apply text-gray-700;
 
 	scroll-padding-top: 1.5rem;
 }
 
 html.dark {
 	@apply
-		color-zinc-300
+		text-zinc-300
 		bg-zinc-900;
 }
 
@@ -69,7 +74,7 @@ a.header-anchor:focus {
 
 a {
 	@apply
-		color-sky-500
+		text-sky-500
 		hover:underline
 		underline-offset-2;
 }
@@ -85,20 +90,20 @@ ol {
 blockquote {
 	@apply
 		border-l-4
-		border-black/35
-		dark:border-white/35
+		/* border-black/35 */
+		/* dark:border-white/35 */
 		bg-slate-100
 		dark:bg-slate-800
-		p-x-6
-		p-y-2;
+		px-6
+		py-2;
 
 	margin: 1em 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	@apply
-		color-gray-600
-		dark:color-zinc-200
+		text-gray-600
+		dark:text-zinc-200
 		font-bold
 		leading-tight;
 }
@@ -120,14 +125,14 @@ h4 {
 }
 
 .h1-styles {
-	@apply m-y-4;
+	@apply my-4;
 }
 
 .h2-styles {
 	@apply
-		m-t-7
-		m-b-2
-		p-b-2
+		mt-7
+		mb-2
+		pb-2
 		border-b
 		border-black/10
 		dark:border-white/10;
@@ -135,8 +140,8 @@ h4 {
 
 .h3-styles {
 	@apply
-		m-t-6
-		m-b-2;
+		mt-6
+		mb-2;
 }
 
 .h4-styles {
@@ -171,8 +176,8 @@ code {
 pre {
 	@apply
 		overflow-x-auto
-		p-x-6
-		p-y-5
+		px-6
+		py-5
 		rounded-lg
 		my-4
 		leading-relaxed;
@@ -191,8 +196,8 @@ code {
 
 :not(pre) > code {
 	@apply
-		p-x-2
-		p-y-1
+		px-2
+		py-1
 		rounded
 		bg-black/5
 		dark:bg-white/5
@@ -216,13 +221,13 @@ ol > li::marker,
 ul > li::marker,
 summary::marker {
 	@apply
-		color-slate-500
-		dark:color-slate-400;
+		text-slate-500
+		dark:text-slate-400;
 }
 
 hr {
 	@apply
-		m-y-10
+		my-10
 		border-black/10
 		dark:border-white/10;
 }
@@ -261,15 +266,15 @@ label > .label {
 	@apply
 		text-sm
 		font-bold
-		m-b-1;
+		mb-1;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
 	@apply
-		p-x-4
-		p-y-2
+		px-4
+		py-2
 		rounded
 		border
 		border-black/10
@@ -286,11 +291,11 @@ input[type="email"],
 textarea
 ):disabled {
 	@apply
-		color-zinc-400
+		text-zinc-400
 		bg-zinc-200
 		border-zinc-300
 
-		dark:color-zinc-500
+		dark:text-zinc-500
 		dark:bg-zinc-700
 		dark:border-zinc-600
 	;

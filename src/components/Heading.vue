@@ -12,11 +12,11 @@ defineProps<{
 			flex
 			flex-wrap
 			print:flex-nowrap
-			print:gap-x-0
+			print:gapx-0
 			justify-between
 			items-center
-			gap-x-6
-			gap-y-2
+			gapx-6
+			gapy-2
 		"
 		:class="`h${size}-styles`"
 	>

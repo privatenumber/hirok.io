@@ -31,14 +31,11 @@
 		"@types/markdown-it": "^12.2.3",
 		"@types/node": "^18.16.3",
 		"@types/nprogress": "^0.2.0",
-		"@unocss/preset-uno": "^0.51.8",
-		"@unocss/reset": "^0.51.8",
-		"@unocss/transformer-directives": "^0.51.8",
-		"@unocss/vite": "^0.51.8",
 		"@vercel/analytics": "^1.0.0",
 		"@vitejs/plugin-vue": "^4.2.1",
 		"@vueuse/core": "^10.1.0",
 		"@vueuse/head": "^1.1.26",
+		"autoprefixer": "^10.4.14",
 		"cleye": "^1.3.2",
 		"code-tag": "^1.1.0",
 		"eslint": "^8.45.0",
@@ -49,14 +46,15 @@
 		"markdown-it-anchor": "^8.6.7",
 		"markdown-it-shiki": "^0.8.1",
 		"nprogress": "^0.2.0",
+		"postcss": "^8.4.27",
 		"postcss-html": "^1.5.0",
 		"simple-git-hooks": "^2.8.1",
 		"stylelint": "^15.6.0",
 		"stylelint-config-recommended-vue": "^1.4.0",
 		"stylelint-config-standard": "^33.0.0",
+		"tailwindcss": "^3.3.3",
 		"tsx": "^3.12.7",
 		"typescript": "^5.0.4",
-		"unocss": "^0.51.8",
 		"unplugin-auto-import": "^0.15.3",
 		"unplugin-icons": "^0.16.1",
 		"unplugin-vue-components": "^0.24.1",
@@ -80,7 +78,15 @@
 			"stylelint-config-recommended-vue"
 		],
 		"rules": {
-			"indentation": "tab"
+			"indentation": "tab",
+			"at-rule-no-unknown": [
+				true,
+				{
+					"ignoreAtRules": [
+						"tailwind"
+					]
+				}
+			]
 		}
 	}
 }

@@ -87,8 +87,8 @@ const lastPublishRelative = computed(() => {
 							ml-2
 							text-lg
 							align-middle
-							color-black
-							dark:color-white
+							text-black
+							dark:text-white
 							transition-opacity
 							opacity-50
 							hover:opacity-90
@@ -105,8 +105,8 @@ const lastPublishRelative = computed(() => {
 							ml-2
 							text-lg
 							align-middle
-							color-black
-							dark:color-white
+							text-black
+							dark:text-white
 							transition-opacity
 							opacity-50
 							hover:opacity-90
@@ -139,7 +139,7 @@ const lastPublishRelative = computed(() => {
 					bottom-0
 					left-0
 					right-0
-					-z-1
+					-z-10
 				"
 			/>
 			<div
@@ -199,7 +199,7 @@ const lastPublishRelative = computed(() => {
 <style scoped>
 td {
 	@apply
-		p-y-8
+		py-8
 		align-top;
 }
 

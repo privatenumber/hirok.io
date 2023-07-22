@@ -83,8 +83,8 @@ const isPageBottom = computed(() => {
 <style scoped>
 header {
 	@apply
-		p-x-4
-		p-y-6;
+		px-4
+		py-6;
 }
 
 .is-sticky {
@@ -93,7 +93,7 @@ header {
 		top-0
 		bg-white/90
 		dark:bg-zinc-900/90
-		z-1;
+		/* z-10; */
 }
 
 nav {
@@ -135,8 +135,8 @@ nav {
 
 a {
 	@apply
-		color-gray-900
+		text-gray-900
 		hover:no-underline
-		dark:color-gray-100;
+		dark:text-gray-100;
 }
 </style>

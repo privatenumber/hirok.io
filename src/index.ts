@@ -1,7 +1,5 @@
 import { ViteSSG } from 'vite-ssg';
 import NProgress from 'nprogress';
-import 'uno.css'; // eslint-disable-line import/no-unresolved
-import '@unocss/reset/tailwind.css';
 import { inject as injectAnalytics } from '@vercel/analytics';
 import App from './App.vue';
 import routes from '~pages'; // eslint-disable-line import/no-unresolved

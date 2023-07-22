@@ -53,15 +53,17 @@ a,
 button {
 	@apply
 		inline-flex
+		flex-nowrap
 		items-center
-		p-y-2
-		p-x-4
+		py-2
+		px-4
 		rounded-lg
 		no-underline
 		hover:no-underline
 		transition-colors
 		duration-100
 		justify-center
+		gap-1
 		;
 }
 
@@ -76,7 +78,7 @@ button:disabled {
 .primary {
 	@apply
 		font-medium
-		color-white
+		text-white
 		bg-sky-500
 		border-2
 		border-sky-500
@@ -87,19 +89,19 @@ button:disabled {
 	@apply
 		border-2
 		border-sky-600
-		hover:bg-sky-700/15;
+		hover:bg-sky-700/20;
 }
 
 .large {
 	@apply
-		p-x-6
+		px-6
 		text-lg;
 }
 
 .small {
 	@apply
-		p-x-2
-		p-y-1
+		px-2
+		py-1
 		text-sm;
 }
 </style>

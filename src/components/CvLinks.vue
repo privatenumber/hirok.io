@@ -19,7 +19,7 @@ const email = typeof window !== 'undefined' && window.atob('aGlyb2tpLm9zYW1lQGdt
 	>
 		<span
 			v-if="isPrint"
-			class="flex items-center gap-x-1"
+			class="flex items-center gapx-1"
 		>
 			<icon-mdi:email /> {{ email }}
 		</span>
@@ -38,7 +38,7 @@ const email = typeof window !== 'undefined' && window.atob('aGlyb2tpLm9zYW1lQGdt
 			<icon-mdi:linkedin /> LinkedIn
 		</AppLink>
 
-		<span class="flex items-center gap-x-1 mb-1">
+		<span class="flex items-center gapx-1 mb-1">
 			<icon-mdi:map-marker-radius-outline /> Tokyo, Japan
 		</span>
 	</div>

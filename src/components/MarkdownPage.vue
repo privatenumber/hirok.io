@@ -114,7 +114,7 @@ if (props.frontmatter.link) {
 
 	<div
 		v-if="isBlogPost"
-		class="prose m-auto m-t-20"
+		class="prose m-auto mt-20"
 	>
 		<hr>
 
@@ -122,31 +122,31 @@ if (props.frontmatter.link) {
 			<router-link to="/">
 				<img
 					src="/hiroki.webp"
-					class="min-w-30 h-30 rounded-50"
+					class="min-w-28 h-28 rounded-full"
 				>
 			</router-link>
 			<div>
 				<div class="text-xl font-medium">
 					Thanks for reading! Hope you'll stick around.
 				</div>
-				<div class="m-t-2">
+				<div class="mt-2">
 					— Hiroki Osame
 				</div>
-				<div class="m-t-1 opacity-70">
+				<div class="mt-1 opacity-70">
 					Open source Engineer. Living in NYC. Working at Square.
 				</div>
 
 				<Button
 					href="https://twitter.com/privatenumbr"
 					size="small"
-					class="m-t-8"
+					class="mt-8"
 				>
-					<icon-mdi-twitter class="m-r-1" /> Follow @privatenumbr
+					<icon-mdi-twitter class="mr-1" /> Follow @privatenumbr
 				</Button>
 			</div>
 		</div>
 
-		<div class="m-t-15 flex justify-between text-xs">
+		<div class="mt-16 flex justify-between text-xs">
 			<div>
 				<div class="text-sm font-bold">
 					Have a question for me?

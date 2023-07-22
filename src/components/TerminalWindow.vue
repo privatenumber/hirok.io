@@ -38,7 +38,8 @@ const props = withDefaults(defineProps<{
 		shadow-lg
 		shadow-gray-200
 		dark:shadow
-		dark:shadow-dark-700;
+		/* dark:shadow-dark-700; */
+	;
 
 	font-style: initial;
 	background-color: rgb(46 52 64);
@@ -55,7 +56,7 @@ const props = withDefaults(defineProps<{
 
 .title {
 	@apply
-		color-light-200
+		text-neutral-50
 		text-xs
 		font-light;
 }
@@ -69,10 +70,11 @@ const props = withDefaults(defineProps<{
 .button {
 	@apply
 		inline-block
-		rounded-1/2
-		w-10px
-		h-10px
-		mr-6px;
+		rounded-full;
+
+	width: 10px;
+	height: 10px;
+	margin-right: 6px;
 }
 
 .button.red {
@@ -90,8 +92,8 @@ const props = withDefaults(defineProps<{
 :deep(pre) {
 	@apply
 		m-0
-		p-x-5
-		p-y-4;
+		px-5
+		py-4;
 }
 
 .window.small :deep(code) {

@@ -29,7 +29,7 @@ const downloads = computed(() => {
 		<Heading size="4">
 			<template v-if="url ?? npmPackage">
 				<AppLink
-					class="color-gray-600 dark:color-zinc-200"
+					class="text-gray-600 dark:text-zinc-200"
 					:href="url ?? npmUrl"
 				>
 					{{ name }}
