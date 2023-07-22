@@ -7,17 +7,18 @@ const props = defineProps<{
 	url?: string;
 }>();
 
-const npmPackage = $computed(() => npmDownloads.packages.find(pkg => pkg.name === props.name));
+const npmPackage = computed(() => npmDownloads.packages.find(pkg => pkg.name === props.name));
 
-const npmUrl = $computed(() => `https://npm.im/${props.name}`);
+const npmUrl = computed(() => `https://npm.im/${props.name}`);
 
-const downloads = $computed(() => {
-	if (!npmPackage) {
+const downloads = computed(() => {
+	const npmPackageValue = npmPackage.value;
+	if (!npmPackageValue) {
 		return;
 	}
 
-	const lastMonthKey = npmDownloads.lastMonth[0] as keyof typeof npmPackage.downloads;
-	const lastMonthDownloads = npmPackage.downloads[lastMonthKey] ?? 0;
+	const lastMonthKey = npmDownloads.lastMonth[0] as keyof typeof npmPackageValue.downloads;
+	const lastMonthDownloads = npmPackageValue.downloads[lastMonthKey] ?? 0;
 	const [count, unit] = getUnit(lastMonthDownloads, shortNumberUnits, 1);
 	return `${count}${unit}/month`;
 });

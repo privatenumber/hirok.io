@@ -5,7 +5,7 @@ const props = defineProps<{
 
 const increments = 100 / (props.data.length - 1);
 const maxValue = Math.max(...props.data);
-const clipPath = $computed(() => {
+const clipPath = computed(() => {
 	const points = props.data.map(
 		(point, i) => `${
 			(i * increments).toFixed(2)

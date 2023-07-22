@@ -16,8 +16,8 @@ if (!props.repository) {
 	console.warn(`No repository URL provided for ${props.name}`);
 }
 
-const npmUrl = $computed(() => `https://www.npmjs.com/package/${props.name}`);
-const repoStars = $computed(() => {
+const npmUrl = computed(() => `https://www.npmjs.com/package/${props.name}`);
+const repoStars = computed(() => {
 	const repo = props.repository
 		? props.repository
 			.replace('https://github.com/', '')
@@ -33,21 +33,21 @@ const repoStars = $computed(() => {
 	return stars;
 });
 
-const repoStarsPretty = $computed(() => {
-	const [value, unit] = getUnit(repoStars, shortNumberUnits, 1);
+const repoStarsPretty = computed(() => {
+	const [value, unit] = getUnit(repoStars.value, shortNumberUnits, 1);
 	return `${value}${unit ?? ''}`;
 });
 
-const repositoryUrl = $computed(() => props.repository ?? `https://github.com/privatenumber/${props.name}`);
-const searchUrl = $computed(() => `https://github.com/search?type=code&q=path%3A%2Fpackage.json%24%2F+%22%5C%22${props.name}%5C%22%3A%22`);
+const repositoryUrl = computed(() => props.repository ?? `https://github.com/privatenumber/${props.name}`);
+const searchUrl = computed(() => `https://github.com/search?type=code&q=path%3A%2Fpackage.json%24%2F+%22%5C%22${props.name}%5C%22%3A%22`);
 
 const [lastMonthKey] = npmDownloads.lastMonth;
 
-const lastMonthDownloads = $computed(() => props.downloads[lastMonthKey] ?? 0);
+const lastMonthDownloads = computed(() => props.downloads[lastMonthKey] ?? 0);
 
-const lastMonthDownloadsPretty = $computed(
+const lastMonthDownloadsPretty = computed(
 	() => {
-		const [value, unit] = getUnit(lastMonthDownloads, shortNumberUnits, 1)!;
+		const [value, unit] = getUnit(lastMonthDownloads.value, shortNumberUnits, 1)!;
 		return `${value % 1 === 0 ? value : value.toFixed(1)} ${unit ?? ''}`;
 	},
 );
@@ -57,12 +57,12 @@ const downloadsChartData = Object.entries(props.downloads)
 	.map(([, downloads]) => downloads)
 	.slice(-12);
 
-const lastPublishDatePretty = $computed(() => {
+const lastPublishDatePretty = computed(() => {
 	const publishDate = new Date(props.lastPublishDate);
 	return publishDate.toLocaleString();
 });
 
-const lastPublishRelative = $computed(() => {
+const lastPublishRelative = computed(() => {
 	const publishDate = new Date(props.lastPublishDate);
 	const secondsAgo = Math.floor((Date.now() - publishDate.getTime()) / 1000);
 	const [value, unit] = getUnit(secondsAgo, timeUnits, 0)!;

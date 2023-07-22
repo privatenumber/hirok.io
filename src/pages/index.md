@@ -8,7 +8,7 @@ import npmPackages from '@/data/npm-downloads.json';
 
 const [, lastMonthDownloads] = npmPackages.lastMonth;
 
-const lastMonthDownloadsPretty = $computed(() => {
+const lastMonthDownloadsPretty = computed(() => {
 	const [downloads, unit] = getUnit(lastMonthDownloads, numberUnits, 1);
 	return `${downloads} ${unit}`;
 });
