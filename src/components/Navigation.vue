@@ -31,7 +31,7 @@ const isPageBottom = computed(() => {
 		<nav class="prose">
 			<router-link
 				to="/"
-				class="title text-center"
+				class="title text-center nav-link"
 			>
 				Hiroki Osame
 			</router-link>
