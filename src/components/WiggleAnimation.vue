@@ -1,12 +1,12 @@
 <script setup lang="ts">
-let animating = $ref(false); // eslint-disable-line no-undef
+const animating = ref(false); // eslint-disable-line no-undef
 
 const resetAnimation = ({ target }: PointerEvent) => {
-	if (!target || animating) {
+	if (!target || animating.value) {
 		return;
 	}
 
-	animating = true;
+	animating.value = true;
 
 	const element = target as HTMLDivElement;
 	element.style.animation = 'none';
@@ -17,7 +17,7 @@ const resetAnimation = ({ target }: PointerEvent) => {
 };
 
 const animationDone = () => {
-	animating = false;
+	animating.value = false;
 };
 </script>
 

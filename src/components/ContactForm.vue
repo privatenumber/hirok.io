@@ -1,17 +1,17 @@
 <script setup lang="ts">
-let isSending = $ref(false);
-let name = $ref('');
-let email = $ref('');
-let message = $ref('');
+const isSending = ref(false);
+const name = ref('');
+const email = ref('');
+const message = ref('');
 
 const sendMessage = async () => {
-	isSending = true;
+	isSending.value = true;
 
 	const body = new FormData();
-	body.append('name', name);
-	body.append('email', email);
+	body.append('name', name.value);
+	body.append('email', email.value);
 	body.append('subject', 'hirok.io Contact form');
-	body.append('message', message);
+	body.append('message', message.value);
 	body.append('access_key', '01766d79-8da6-4752-a79f-48ed42a1631f');
 
 	const fetching = await fetch(
@@ -28,10 +28,10 @@ const sendMessage = async () => {
 		// show popup
 	}
 
-	name = '';
-	email = '';
-	message = '';
-	isSending = false;
+	name.value = '';
+	email.value = '';
+	message.value = '';
+	isSending.value = false;
 };
 
 </script>

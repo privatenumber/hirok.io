@@ -6,24 +6,24 @@ defineProps<{
 	tip: string;
 }>();
 
-const trigger = $ref<InstanceType<typeof Subslot>>(); // eslint-disable-line no-undef
-const tooltip = $ref<HTMLDivElement>(); // eslint-disable-line no-undef
-let isOpen = $ref(false); // eslint-disable-line no-undef
+const trigger = ref<InstanceType<typeof Subslot>>(); // eslint-disable-line no-undef
+const tooltip = ref<HTMLDivElement>(); // eslint-disable-line no-undef
+const isOpen = ref(false); // eslint-disable-line no-undef
 
 let popper: Instance;
 const show = () => {
-	isOpen = true;
+	isOpen.value = true;
 
 	if (popper) {
 		popper.update();
 	} else {
-		if (!trigger?.$el || !tooltip) {
+		if (!trigger.value?.$el || !tooltip.value) {
 			return;
 		}
 
 		popper = createPopper(
-			trigger.$el,
-			tooltip,
+			trigger.value.$el,
+			tooltip.value,
 			{
 				placement: 'bottom',
 				modifiers: [
@@ -51,7 +51,7 @@ onBeforeUnmount(() => {
 });
 
 const hide = () => {
-	isOpen = false;
+	isOpen.value = false;
 };
 </script>
 

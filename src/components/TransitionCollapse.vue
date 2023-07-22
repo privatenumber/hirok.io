@@ -1,31 +1,20 @@
 <script setup lang="ts">
-const zeroHeight = (element: HTMLElement) => {
-	Object.assign(element.style, {
+const zeroHeight = (element: Element) => {
+	Object.assign((element as HTMLElement).style, {
 		height: '0px',
 	});
 };
 
-const removeHeight = (element: HTMLElement) => {
-	element.style.removeProperty('height');
+const removeHeight = (element: Element) => {
+	(element as HTMLElement).style.removeProperty('height');
 };
 
-const getHeight = (element: Element) => {
-	const styles = window.getComputedStyle(element);
-	return (
-		element.scrollHeight
-		+ Number.parseFloat(styles.marginTop.slice(0, -2)) // Strip px
-	);
+const setContentHeight = (element: Element) => {
+	const { scrollHeight } = element;
+	(element as HTMLElement).style.height = `${scrollHeight}px`;
 };
 
-const setContentHeight = (element: HTMLElement) => {
-	const targetHeight = Array.from(element.children)
-		.map(getHeight)
-		.reduce((current, sum) => current + sum, 0);
-
-	element.style.height = `${targetHeight}px`;
-};
-
-const onLeave = (element: HTMLElement) => {
+const onLeave = (element: Element) => {
 	setContentHeight(element);
 	zeroHeight(element);
 };
@@ -33,7 +22,7 @@ const onLeave = (element: HTMLElement) => {
 </script>
 
 <template>
-	<transition
+	<Transition
 		v-bind="$attrs"
 
 		:enter-active-class="$s.transitioning"
@@ -48,7 +37,7 @@ const onLeave = (element: HTMLElement) => {
 		@after-leave="removeHeight"
 	>
 		<slot />
-	</transition>
+	</Transition>
 </template>
 
 <style module="$s">

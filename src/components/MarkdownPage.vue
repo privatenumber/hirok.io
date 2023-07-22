@@ -19,7 +19,7 @@ const props = defineProps<{
 const route = useRoute();
 const isBlogPost = computed(() => props.frontmatter.date);
 const heading = computed(() => props.frontmatter.heading ?? props.frontmatter.title);
-const article = $ref<HTMLElement>(); // eslint-disable-line no-undef
+const article = ref<HTMLElement>(); // eslint-disable-line no-undef
 
 const { scrollMarginTop } = useCssModule();
 
@@ -35,7 +35,7 @@ onMounted(() => {
 	const lastPage = pageHeight - windowHeight;
 
 	// Add scroll margin to anchors on last page
-	article!.querySelectorAll('[id]').forEach((anchor) => {
+	article.value!.querySelectorAll('[id]').forEach((anchor) => {
 		if ((anchor as HTMLElement).offsetTop > lastPage) {
 			anchor.classList.add(scrollMarginTop);
 		}
