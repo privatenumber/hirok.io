@@ -133,7 +133,7 @@ if (props.frontmatter.link) {
 					— Hiroki Osame
 				</div>
 				<div class="mt-1 opacity-70">
-					Open source Engineer. Living in NYC. Working at Square.
+					Open source Engineer. Living in Tokyo. Working at Square.
 				</div>
 
 				<Button
