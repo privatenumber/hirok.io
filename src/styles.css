@@ -158,7 +158,8 @@ video {
 
 figure,
 picture {
-	margin: 1em 0;
+	@apply
+		my-16;
 }
 
 figcaption {
