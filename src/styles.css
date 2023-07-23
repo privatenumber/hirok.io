@@ -196,7 +196,6 @@ code {
 :not(pre) > code {
 	@apply
 		px-2
-		py-1
 		rounded
 		bg-black/5
 		dark:bg-white/5
@@ -243,11 +242,17 @@ abbr {
 }
 
 kbd {
-	color: red;
-	border: 1px solid;
-	padding: 0.25rem 0.5rem;
-	font-size: 0.875em;
-	border-radius: 0.25rem;
+	@apply
+		bg-black/10
+		dark:bg-white/10
+		rounded
+		border
+		border-b-2
+		border-black/10
+		dark:border-white/10
+		px-2
+		py-1
+		text-xs;
 }
 
 details {
