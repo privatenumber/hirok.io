@@ -119,12 +119,15 @@ if (props.frontmatter.link) {
 		<hr>
 
 		<div class="flex gap-8 items-center justify-center">
-			<router-link to="/">
+			<AppLink
+				to="/"
+				class="min-w-fit"
+			>
 				<img
 					src="/hiroki.webp"
-					class="min-w-28 h-28 rounded-full"
+					class="h-28 rounded-full"
 				>
-			</router-link>
+			</AppLink>
 			<div>
 				<div class="text-xl font-medium">
 					Thanks for reading! Hope you'll stick around.
