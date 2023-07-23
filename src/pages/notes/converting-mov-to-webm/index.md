@@ -1,29 +1,43 @@
-# Converting `.mov` to `.webm`
+<script setup lang="ts">
+const inputFile = $ref('input.mov');
+</script>
 
+# Converting `.mov` to `.webm` on macOS
+
+<!-- 
+<input type="text" v-model="inputFile">
+
+Codeblocks can't handle handebars
+-->
+
+Using [ffmpeg](https://formulae.brew.sh/formula/ffmpeg), you can convert a QuickTime video to WebM format:
+```
+ffmpeg -i input.mov -c:v libvpx -quality good -cpu-used 0 -b:v 7000k -qmin 10 -qmax 42 -maxrate 500k -bufsize 1500k -threads 8 -vf scale=-1:1080 -c:a libvorbis -b:a 192k -f webm output.webm
+```
+
+Add the `-an` flag to mute the audio.
+
+
+## Context
 I use the macOS screen recorder frequently (<kbd>Shift</kbd>+<kbd>⌘</kbd>+<kbd>5</kbd>) but the output video is a QuickTime video (`.mov`).
 
 When using the video on websites, ideally it's in the [WebMedia (`.webm`) format](https://cloudinary.com/guides/video-formats/webm-format-what-you-should-know) of the video, which is a format specifically optimized for modern web environments.
 
 
-I found this answer on [StackExchange](https://superuser.com/a/479391):
+## Research
 
-```
-ffmpeg -i xxx.mp4 -c:v libvpx -quality good -cpu-used 0 -b:v 7000k -qmin 10 -qmax 42 -maxrate 500k -bufsize 1500k -threads 8 -vf scale=-1:1080 -c:a libvorbis -b:a 192k -f webm xxx.webm
-```
+I found this answer on [StackExchange](https://superuser.com/a/479391). Even though the input format was for `.mp4`, it worked for `.mov` as well.
 
-Even though the input format was for `.mp4`, it worked for `.mov` as well.
 
-You can add `-an` to mute the audio.
+### What does the command do?
 
-<!-- 
-
-I asked ChatGPT for a breakdown of what the command is doing:
+> I asked ChatGPT for a breakdown of what the command is doing
 
 This `ffmpeg` command is used to convert a video file from one format to another. Let's break down the various options and parameters used in the command:
 
 1. `ffmpeg`: This is the command to run the FFmpeg software, a powerful multimedia framework that can handle audio, video, and other multimedia tasks.
 
-2. `-i ./site-load.mov`: This specifies the input file for the conversion. In this case, it is `site-load.mov`, assumed to be located in the current working directory (`./`).
+2. `-i ./input.mov`: This specifies the input file for the conversion. In this case, it is `input.mov`, assumed to be located in the current working directory (`./`).
 
 3. `-c:v libvpx`: This option selects the video codec to be used for the video encoding. Here, `libvpx` is the VP8/VP9 video codec developed by the WebM project.
 
@@ -47,6 +61,24 @@ This `ffmpeg` command is used to convert a video file from one format to another
 
 13. `-f webm`: This sets the output format to WebM, a multimedia format developed by Google that combines VP8/VP9 video and Vorbis audio, designed for web usage.
 
-14. `./site-load.webm`: This specifies the output filename and location for the converted video. In this case, it will be saved as `site-load.webm` in the current working directory (`./`).
+14. `./output.webm`: This specifies the output filename and location for the converted video. In this case, it will be saved as `output.webm` in the current working directory (`./`).
 
-In summary, this `ffmpeg` command takes a video file called `site-load.mov`, converts it to WebM format with VP8/VP9 video and Vorbis audio codecs, scales it to 1080p resolution while maintaining aspect ratio, and applies specific settings for video and audio bitrate, quantization, and buffer size. The resulting WebM file will be saved as `site-load.webm`. -->
+In summary, this `ffmpeg` command takes a video file called `input.mov`, converts it to WebM format with VP8/VP9 video and Vorbis audio codecs, scales it to 1080p resolution while maintaining aspect ratio, and applies specific settings for video and audio bitrate, quantization, and buffer size. The resulting WebM file will be saved as `output.webm`.
+
+### Can macOS's video format be configured?
+
+macOS's format for taking _screenshot images_ can be [configured from the default PNG format](https://macos-defaults.com/screenshots/type.html) by executing this in Terminal:
+
+```sh
+defaults write com.apple.screencapture "type" -string "jpg"
+```
+
+However, it doesn't seem like there's a way to change the default video format.
+
+Upon investigating, the command above is basically setting what gets passed into the `screencapture` command. So when you execute the command `man screencapture`, to see the manual for `screencapture` which documents options and available formats:
+
+```
+-t      <format> Image format to create, default is png (other options include pdf, jpg, tiff and other formats).
+```
+
+Unfortunately, it doesn't seem like there's a configuration for video formats.
