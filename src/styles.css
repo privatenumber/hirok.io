@@ -162,8 +162,13 @@ picture {
 }
 
 figcaption {
-	color: red;
-	font-size: 0.875em;
+	@apply
+		text-sm
+		text-gray-500
+		dark:text-zinc-400
+		text-center
+		italic
+		mt-2;
 }
 
 code {
@@ -196,6 +201,7 @@ code {
 :not(pre) > code {
 	@apply
 		px-2
+		py-1
 		rounded
 		bg-black/5
 		dark:bg-white/5
