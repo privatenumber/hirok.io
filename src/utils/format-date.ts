@@ -1,5 +1,6 @@
 export const formatDate = (
 	date: string | Date,
+	detailed?: boolean,
 ) => {
 	if (typeof date === 'string') {
 		date = new Date(date);
@@ -10,7 +11,8 @@ export const formatDate = (
 		{
 			year: 'numeric',
 			month: 'short',
-			day: 'numeric',
+			day: detailed ? 'numeric' : undefined,
+			weekday: detailed ? 'long' : undefined,
 		},
 	);
 };

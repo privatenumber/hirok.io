@@ -93,16 +93,20 @@ if (props.frontmatter.link) {
 			v-if="isBlogPost"
 			class="opacity-80 text-lg"
 		>
-			{{ formatDate(props.frontmatter.date!) }}
-			<span v-if="props.frontmatter.duration">
-				· {{ props.frontmatter.duration }}
+			<span
+				:title="formatDate(frontmatter.date!, true)"
+			>
+				{{ formatDate(frontmatter.date!) }}
+			</span>
+			<span v-if="frontmatter.duration">
+				· {{ frontmatter.duration }}
 			</span>
 		</p>
 		<p
-			v-if="props.frontmatter.subtitle"
+			v-if="frontmatter.subtitle"
 			class="opacity-70 italic text-lg"
 		>
-			{{ props.frontmatter.subtitle }}
+			{{ frontmatter.subtitle }}
 		</p>
 	</div>
 	<article
