@@ -37,7 +37,7 @@ const postRoutes = useRouter().getRoutes()
 				class="post-link"
 				:to="route.path"
 			>
-				<div class="flex justify-between items-center">
+				<div class="flex flex-col sm:flex-row justify-between">
 					<div>
 						<span class="title text-lg font-medium">
 							{{ route.meta.title }}
