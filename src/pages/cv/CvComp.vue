@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import CvLinks from './CvLinks.vue';
+
 const isPrint = useMediaQuery('print');
 const todayPretty = new Date().toLocaleDateString();
 </script>

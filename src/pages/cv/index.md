@@ -6,6 +6,7 @@ heading: ''
 <script setup lang="ts">
 import { getUnit, numberUnits, shortNumberUnits } from '@/utils/get-unit';
 import npmPackages from '@/data/npm-downloads.json';
+import CvComp from './CvComp.vue';
 
 const [lastMonth, lastMonthDownloads] = npmPackages.lastMonth;
 const [downloads, unit] = getUnit(lastMonthDownloads, numberUnits, 1);
