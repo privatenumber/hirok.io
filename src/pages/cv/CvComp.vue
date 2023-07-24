@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import A4Paper from './A4Paper.vue';
 import CvLinks from './CvLinks.vue';
 
 const isPrint = useMediaQuery('print');
