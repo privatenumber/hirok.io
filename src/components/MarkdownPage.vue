@@ -139,13 +139,23 @@ if (props.frontmatter.link) {
 					Open source Engineer. Living in Tokyo. Working at Square.
 				</div>
 
-				<Button
-					href="https://twitter.com/privatenumbr"
-					size="small"
-					class="mt-8"
-				>
-					<icon-mdi-twitter class="mr-1" /> Follow @privatenumbr
-				</Button>
+				<div class="mt-8 flex flex-col sm:flex-row gap-2">
+					<Button
+						href="https://twitter.com/privatenumbr"
+						size="small"
+					>
+						<icon-mdi-twitter /> Follow @privatenumbr
+					</Button>
+					<Button
+						href="https://github.com/sponsors/privatenumber"
+						size="small"
+						variant="custom"
+						class="bg-rose-500 border-rose-500 hover:bg-rose-600"
+					>
+						<icon-mdi-heart /> Buy me a coffee
+					</Button>
+
+				</div>
 			</div>
 		</div>
 
@@ -154,13 +164,13 @@ if (props.frontmatter.link) {
 				<div class="text-sm font-bold">
 					Have a question for me?
 				</div>
-				Reach out on
-				<AppLink href="https://twitter.com/privatenumbr">
-					Twitter
+				Reach out via
+				<AppLink href="/contact">
+					email
 				</AppLink>
 				or
-				<AppLink href="https://github.com/privatenumber/hirok.io/discussions">
-					GitHub
+				<AppLink href="https://twitter.com/privatenumbr">
+					Twitter
 				</AppLink>
 			</div>
 

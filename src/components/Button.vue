@@ -24,6 +24,7 @@ const isExternal = computed(() => props.href?.startsWith('http'));
 			v-if="isExternal"
 			v-bind="attributes"
 			:href="href"
+			class="button"
 			:class="[variant, size]"
 			role="button"
 		>
@@ -32,6 +33,7 @@ const isExternal = computed(() => props.href?.startsWith('http'));
 		<RouterLink
 			v-else
 			v-bind="attributes"
+			class="button"
 			:class="[variant, size]"
 			role="button"
 			:to="href"
@@ -41,6 +43,7 @@ const isExternal = computed(() => props.href?.startsWith('http'));
 	</template>
 	<button
 		v-else
+		class="button"
 		:class="[variant, size]"
 		type="button"
 	>
@@ -49,59 +52,70 @@ const isExternal = computed(() => props.href?.startsWith('http'));
 </template>
 
 <style scoped>
-a,
-button {
-	@apply
-		inline-flex
-		flex-nowrap
-		items-center
-		py-2
-		px-4
-		rounded-lg
-		no-underline
-		hover:no-underline
-		transition-colors
-		duration-100
-		justify-center
-		gap-1
-		;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-button:disabled {
-	@apply
-		opacity-60
-		cursor-not-allowed
-		pointer-events-none
-		;
-}
+@layer components {
+	.button {
+		@apply
+			inline-flex
+			flex-nowrap
+			items-center
+			py-2
+			rounded-lg
+			no-underline
+			hover:no-underline
+			transition-colors
+			duration-100
+			justify-center
+			gap-1
+			border-2
+			border-transparent
+			text-white
+			;
+	}
 
-.primary {
-	@apply
-		font-medium
-		text-white
-		bg-sky-500
-		border-2
-		border-sky-500
-		hover:bg-sky-600;
-}
+	.button:disabled {
+		@apply
+			opacity-60
+			cursor-not-allowed
+			pointer-events-none
+			;
+	}
 
-.secondary {
-	@apply
-		border-2
-		border-sky-600
-		hover:bg-sky-700/20;
-}
+	.primary {
+		@apply
+			font-medium
+			bg-sky-500
+			border-sky-500
+			hover:bg-sky-600;
+	}
 
-.large {
-	@apply
-		px-6
-		text-lg;
-}
+	.secondary {
+		@apply
+			text-sky-500
+			border-sky-600
+			hover:bg-sky-700/20;
+	}
 
-.small {
-	@apply
-		px-2
-		py-1
-		text-sm;
+	.large {
+		@apply
+			px-6
+			text-lg;
+	}
+
+	.medium {
+		@apply
+			px-4
+			text-base;
+	}
+
+	.small {
+		@apply
+			px-3
+			py-1
+			text-sm;
+	}
 }
 </style>

@@ -36,6 +36,7 @@ declare module '@vue/runtime-core' {
     IconMdiGithub: typeof import('~icons/mdi/github')['default']
     IconMdiGithubBox: typeof import('~icons/mdi/github-box')['default']
     IconMdiHeadHeart: typeof import('~icons/mdi/head-heart')['default']
+    IconMdiHeart: typeof import('~icons/mdi/heart')['default']
     IconMdiLinkedin: typeof import('~icons/mdi/linkedin')['default']
     IconMdiSchool: typeof import('~icons/mdi/school')['default']
     IconMdiSquareInc: typeof import('~icons/mdi/square-inc')['default']
