@@ -4,7 +4,9 @@
 @tailwind utilities;
 
 html {
-	@apply text-gray-700;
+	@apply
+		text-zinc-900
+		bg-zinc-50;
 
 	scroll-padding-top: 1.5rem;
 }
@@ -74,6 +76,7 @@ a.header-anchor:focus {
 a {
 	@apply
 		text-sky-500
+		font-medium
 		hover:underline
 		underline-offset-2;
 }
@@ -101,7 +104,7 @@ blockquote {
 
 h1, h2, h3, h4, h5, h6 {
 	@apply
-		text-gray-600
+		text-zinc-700
 		dark:text-zinc-200
 		font-bold
 		leading-tight;

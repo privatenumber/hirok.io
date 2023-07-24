@@ -26,7 +26,7 @@ const npmDownloads = `${downloads} ${unit}`;
 
 My Open Source projects are published as packages on [npm](https://www.npmjs.com) for anyone to use.
 
-<Popper :tip="downloadsMonthPretty">Last month</Popper>, my packages had a total of <Popper :tip="downloadCount.toLocaleString()"><strong>{{ npmDownloads }}</strong></Popper> downloads.
+<Popper :tip="downloadsMonthPretty">Last month</Popper>, my packages had a total of <Popper :tip="downloadCount.toLocaleString()"><strong class="whitespace-nowrap">{{ npmDownloads }}</strong></Popper> downloads.
 
 <template v-for="npmPackage in packagesSortedByPopularity">
 	<NpmPackage v-bind="npmPackage" />
