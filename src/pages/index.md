@@ -46,7 +46,7 @@ I have a passion for helping engineers be more productive by improving Developer
 
 My [_DX_ projects](/projects) are open-source and available for anyone to use. Last month, they were downloaded <span class="whitespace-nowrap">_{{ lastMonthDownloadsPretty }} times_</span> (~{{ downloadsPerSecond.toLocaleString() }}/sec).
 
-I'm currently based in 🗼 Tokyo and work at <AppLink href="https://squareup.com/"><icon-mdi-square-inc class="inline-block align-middle mb-0.5" /> Square</AppLink> as a frontend engineer.
+I'm currently based in 🗼 Tokyo and work at <AppLink href="https://squareup.com/" class="whitespace-nowrap"><icon-mdi-square-inc class="inline-block align-middle mb-0.5" /> Square</AppLink> as a frontend engineer.
 
 <div class="mt-8 sm:mt-14 flex flex-wrap gap-2 sm:gap-4">
 
