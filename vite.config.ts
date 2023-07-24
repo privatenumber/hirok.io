@@ -14,7 +14,7 @@ import iconsResolver from 'unplugin-icons/resolver';
 import grayMatter from 'gray-matter';
 import slugify from '@sindresorhus/slugify';
 import generateSitemap from 'vite-ssg-sitemap';
-import { LinkComponent, StyleHeadings } from './markdown-it/plugins';
+import { LinkComponent, StyleHeadings } from './markdown-it/plugins.js';
 import 'vite-ssg'; // For `ssgOptions` types
 
 export default defineConfig({
