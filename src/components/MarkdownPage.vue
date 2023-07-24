@@ -124,7 +124,7 @@ if (props.frontmatter.link) {
 
 		<div class="flex gap-8 items-center justify-center">
 			<AppLink
-				to="/"
+				href="/"
 				class="min-w-fit"
 			>
 				<img
