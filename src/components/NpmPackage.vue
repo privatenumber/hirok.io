@@ -149,8 +149,6 @@ const lastPublishRelative = computed(() => {
 					gap-4
 					px-2
 					justify-between
-					bg-white/50
-					dark:bg-zinc-900/50
 				"
 			>
 				<div class="text-center">

@@ -28,6 +28,6 @@ const clipPath = computed(() => {
 
 <style scoped>
 .npm-chart {
-	background-image: linear-gradient(-15deg, transparent 0%, #0EA5E9 80%);
+	background-image: linear-gradient(-15deg, transparent 0%, rgb(14 165 233 / 50%) 80%);
 }
 </style>
