@@ -9,15 +9,11 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    A4Paper: typeof import('./../components/A4Paper.vue')['default']
     AppLink: typeof import('./../components/AppLink.vue')['default']
     AppSection: typeof import('./../components/AppSection.vue')['default']
     Button: typeof import('./../components/Button.vue')['default']
     Collapsible: typeof import('./../components/Collapsible.vue')['default']
-    ContactForm: typeof import('./../components/ContactForm.vue')['default']
     CssChart: typeof import('./../components/CssChart.vue')['default']
-    CvComp: typeof import('./../components/CvComp.vue')['default']
-    CvLinks: typeof import('./../components/CvLinks.vue')['default']
     Footer: typeof import('./../components/Footer.vue')['default']
     Heading: typeof import('./../components/Heading.vue')['default']
     'IconCi:moon': typeof import('~icons/ci/moon')['default']
@@ -43,7 +39,6 @@ declare module '@vue/runtime-core' {
     IconMdiTwitter: typeof import('~icons/mdi/twitter')['default']
     IconTablerViewfinder: typeof import('~icons/tabler/viewfinder')['default']
     ListPosts: typeof import('./../components/ListPosts.vue')['default']
-    ListProjects: typeof import('./../components/ListProjects.vue')['default']
     MarkdownPage: typeof import('./../components/MarkdownPage.vue')['default']
     Navigation: typeof import('./../components/Navigation.vue')['default']
     NpmPackage: typeof import('./../components/NpmPackage.vue')['default']
