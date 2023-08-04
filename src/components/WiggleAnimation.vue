@@ -1,29 +1,34 @@
 <script setup lang="ts">
+const wrapper = ref<HTMLDivElement>();
 const animating = ref(false);
 
-const resetAnimation = ({ target }: PointerEvent) => {
-	if (!target || animating.value) {
+const resetAnimation = () => {
+	const element = wrapper.value;
+	if (!element || animating.value) {
 		return;
 	}
 
-	animating.value = true;
-
-	const element = target as HTMLDivElement;
-	element.style.animation = 'none';
-
+	element.style.animationName = 'none';
 	// eslint-disable-next-line no-unused-expressions
 	element.offsetHeight; // trigger reflow
-	element.style.animation = '';
+	element.style.animationName = '';
+};
+
+const animationStart = () => {
+	animating.value = true;
 };
 
 const animationDone = () => {
 	animating.value = false;
+	wrapper.value!.style.animationDelay = '0s';
 };
 </script>
 
 <template>
 	<div
+		ref="wrapper"
 		@pointerenter="resetAnimation"
+		@animationstart="animationStart"
 		@animationend="animationDone"
 	>
 		<slot />
@@ -36,6 +41,12 @@ div {
 	@apply touch-manipulation;
 
 	animation: wiggle 500ms ease-in 1 normal forwards;
+
+	/**
+	 * If the element is rendered with the animation, it was starting too fast
+	 * It's removed after the first animation
+	 */
+	animation-delay: 0.1s;
 }
 
 @keyframes wiggle {
