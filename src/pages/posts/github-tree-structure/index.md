@@ -118,7 +118,9 @@ By organizing your repositories with the _GitHub Tree_ structure, you'll enjoy s
 
 ### Scoped Git configurations
 
-As a developer working on personal and work-related projects, you might need to switch between different Git configurations or profiles. To accomplish this, you can add toggling logic in your top-level `~/.gitconfig` file.
+If you're a dev with both personal and work projects in the same environment, you may want to commit using your work email address for repos in the work's GitHub org.
+
+With this setup, you can configure this seamlessly in your top-level `~/.gitconfig` by toggling the appropriate Git profile based on which directory you're in.
 
 Here's an example of how to set up two different profiles based on the org:
 
@@ -138,13 +140,15 @@ Here's an example of how to set up two different profiles based on the org:
 	path = ~/Developer/github/org-b/.gitconfig
 ```
 
-For each org's `.gitconfig`:
+Create a `.gitconfig` in each org directory with the relevant Git profile:
 
 ```ini
 [user]
 	name = Hiroki Osame
 	email = email@company.com
 ```
+
+Now, whenever you commit in your personal repositories, Git will use your personal email. And when you commit to repos in your work org, it will use your work email.
 
 By setting up different configs for each org, you can easily switch between your personal and work-related projects, ensuring that your commits and contributions are associated with the correct identity.
 
