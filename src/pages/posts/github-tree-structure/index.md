@@ -6,7 +6,7 @@ tags: GitHub, Git, Open Source, Engineering, Software Engineering, Workflow, Org
 duration: 5min
 ---
 
-As a software engineer, cloning repositories using Git is a common task. Most devs just create a single `projects` directory and clone all repositories there. However, this approach can lead to organizational issues like name collisions and difficulty finding repositories.
+As a software engineer, cloning repositories using Git is a common task. Most devs just create a single `projects` directory and clone all repositories there. However, this approach does not scale well and can lead to organizational issues like name collisions and difficulty finding repositories.
 
 ## Solution: The _GitHub Tree_ structure
 
