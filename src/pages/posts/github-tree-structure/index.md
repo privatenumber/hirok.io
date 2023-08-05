@@ -12,7 +12,7 @@ As a software engineer, cloning repositories using Git is a common task. Most de
 
 The _GitHub Tree_ structure is a straightforward yet effective way to organize your repositories by mirroring the organization on GitHub. It helps establish a clear structure that scales as your collection grows.
 
-The structure is simple:
+The structure is as follows:
 
 ```tree
 ~/Developer
@@ -32,7 +32,7 @@ The structure is simple:
 
 	Within the top-level directory, create a subdirectory named `github`. This indicates that everything inside mirrors GitHub, and allows you to use the `Developer` directory for other things.
 
-	This is useful if you use other Git servers like GitHub Enterprise, GitLab, or Bitbucket. In my case, I used to use a private GitHub Enterprise server at work, so I had a `github` and `github-work` directory to differentiate between the two websites.
+	This is useful if you use other Git servers like GitHub Enterprise, GitLab, or Bitbucket. In my case, I used to use a private GitHub Enterprise server at work, so I had a `github` and `github-work` directory for each site.
 
 3. `<GitHub org / username>`
 
@@ -46,7 +46,7 @@ The structure is simple:
 
 ### Your own repository
 
-To clone your own repository, simply run:
+For your own repo, simply clone it to the appropriate directory:
 
 <TerminalWindow>
 
@@ -55,7 +55,7 @@ git clone git@github.com:my-user/my-repo.git ~/Developer/github/my-user/my-repo
 ```
 </TerminalWindow>
 
-> **Tip:** If `~/Developer/github/my-user/` doesn't exist yet, `git clone` will automatically make it for you.
+> **Tip:** If `~/Developer/github/my-user/` doesn't exist yet, `git clone` will automatically create it for you.
 
 
 ### Forked repository
@@ -64,23 +64,21 @@ When cloning forks, use the original namespace:
 
 1. Fork the repository on GitHub.
 
-	For example, if contributing to `vercel/next.js`, fork it to `my-user/next.js`.
-
 2. Clone _the forked version_ to the directory of the original org.
 
-	For example, clone `my-user/next.js` to `~/Developer/github/vercel/next.js`:
+	For example, if contributing to `vercel/next.js`, clone `my-fork/next.js` to `~/Developer/github/vercel/next.js`:
 
 	<TerminalWindow>
 
 	```sh
-	git clone git@github.com:my-user/next.js.git ~/Developer/github/vercel/next.js
+	git clone git@github.com:my-fork/next.js.git ~/Developer/github/vercel/next.js
 	```
 	</TerminalWindow>
 
 
 	This ensures that your clone has the correct `origin` remote set up for pushing.
 
-3. Add the upstream remote as `up` (which stands for "upstream"):
+3. Add the upstream remote as `up` (short for "upstream"):
 
 	<TerminalWindow>
 
@@ -106,7 +104,7 @@ This approach helps maintain a clear separation between your repos and forks.
 
 By organizing your repositories with the _GitHub Tree_ structure, you'll enjoy several benefits:
 
-### Mirror GitHub
+### GitHub mirror
 
 - You don't have to think about how to organize your repositories; you're simply following GitHub's structure.
 - Avoid name collisions as GitHub ensures unique repository names within an org.
@@ -114,15 +112,15 @@ By organizing your repositories with the _GitHub Tree_ structure, you'll enjoy s
 ### Finding code
 
 - Quickly locate any repository due to the familiar organization.
-- Easy grepping with clearly indicated repository paths in the results.
+- Easily `grep` across multiple repositories with the results clearly indicating repository paths.
 
 ### Scoped Git configurations
 
-If you're a dev with both personal and work projects in the same environment, you may want to commit using your work email address for repos in the work's GitHub org.
+If you're a dev with both personal and work projects in the same environment, you may want to commit using your work email for repositories in the work org.
 
-With this setup, you can configure this seamlessly in your top-level `~/.gitconfig` by toggling the appropriate Git profile based on which directory you're in.
+This setup allows you can configure this seamlessly in your top-level `~/.gitconfig` by toggling the appropriate Git profile based on which directory you're in.
 
-Here's an example of how to set up two different profiles based on the org:
+Here's an example of how to set up three different profiles based on the org:
 
 `~/.gitconfig`:
 ```ini
@@ -140,7 +138,7 @@ Here's an example of how to set up two different profiles based on the org:
 	path = ~/Developer/github/org-b/.gitconfig
 ```
 
-Create a `.gitconfig` in each org directory with the relevant Git profile:
+Note, the above explicitly references a `.gitconfig` file in each org directory. To set this up, create a `.gitconfig` with the relevant configuration:
 
 ```ini
 [user]
