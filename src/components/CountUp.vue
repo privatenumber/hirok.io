@@ -7,34 +7,30 @@ const props = withDefaults(defineProps<{
 	duration: 1000,
 });
 
-const detectDecimals = (number: number) => number.toString().split('.')[1]?.length ?? 0;
-
-const decimals = detectDecimals(props.value);
 const easeOutQuartic = (t: number) => 1 - Math.pow(1 - t, 4);
 
+const countDecimals = (number: number) => number.toString().split('.')[1]?.length ?? 0;
+const decimals = countDecimals(props.value);
+
 onMounted(() => {
-	const { duration } = props;
+	const { duration, value: finalValue } = props;
 
 	// Set container width
 	const width = $el.value.offsetWidth;
 	$el.value!.style.width = `${width}px`;
 
-	$el.value.textContent = 0;
-
 	const startTime = Date.now();
 	const countUp = () => {
-		const progress = (Date.now() - startTime) / duration;
-		let value = (props.value * easeOutQuartic(progress));
-		if (value > props.value) {
-			value = props.value;
+		let progress = (Date.now() - startTime) / duration;
+		if (1 < progress) {
+			progress = 1;
 		}
 
-		$el.value.textContent = value.toFixed(decimals);
+		const currentValue = finalValue * easeOutQuartic(progress);
+		$el.value.textContent = currentValue.toFixed(decimals);
 
 		if (progress < 1) {
 			window.requestAnimationFrame(countUp);
-		} else {
-			$el.value.textContent = props.value;
 		}
 	};
 	window.requestAnimationFrame(countUp);
