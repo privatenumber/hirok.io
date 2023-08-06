@@ -16,10 +16,6 @@ onMounted(() => {
 	const $element_ = $element.value!;
 	const { duration, value: finalValue } = props;
 
-	// Set container width
-	const { width } = getComputedStyle($element_);
-	$element_.style.width = width;
-
 	const startTime = Date.now();
 	const countUp = () => {
 		let progress = (Date.now() - startTime) / duration;
@@ -36,7 +32,18 @@ onMounted(() => {
 			$element_.style.removeProperty('width');
 		}
 	};
-	window.requestAnimationFrame(countUp);
+
+	/**
+	 * Sometimes the CSS hasn't loaded in `onMounted` yet (esp. iOS Safari)
+	 * so we need to check the width here to get an accurate value.
+	 */
+	window.requestAnimationFrame(() => {
+		// getComputedStyle is used to get sub-pixel accuracy
+		const { width } = getComputedStyle($element_);
+		$element_.style.width = width;
+
+		countUp();
+	});
 });
 </script>
 
