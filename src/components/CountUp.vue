@@ -17,6 +17,7 @@ onMounted(() => {
 
 	// Set container width
 	const width = $el.value.offsetWidth;
+	console.log({ width });
 	$el.value!.style.width = `${width}px`;
 
 	const startTime = Date.now();
