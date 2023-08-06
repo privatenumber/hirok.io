@@ -16,7 +16,7 @@ onMounted(() => {
 	const { duration, value: finalValue } = props;
 
 	// Set container width
-	const width = $el.value.offsetWidth;
+	const width = getComputedStyle($el.value).width;
 	console.log({ width });
 	$el.value!.style.width = `${width}px`;
 
