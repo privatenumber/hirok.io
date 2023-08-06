@@ -16,11 +16,7 @@ onMounted(() => {
 	const { duration, value: finalValue } = props;
 
 	// Set container width
-	const width = getComputedStyle($el.value).width;
-	console.log({ width });
-	if (width === 'auto') {
-		debugger;
-	}
+	const { width } = getComputedStyle($el.value);
 	$el.value!.style.width = width;
 
 	const startTime = Date.now();
