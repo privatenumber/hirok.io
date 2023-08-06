@@ -18,6 +18,9 @@ onMounted(() => {
 	// Set container width
 	const width = getComputedStyle($el.value).width;
 	console.log({ width });
+	if (width === 'auto') {
+		debugger;
+	}
 	$el.value!.style.width = width;
 
 	const startTime = Date.now();
