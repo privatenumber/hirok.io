@@ -12,15 +12,11 @@ const easeOutQuartic = (t: number) => 1 - (1 - t) ** 4;
 const countDecimals = (number: number) => number.toString().split('.')[1]?.length ?? 0;
 const decimals = countDecimals(props.value);
 
+
 const debug = ref();
 onMounted(() => {
 	const $element_ = $element.value!;
 	const { duration, value: finalValue } = props;
-
-	// Set container width
-	const { width } = getComputedStyle($element_);
-	debug.value = width;
-	$element_.style.width = width;
 
 	const startTime = Date.now();
 	const countUp = () => {
@@ -38,7 +34,15 @@ onMounted(() => {
 			$element_.style.removeProperty('width');
 		}
 	};
-	window.requestAnimationFrame(countUp);
+
+	window.requestAnimationFrame(() => {
+		// Set container width
+		const { width } = getComputedStyle($element_);
+		debug.value = width;
+		$element_.style.width = width;
+
+		countUp();
+	});
 });
 </script>
 
