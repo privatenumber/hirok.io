@@ -4,9 +4,9 @@ heading: ''
 
 <script setup lang="ts">
 import { getUnit, numberUnits } from '@/utils/get-unit';
-import npmPackages from '@/data/npm-downloads.json';
+import { lastMonth } from '@/data/npm-downloads.json';
 
-const [, lastMonthDownloads] = npmPackages.lastMonth;
+const [, lastMonthDownloads] = lastMonth;
 const [downloadsSimple, unit] = getUnit(lastMonthDownloads, numberUnits, 1);
 const downloadsPerSecond = Math.round(lastMonthDownloads / 30 / 24 / 60 / 60);
 </script>
