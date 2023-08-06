@@ -31,6 +31,8 @@ onMounted(() => {
 
 		if (progress < 1) {
 			window.requestAnimationFrame(countUp);
+		} else {
+			$el.value!.style.width = null;
 		}
 	};
 	window.requestAnimationFrame(countUp);
