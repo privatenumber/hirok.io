@@ -18,7 +18,7 @@ onMounted(() => {
 	// Set container width
 	const width = getComputedStyle($el.value).width;
 	console.log({ width });
-	$el.value!.style.width = `${width}px`;
+	$el.value!.style.width = width;
 
 	const startTime = Date.now();
 	const countUp = () => {
