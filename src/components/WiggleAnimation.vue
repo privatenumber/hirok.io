@@ -42,10 +42,10 @@ div {
 
 	animation: wiggle 500ms ease-in 1 normal forwards;
 
-	/**
-	 * If the element is rendered with the animation, it was starting too fast
-	 * It's removed after the first animation
-	 */
+	/*
+	If the element is rendered with the animation, it was starting too fast
+	It's removed after the first animation
+	*/
 	animation-delay: 0.1s;
 }
 

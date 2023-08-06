@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const $el = ref();
+const $element = ref<HTMLElement>();
 const props = withDefaults(defineProps<{
 	value: number;
 	duration?: number;
@@ -7,32 +7,33 @@ const props = withDefaults(defineProps<{
 	duration: 1000,
 });
 
-const easeOutQuartic = (t: number) => 1 - Math.pow(1 - t, 4);
+const easeOutQuartic = (t: number) => 1 - (1 - t) ** 4;
 
 const countDecimals = (number: number) => number.toString().split('.')[1]?.length ?? 0;
 const decimals = countDecimals(props.value);
 
 onMounted(() => {
+	const $element_ = $element.value!;
 	const { duration, value: finalValue } = props;
 
 	// Set container width
-	const { width } = getComputedStyle($el.value);
-	$el.value!.style.width = width;
+	const { width } = getComputedStyle($element_);
+	$element_.style.width = width;
 
 	const startTime = Date.now();
 	const countUp = () => {
 		let progress = (Date.now() - startTime) / duration;
-		if (1 < progress) {
+		if (progress > 1) {
 			progress = 1;
 		}
 
 		const currentValue = finalValue * easeOutQuartic(progress);
-		$el.value.textContent = currentValue.toFixed(decimals);
+		$element_.textContent = currentValue.toFixed(decimals);
 
 		if (progress < 1) {
 			window.requestAnimationFrame(countUp);
 		} else {
-			$el.value!.style.width = null;
+			$element_.style.removeProperty('width');
 		}
 	};
 	window.requestAnimationFrame(countUp);
@@ -45,7 +46,7 @@ the CSS is loaded. Still missing the font-size though.
 -->
 <template>
 	<span
-		ref="$el"
+		ref="$element"
 		:style="{
 			display: 'inline-block',
 			fontVariantNumeric: 'tabular-nums',

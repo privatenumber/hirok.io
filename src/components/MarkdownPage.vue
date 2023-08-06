@@ -158,7 +158,6 @@ if (props.frontmatter.link) {
 					>
 						<icon-mdi-heart /> Buy me a coffee
 					</Button>
-
 				</div>
 			</div>
 		</div>
