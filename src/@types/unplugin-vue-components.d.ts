@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     AppSection: typeof import('./../components/AppSection.vue')['default']
     Button: typeof import('./../components/Button.vue')['default']
     Collapsible: typeof import('./../components/Collapsible.vue')['default']
+    CountUp: typeof import('./../components/CountUp.vue')['default']
     CssChart: typeof import('./../components/CssChart.vue')['default']
     Footer: typeof import('./../components/Footer.vue')['default']
     Heading: typeof import('./../components/Heading.vue')['default']

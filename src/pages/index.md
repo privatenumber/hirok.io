@@ -7,12 +7,7 @@ import { getUnit, numberUnits } from '@/utils/get-unit';
 import npmPackages from '@/data/npm-downloads.json';
 
 const [, lastMonthDownloads] = npmPackages.lastMonth;
-
-const lastMonthDownloadsPretty = computed(() => {
-	const [downloads, unit] = getUnit(lastMonthDownloads, numberUnits, 1);
-	return `${downloads} ${unit}`;
-});
-
+const [downloadsSimple, unit] = getUnit(lastMonthDownloads, numberUnits, 1);
 const downloadsPerSecond = Math.round(lastMonthDownloads / 30 / 24 / 60 / 60);
 </script>
 
@@ -44,7 +39,9 @@ I'm a software engineer specializing in JavaScript & TypeScript.
 
 I have a passion for helping engineers be more productive by improving Developer Experience (_DX_).
 
-My [_DX_ projects](/projects) are open-source and available for anyone to use. Last month, they were downloaded <span class="whitespace-nowrap">_{{ lastMonthDownloadsPretty }} times_</span> (~{{ downloadsPerSecond.toLocaleString() }}/sec).
+My [_DX_ projects](/projects) are open-source and available for anyone to use. Last month, they were downloaded <span class="whitespace-nowrap">_<CountUp :value="downloadsSimple" /> {{ unit }} times_</span> (~<CountUp :value="downloadsPerSecond" />/sec).
+
+
 
 I'm currently based in <span class="whitespace-nowrap">🗼 Tokyo</span> and work at <AppLink href="https://squareup.com/" class="whitespace-nowrap"><icon-mdi-square-inc class="inline-block align-middle mb-0.5" /> Square</AppLink> as a frontend engineer.
 
