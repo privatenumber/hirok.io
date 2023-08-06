@@ -12,8 +12,6 @@ const easeOutQuartic = (t: number) => 1 - (1 - t) ** 4;
 const countDecimals = (number: number) => number.toString().split('.')[1]?.length ?? 0;
 const decimals = countDecimals(props.value);
 
-
-const debug = ref();
 onMounted(() => {
 	const $element_ = $element.value!;
 	const { duration, value: finalValue } = props;
@@ -35,10 +33,13 @@ onMounted(() => {
 		}
 	};
 
+	/**
+	 * Sometimes the CSS hasn't loaded in `onMounted` yet (esp. iOS Safari)
+	 * so we need to check the width here to get an accurate value.
+	 */
 	window.requestAnimationFrame(() => {
-		// Set container width
+		// getComputedStyle is used to get sub-pixel accuracy
 		const { width } = getComputedStyle($element_);
-		debug.value = width;
 		$element_.style.width = width;
 
 		countUp();
@@ -58,5 +59,5 @@ the CSS is loaded. Still missing the font-size though.
 			fontVariantNumeric: 'tabular-nums',
 		}"
 		class="text-right"
-	>{{ value }}</span> {{ debug }}
+	>{{ value }}</span>
 </template>
