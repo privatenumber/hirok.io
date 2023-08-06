@@ -58,6 +58,7 @@ export default defineConfig({
 						route.meta ?? {},
 						frontmatter,
 						{
+							// Used for "Edit this page" button
 							filePath: route.component,
 						},
 					);
