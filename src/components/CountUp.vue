@@ -43,6 +43,10 @@ onMounted(() => {
 });
 </script>
 
+<!--
+Some styles are inline because this could be rendered before
+the CSS is loaded. Still missing the font-size though.
+-->
 <template>
 	<span
 		ref="$el"
@@ -50,6 +54,6 @@ onMounted(() => {
 			display: 'inline-block',
 			fontVariantNumeric: 'tabular-nums',
 		}"
-		class="tabular-nums inline-block text-right"
+		class="text-right"
 	>{{ value }}</span>
 </template>
