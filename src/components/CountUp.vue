@@ -16,10 +16,7 @@ onMounted(() => {
 	const { duration } = props;
 
 	// Set container width
-	let width = $el.value.scrollWidth;
-	if (width === 0) {
-		width = props.value.toString().length * 8;
-	}
+	const width = $el.value.offsetWidth;
 	$el.value!.style.width = `${width}px`;
 
 	$el.value.textContent = 0;
