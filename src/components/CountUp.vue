@@ -40,6 +40,10 @@ onMounted(() => {
 <template>
 	<span
 		ref="$el"
+		:style="{
+			display: 'inline-block',
+			fontVariantNumeric: 'tabular-nums',
+		}"
 		class="tabular-nums inline-block text-right"
 	>{{ value }}</span>
 </template>
