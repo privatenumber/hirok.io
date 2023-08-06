@@ -16,8 +16,8 @@ onMounted(() => {
 	const { duration, value: finalValue } = props;
 
 	// Set container width
-	const width = $el.value.offsetWidth;
-	$el.value!.style.width = `${width}px`;
+	const { width } = getComputedStyle($el.value);
+	$el.value!.style.width = width;
 
 	const startTime = Date.now();
 	const countUp = () => {
@@ -39,9 +39,17 @@ onMounted(() => {
 });
 </script>
 
+<!--
+Some styles are inline because this could be rendered before
+the CSS is loaded. Still missing the font-size though.
+-->
 <template>
 	<span
 		ref="$el"
-		class="tabular-nums inline-block text-right"
+		:style="{
+			display: 'inline-block',
+			fontVariantNumeric: 'tabular-nums',
+		}"
+		class="text-right"
 	>{{ value }}</span>
 </template>

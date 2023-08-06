@@ -53,6 +53,9 @@ devDependencies:
   code-tag:
     specifier: ^1.1.0
     version: 1.1.0
+  critters:
+    specifier: ^0.0.20
+    version: 0.0.20
   cssnano:
     specifier: ^6.0.1
     version: 6.0.1(postcss@8.4.27)
@@ -127,7 +130,7 @@ devDependencies:
     version: 0.22.6(vite@4.3.9)
   vite-ssg:
     specifier: ^0.22.2
-    version: 0.22.2(@vueuse/head@1.1.26)(vite@4.3.9)(vue-router@4.2.2)(vue@3.3.4)
+    version: 0.22.2(@vueuse/head@1.1.26)(critters@0.0.20)(vite@4.3.9)(vue-router@4.2.2)(vue@3.3.4)
   vite-ssg-sitemap:
     specifier: ^0.5.1
     version: 0.5.1
@@ -1722,6 +1725,18 @@ packages:
       path-type: 4.0.0
     dev: true
 
+  /critters@0.0.20:
+    resolution: {integrity: sha512-CImNRorKOl5d8TWcnAz5n5izQ6HFsvz29k327/ELy6UFcmbiZNOsinaKvzv16WZR0P6etfSWYzE47C4/56B3Uw==}
+    dependencies:
+      chalk: 4.1.2
+      css-select: 5.1.0
+      dom-serializer: 2.0.0
+      domhandler: 5.0.3
+      htmlparser2: 8.0.2
+      postcss: 8.4.27
+      pretty-bytes: 5.6.0
+    dev: true
+
   /cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
@@ -1990,7 +2005,7 @@ packages:
     dependencies:
       domelementtype: 2.3.0
       domhandler: 5.0.3
-      entities: 4.3.1
+      entities: 4.5.0
     dev: true
 
   /domelementtype@2.3.0:
@@ -3088,6 +3103,15 @@ packages:
       domhandler: 5.0.3
       domutils: 3.0.1
       entities: 4.3.1
+    dev: true
+
+  /htmlparser2@8.0.2:
+    resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==}
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      domutils: 3.0.1
+      entities: 4.5.0
     dev: true
 
   /http-proxy-agent@5.0.0:
@@ -4771,6 +4795,11 @@ packages:
     hasBin: true
     dev: true
 
+  /pretty-bytes@5.6.0:
+    resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
+    engines: {node: '>=6'}
+    dev: true
+
   /prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
     dependencies:
@@ -6037,7 +6066,7 @@ packages:
     resolution: {integrity: sha512-X3ZImSVpFMypBTIhaTqEOdKj7tO9n7Puzd8vsxuQluFUyu6x/e2Dzv8qk5qZsC34ZR6iHt0wa2sPhDu1OjdOsA==}
     dev: true
 
-  /vite-ssg@0.22.2(@vueuse/head@1.1.26)(vite@4.3.9)(vue-router@4.2.2)(vue@3.3.4):
+  /vite-ssg@0.22.2(@vueuse/head@1.1.26)(critters@0.0.20)(vite@4.3.9)(vue-router@4.2.2)(vue@3.3.4):
     resolution: {integrity: sha512-eSlp/WiT7dkpZ6TIkZuALUcOnCJlVfqj38OdpFVZHtHFcwCH9b95edu5Hgti5WnGrq33iVfGOK67zWpt9ClroA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
@@ -6055,6 +6084,7 @@ packages:
     dependencies:
       '@unhead/dom': 1.1.26
       '@vueuse/head': 1.1.26(vue@3.3.4)
+      critters: 0.0.20
       fs-extra: 11.1.1
       html-minifier: 4.0.0
       html5parser: 2.0.2
