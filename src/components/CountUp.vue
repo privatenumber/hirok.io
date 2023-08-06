@@ -4,7 +4,7 @@ const props = withDefaults(defineProps<{
 	value: number;
 	duration?: number;
 }>(), {
-	duration: 800,
+	duration: 1000,
 });
 
 const detectDecimals = (number: number) => number.toString().split('.')[1]?.length ?? 0;
@@ -16,7 +16,11 @@ onMounted(() => {
 	const { duration } = props;
 
 	// Set container width
-	$el.value!.style.width = `${$el.value.scrollWidth}px`;
+	let width = $el.value.scrollWidth;
+	if (width === 0) {
+		width = props.value.toString().length * 8;
+	}
+	$el.value!.style.width = `${width}px`;
 
 	$el.value.textContent = 0;
 
