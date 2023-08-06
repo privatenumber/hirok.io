@@ -123,7 +123,7 @@ export default defineConfig({
 		icons(),
 	],
 	ssgOptions: {
-		script: 'async',
+		script: 'defer',
 		formatting: 'minify',
 		onFinished() {
 			generateSitemap({
