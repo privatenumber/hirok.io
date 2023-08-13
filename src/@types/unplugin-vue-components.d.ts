@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AppLink: typeof import('./../components/AppLink.vue')['default']
     AppSection: typeof import('./../components/AppSection.vue')['default']
+    BlogPostFooter: typeof import('./../components/BlogPostFooter.vue')['default']
     Button: typeof import('./../components/Button.vue')['default']
     Collapsible: typeof import('./../components/Collapsible.vue')['default']
     CountUp: typeof import('./../components/CountUp.vue')['default']
