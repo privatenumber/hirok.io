@@ -12,11 +12,6 @@
 		],
 		"module": "ESNext",
 		"target": "ESNext",
-		"types": [
-			"@types/node",
-			"vite/client",
-			"vite-plugin-pages/client",
-		],
 		"jsx": "preserve",
 		"paths": {
 			"@/*": ["./src/*"]
