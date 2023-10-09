@@ -686,7 +686,7 @@
 		},
 		{
 			"name": "esbuild-loader",
-			"repository": "https://github.com/esbuild-kit/esbuild-loader",
+			"repository": "https://github.com/privatenumber/esbuild-loader",
 			"description": "⚡️ Speed up your Webpack build with esbuild",
 			"lastPublishDate": "2023-08-29T07:27:19.852Z",
 			"latestVersion": "4.0.2",
