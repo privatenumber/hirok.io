@@ -5,6 +5,11 @@ date: 2023-07-24
 duration: 5min
 ---
 
+<img
+	src="./banner.png"
+	alt="Banner image: warehouse full of packages"	
+/>
+
 ## "npm dependencies are too large"
 If you've worked with JavaScript and [npm], you're likely familiar with the notorious `node_modules` directory. This folder houses all your project's dependencies, and is widely known for its hefty size. It's not uncommon for a small project to exceed 100MB, and a quick Google search [reveals](https://stackoverflow.com/questions/64234215/node-modules-size) [many](https://www.reddit.com/r/Angular2/comments/8x8efe/node_modules_is_far_far_too_large_no_idea_how_to/) [frustrated](https://stackoverflow.com/questions/50206572/how-to-reduce-node-modules-in-npm) [devs](https://stackoverflow.com/questions/68236832/node-modules-folder-unnecessarily-large).
 
