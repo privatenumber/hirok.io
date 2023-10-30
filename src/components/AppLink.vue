@@ -15,6 +15,7 @@ const isExternal = computed(() => isExternalPattern.test(props.href));
 		:href="props.href"
 	>
 		<slot />
+		{{ ' ' }}
 		<PrintUrlLabel :url="href" />
 	</a>
 	<RouterLink
@@ -22,6 +23,7 @@ const isExternal = computed(() => isExternalPattern.test(props.href));
 		:to="props.href"
 	>
 		<slot />
+		{{ ' ' }}
 		<PrintUrlLabel :url="href" />
 	</RouterLink>
 </template>

@@ -33,9 +33,7 @@ const label = computed(
 			text-sm
 			font-light
 		"
-	>
-		(<span class="readable-link">{{ label }}</span>)
-	</span>
+	>(<span class="readable-link">{{ label }}</span>)</span>
 </template>
 
 <style scoped>

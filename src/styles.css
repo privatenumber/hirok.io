@@ -78,7 +78,8 @@ a {
 		text-sky-500
 		font-medium
 		hover:underline
-		underline-offset-2;
+		underline-offset-2
+		print:font-normal;
 }
 
 p,
