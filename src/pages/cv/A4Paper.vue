@@ -3,7 +3,7 @@
 		<div
 			class="
 			hidden
-			!print:hidden
+			print:!hidden
 			rounded-md
 			bg-blue-400/20
 			px-6
