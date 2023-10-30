@@ -71,17 +71,13 @@ On the Design Engineering team, I helped build a Vue.js component library with 5
 
 </div>
 
-<div>
 <Heading
 	size="3"
 	annotation="2011-2015"
 >
-<icon-mdi-school class="inline-block mr-1" /> Boston University
+	<icon-mdi-school class="inline-block mr-1" /> Boston University
+	<span class="ml-2 font-light text-lg">B.A. in Computer Science</span>
 </Heading>
-
-B.A. in Computer Science
-
-</div>
 
 <!--
 <div class="print:hidden">
