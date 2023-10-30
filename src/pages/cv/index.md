@@ -52,7 +52,7 @@ I'm a software engineer specializing in JavaScript & TypeScript. I'm interested 
 	size="3"
 	annotation="2018-Present"
 >
-<icon-mdi-square-inc class="inline align-middle m-r-1" /> Square / Block
+<icon-mdi-square-inc class="inline align-middle mr-1" /> Square / Block
 </Heading>
 
 As a Senior L6 Frontend SWE on the ECOM DX team, I develop tools to address common pain-points across Eng departments. I'm also the ECOM Open Source (OS) ambassador, and I encourage & drive OS contributions. Previously, on the ECOM Site Performance team, I helped optimize loading times & Lighthouse scores. On the ECOM Site Design team, I helped build a themeable Vue.js component library for our client websites.
@@ -64,7 +64,7 @@ As a Senior L6 Frontend SWE on the ECOM DX team, I develop tools to address comm
 	size="3"
 	annotation="2015-2018"
 >
-<icon-fa6-brands-weebly class="inline align-middle m-r-1" /> Weebly
+<icon-fa6-brands-weebly class="inline align-middle mr-1" /> Weebly
 </Heading>
 
 On the Design Engineering team, I helped build a Vue.js component library with 50+ components. I collaborated extensively with Engineering & Design and developed a comprehensive tooling ecosystem (style guide, recipe-book, playground, auto-upgrade command, visual regression testing). I'm proud to be recognized as a top 10% performer in the Eng department.
@@ -118,7 +118,7 @@ Reported to the _Executive Director of Information Security_, Quinn Shamblin.
 
 </div>
 
-## <icon-material-symbols-star-rounded class="inline align-middle mt--2" /> Personal projects / Open Source
+## <icon-material-symbols-star-rounded class="inline align-middle -mt-2" /> Personal projects / Open Source
 
 I'm a highly enthusiastic Open Source developer who dedicates personal time to maintaining around 70 projects on GitHub. Several are popular and utilized by renowned developers, projects, and companies. Last month ({{ downloadMonthPretty }}), they were downloaded <span class="whitespace-nowrap">**{{ npmDownloads }} times**</span> ({{ downloadsPerSecond.toLocaleString() }}/sec). Here are some notable ones:
 
