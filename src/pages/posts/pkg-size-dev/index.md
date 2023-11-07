@@ -150,7 +150,7 @@ For example, installing both [`esbuild` and `esbuild-loader@3.0.1`](https://pkg-
 
 <figure class="w-4/5 mx-auto">
 	<img
-		src="./pkg-size-duplicates.png"
+		src="./pkg-size-4.png"
 		alt="Two versions of esbuild installed"
 		class="rounded"
 	>
