@@ -1,7 +1,7 @@
 {
 	"repositories": {
 		"Nutlope/aicommits": 6541,
-		"esbuild-kit/tsx": 5686,
+		"privatenumber/tsx": 5686,
 		"privatenumber/esbuild-loader": 3449,
 		"privatenumber/tasuku": 1774,
 		"privatenumber/minification-benchmarks": 1138,
