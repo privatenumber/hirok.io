@@ -23,11 +23,17 @@ const createFilter = (
 	)) as VNodeTypes[];
 };
 
-const parseNumber = (value: any) => (
-	typeof value === 'number'
-		? value
-		: Number.parseInt(value, 10)
-);
+const parseNumber = (value: unknown) => {
+	if (typeof value === 'number') {
+		return value;
+	}
+
+	if (typeof value === 'string') {
+		return Number.parseInt(value, 10);
+	}
+
+	throw new Error('Invalid value');
+};
 
 export default defineComponent({
 	props: {
