@@ -1,3 +1,10 @@
+<script setup lang="ts">
+
+const print = () => {
+	window.print();
+};
+</script>
+
 <template>
 	<div class="a4-paper print:p-4">
 		<div
@@ -10,10 +17,12 @@
 			py-4
 			mb-6
 			sm:block
+			cursor-pointer
 		"
+			@click="print()"
 		>
 			<span class="mr-1">🖨️</span>
-			Print this page on A4 paper for a condensed version.
+			Print this page on A4 paper for a PDF version.
 		</div>
 		<slot />
 	</div>
@@ -21,6 +30,12 @@
 
 <style>
 @media print {
+	@page {
+		size: auto;
+		size: A4;
+		margin: 0;
+	}
+
 	* {
 		@apply !text-black;
 	}
