@@ -129,9 +129,9 @@ I'm a highly enthusiastic Open Source developer who dedicates personal time to m
 	gap-y-2
 	print:grid-cols-2
 ">
-<ProjectCard name="tsx">
+<ProjectCard name="tsx" subtext="(TypeScript Execute)">
 
-Enhanced Node.js to "just run" TypeScript & ESM code. It's zero-config so it's a beginner-friendly way to jump-start TypeScript development. Powered by esbuild.
+Enhanced Node.js to "just run" TypeScript & ESM code. It's zero-config so it's a beginner-friendly way to jump-start TypeScript development.
 
 <Collapsible class="print:hidden">
 

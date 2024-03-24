@@ -4,6 +4,7 @@ import npmDownloads from '@/data/npm-downloads.json';
 
 const props = defineProps<{
 	name: string;
+	subtext?: string;
 	url?: string;
 }>();
 
@@ -33,10 +34,16 @@ const downloads = computed(() => {
 					:href="url ?? npmUrl"
 				>
 					{{ name }}
+					<span class="text-gray-500 font-normal text-lg">
+						{{ subtext }}
+					</span>
 				</AppLink>
 			</template>
 			<template v-else>
 				{{ name }}
+				<span class="text-gray-500 font-normal text-lg">
+					{{ subtext }}
+				</span>
 			</template>
 
 			<template
