@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const inputFile = $ref('input.mov');
+const inputFile = ref('input.mov');
 </script>
 
 # Converting `.mov` to `.webm` on macOS
