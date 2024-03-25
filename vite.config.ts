@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 import { defineConfig } from 'vite';
-import markdown from 'vite-plugin-vue-markdown';
+import markdown from 'unplugin-vue-markdown/vite';
 import markdownAnchor from 'markdown-it-anchor';
 import Shiki from 'markdown-it-shiki';
 import vue from '@vitejs/plugin-vue';

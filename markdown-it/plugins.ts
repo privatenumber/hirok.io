@@ -1,5 +1,5 @@
 import MarkdownIt from 'markdown-it'; // eslint-disable-line import/no-extraneous-dependencies
-import Token from 'markdown-it/lib/token.js'; // eslint-disable-line import/no-extraneous-dependencies
+import Token from 'markdown-it/lib/token.js';
 
 type Options = {
 	linkTag: string;
