@@ -30,7 +30,6 @@ export default defineConfig({
 	},
 	plugins: [
 		vue({
-			reactivityTransform: true,
 			template: {
 				compilerOptions: {
 					comments: false,
