@@ -18,6 +18,9 @@
 		"*.{js,ts,vue,md}": "eslint --cache",
 		"*.{css,vue}": "stylelint --cache"
 	},
+	"engines": {
+		"node": "20"
+	},
 	"devDependencies": {
 		"@iconify/json": "^2.2.196",
 		"@nodesecure/npm-registry-sdk": "^1.6.1",
