@@ -32,7 +32,7 @@ const print = () => {
 @media print {
 	@page {
 		size: auto;
-		size: A4;
+		size: a4;
 		margin: 0;
 	}
 
