@@ -7,6 +7,7 @@
 		"lint": "npm run lint:js; npm run lint:css",
 		"lint:js": "lint --cache --ignore-pattern '**/@types/unplugin-*.d.ts' .",
 		"lint:css": "stylelint --cache './src/**/*.{css,vue}'",
+		"type-check": "vue-tsc",
 		"dev": "vite --open --port 3000",
 		"build": "NODE_ENV=production vite-ssg build",
 		"preview": "vite preview --port 3000"
@@ -64,7 +65,8 @@
 		"vite-ssg": "^0.23.6",
 		"vite-ssg-sitemap": "^0.6.1",
 		"vue": "^3.4.21",
-		"vue-router": "^4.3.0"
+		"vue-router": "^4.3.0",
+		"vue-tsc": "^2.0.7"
 	},
 	"stylelint": {
 		"extends": "stylelint-config-standard",
