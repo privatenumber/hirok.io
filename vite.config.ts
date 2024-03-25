@@ -30,7 +30,6 @@ export default defineConfig({
 	},
 	plugins: [
 		vue({
-			reactivityTransform: true,
 			template: {
 				compilerOptions: {
 					comments: false,
@@ -123,13 +122,13 @@ export default defineConfig({
 
 		icons(),
 	],
-	ssgOptions: {
-		script: 'defer',
-		formatting: 'minify',
-		onFinished: () => {
-			generateSitemap({
-				hostname: 'https://hirok.io/',
-			});
-		},
-	},
+	// ssgOptions: {
+	// 	script: 'defer',
+	// 	formatting: 'minify',
+	// 	onFinished: () => {
+	// 		generateSitemap({
+	// 			hostname: 'https://hirok.io/',
+	// 		});
+	// 	},
+	// },
 });
