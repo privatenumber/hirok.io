@@ -47,7 +47,7 @@ export default defineConfig({
 				'vue',
 				'md',
 			],
-			extendRoute(route) {
+			extendRoute: (route) => {
 				const routeFilePath = path.join(__dirname, route.component);
 
 				if (routeFilePath.endsWith('.md')) {
@@ -70,7 +70,7 @@ export default defineConfig({
 
 		markdown({
 			wrapperComponent: 'MarkdownPage',
-			markdownItSetup(md) {
+			markdownItSetup: (md) => {
 				md.use(markdownAnchor, {
 					slugify,
 					permalink: markdownAnchor.permalink.linkInsideHeader({
@@ -126,7 +126,7 @@ export default defineConfig({
 	ssgOptions: {
 		script: 'defer',
 		formatting: 'minify',
-		onFinished() {
+		onFinished: () => {
 			generateSitemap({
 				hostname: 'https://hirok.io/',
 			});

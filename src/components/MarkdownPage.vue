@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { formatDate } from '@/utils/format-date';
+import { formatDate } from '@/utils/format-date.js';
 
 const props = defineProps<{
 	frontmatter: {

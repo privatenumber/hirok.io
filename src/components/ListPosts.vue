@@ -1,22 +1,22 @@
 <script setup lang="ts">
 import { useRouter, type RouteRecordNormalized } from 'vue-router';
-import { formatDate } from '@/utils/format-date';
+import { formatDate } from '@/utils/format-date.js';
 
 type Frontmatter = {
 	title?: string;
 	date: Date;
 	duration?: string;
-}
+};
 
 const isPublishedPost = (
 	route: RouteRecordNormalized,
-): route is RouteRecordNormalized & { meta: Frontmatter } => Boolean(
+) => Boolean(
 	route.path.startsWith('/posts')
 	&& (route.meta as Frontmatter).date,
 );
 
 const postRoutes = useRouter().getRoutes()
-	.filter(isPublishedPost)
+	.filter((route): route is RouteRecordNormalized & { meta: Frontmatter } => isPublishedPost(route))
 	.map((route) => {
 		route.meta.date = new Date(route.meta.date);
 		return route;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getUnit, shortNumberUnits } from '@/utils/get-unit';
+import { getUnit, shortNumberUnits } from '@/utils/get-unit.js';
 import npmDownloads from '@/data/npm-downloads.json';
 
 const props = defineProps<{

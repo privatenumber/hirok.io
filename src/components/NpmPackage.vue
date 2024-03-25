@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getUnit, timeUnits, shortNumberUnits } from '@/utils/get-unit';
+import { getUnit, timeUnits, shortNumberUnits } from '@/utils/get-unit.js';
 import githubStars from '@/data/github-stars.json';
 import npmDownloads from '@/data/npm-downloads.json';
 

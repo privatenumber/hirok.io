@@ -1,11 +1,11 @@
 {
 	"private": true,
-	"type": "module",
 	"files": [],
+	"type": "module",
 	"scripts": {
 		"prepare": "simple-git-hooks",
 		"lint": "npm run lint:js; npm run lint:css",
-		"lint:js": "eslint --cache .",
+		"lint:js": "lint --cache --ignore-pattern '**/@types/unplugin-*.d.ts' .",
 		"lint:css": "stylelint --cache './src/**/*.{css,vue}'",
 		"dev": "vite --open --port 3000",
 		"build": "NODE_ENV=production vite-ssg build",
@@ -23,7 +23,7 @@
 		"@nodesecure/npm-registry-sdk": "^1.6.1",
 		"@octokit/graphql": "^7.0.2",
 		"@popperjs/core": "^2.11.8",
-		"@pvtnbr/eslint-config": "^0.37.1",
+		"@pvtnbr/eslint-config": "^1.1.0",
 		"@sindresorhus/slugify": "^2.2.1",
 		"@types/markdown-it": "^13.0.7",
 		"@types/node": "^20.11.30",
@@ -63,12 +63,6 @@
 		"vite-ssg-sitemap": "^0.6.1",
 		"vue": "^3.4.21",
 		"vue-router": "^4.3.0"
-	},
-	"eslintConfig": {
-		"extends": "@pvtnbr",
-		"ignorePatterns": [
-			"**/@types/unplugin-*.d.ts"
-		]
 	},
 	"stylelint": {
 		"extends": [

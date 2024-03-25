@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { createPopper, type Instance } from '@popperjs/core';
-import Subslot from './subslot';
+import Subslot from './subslot.js';
 
 defineProps<{
 	tip: string;

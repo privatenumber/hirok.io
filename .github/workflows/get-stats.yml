@@ -1,7 +1,7 @@
 name: Get stats
 on:
   schedule:
-    - cron: '0 0 1 * *' # First day of the month
+    - cron: "0 0 1 * *" # First day of the month
   workflow_dispatch:
 
 jobs:
@@ -11,32 +11,32 @@ jobs:
     timeout-minutes: 30
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version-file: '.nvmrc'
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
 
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v2
-      with:
-        version: 8
-        run_install: true
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
 
-    - name: Get npm downloads
-      run: pnpm tsx scripts/get-npm-downloads.ts
+      - name: Get npm downloads
+        run: pnpm tsx scripts/get-npm-downloads.ts
 
-    - name: Get GitHub stats
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: pnpm tsx scripts/get-github-stars.ts
+      - name: Get GitHub stats
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: pnpm tsx scripts/get-github-stars.ts
 
-    - name: Commit
-      run: |
-        git config user.name 'Hiroki Osame'
-        git config user.email 'hiroki.osame@gmail.com'
-        git add src/data
-        git commit -m 'chore: update stats'
-        git push
+      - name: Commit
+        run: |
+          git config user.name 'Hiroki Osame'
+          git config user.email 'hiroki.osame@gmail.com'
+          git add src/data
+          git commit -m 'chore: update stats'
+          git push

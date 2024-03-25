@@ -91,6 +91,7 @@ export default defineComponent({
 			}
 
 			const cloned = cloneVNode(textWrapper);
+
 			/**
 			 1  ShapeFlags.ELEMENT
 			 16 ShapeFlags.ARRAY_CHILDREN
