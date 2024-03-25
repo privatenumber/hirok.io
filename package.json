@@ -47,9 +47,8 @@
 		"postcss": "^8.4.38",
 		"postcss-html": "^1.6.0",
 		"simple-git-hooks": "^2.11.0",
-		"stylelint": "^15.11.0",
-		"stylelint-config-recommended-vue": "^1.5.0",
-		"stylelint-config-standard": "^34.0.0",
+		"stylelint": "^16.3.0",
+		"stylelint-config-standard": "^36.0.0",
 		"tailwindcss": "^3.4.1",
 		"tsx": "^4.7.1",
 		"typescript": "^5.4.3",
@@ -65,18 +64,19 @@
 		"vue-router": "^4.3.0"
 	},
 	"stylelint": {
-		"extends": [
-			"stylelint-config-standard",
-			"stylelint-config-recommended-vue"
-		],
+		"extends": "stylelint-config-standard",
+		"customSyntax": "postcss-html",
 		"rules": {
-			"indentation": "tab",
 			"at-rule-no-unknown": [
 				true,
 				{
-					"ignoreAtRules": [
-						"tailwind"
-					]
+					"ignoreAtRules": ["tailwind"]
+				}
+			],
+			"selector-pseudo-class-no-unknown": [
+				true,
+				{
+					"ignorePseudoClasses": ["deep"]
 				}
 			]
 		}
